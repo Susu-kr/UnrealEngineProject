@@ -1,0 +1,12 @@
+﻿  Using 'git status' to determine working set for adaptive non-unity build (D:\Github\GitHub\UnrealEngineProject).
+  Building UnrealCppProjectEditor...
+  Using Visual Studio 2017 14.16.27045 toolchain (D:\Program Files\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023) and Windows 10.0.16299.0 SDK (D:\Windows Kits\10).
+  Building 4 actions with 6 processes...
+    [1/4] CProperty.cpp
+    [2/4] UE4Editor-UnrealCppProject-0002.lib
+       Creating library D:\Github\GitHub\UnrealEngineProject\UnrealCppProject\Intermediate\Build\Win64\UE4Editor\Development\UnrealCppProject\UE4Editor-UnrealCppProject-0002.lib and object D:\Github\GitHub\UnrealEngineProject\UnrealCppProject\Intermediate\Build\Win64\UE4Editor\Development\UnrealCppProject\UE4Editor-UnrealCppProject-0002.exp
+    [3/4] UE4Editor-UnrealCppProject-0002.dll
+       Creating library D:\Github\GitHub\UnrealEngineProject\UnrealCppProject\Intermediate\Build\Win64\UE4Editor\Development\UnrealCppProject\UE4Editor-UnrealCppProject-0002.suppressed.lib and object D:\Github\GitHub\UnrealEngineProject\UnrealCppProject\Intermediate\Build\Win64\UE4Editor\Development\UnrealCppProject\UE4Editor-UnrealCppProject-0002.suppressed.exp
+    [4/4] UnrealCppProjectEditor.target
+  Total time in Parallel executor: 1.55 seconds
+  Total execution time: 2.12 seconds

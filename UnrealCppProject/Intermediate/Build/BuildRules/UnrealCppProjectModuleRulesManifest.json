@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"D:\\Github\\GitHub\\UnrealEngineProject\\UnrealCppProject\\Source\\UnrealCppProject\\UnrealCppProject.Build.cs",
+		"D:\\Github\\GitHub\\UnrealEngineProject\\UnrealCppProject\\Source\\UnrealCppProject.Target.cs",
+		"D:\\Github\\GitHub\\UnrealEngineProject\\UnrealCppProject\\Source\\UnrealCppProjectEditor.Target.cs"
+	],
+	"EngineVersion": "4.25.4"
+}
