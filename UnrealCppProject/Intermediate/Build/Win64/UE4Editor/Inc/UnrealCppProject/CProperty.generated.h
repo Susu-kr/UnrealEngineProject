@@ -58,7 +58,13 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ACProperty); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ACProperty)
 
 
-#define UnrealCppProject_Source_UnrealCppProject_Actor_CProperty_h_12_PRIVATE_PROPERTY_OFFSET
+#define UnrealCppProject_Source_UnrealCppProject_Actor_CProperty_h_12_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__A() { return STRUCT_OFFSET(ACProperty, A); } \
+	FORCEINLINE static uint32 __PPO__B() { return STRUCT_OFFSET(ACProperty, B); } \
+	FORCEINLINE static uint32 __PPO__C() { return STRUCT_OFFSET(ACProperty, C); } \
+	FORCEINLINE static uint32 __PPO__D() { return STRUCT_OFFSET(ACProperty, D); }
+
+
 #define UnrealCppProject_Source_UnrealCppProject_Actor_CProperty_h_9_PROLOG
 #define UnrealCppProject_Source_UnrealCppProject_Actor_CProperty_h_12_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

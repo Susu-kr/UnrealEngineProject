@@ -11,6 +11,18 @@ class UNREALCPPPROJECT_API ACProperty : public AActor
 {
 	GENERATED_BODY()
 	
+private:
+	UPROPERTY(EditAnywhere)
+		int A = 10;
+	UPROPERTY(EditInstanceOnly)
+		int B = 20;
+	UPROPERTY(EditDefaultsOnly)
+		int C;
+
+protected:
+	UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+		int D = 40;
+
 public:	
 	// Sets default values for this actor's properties
 	ACProperty();
