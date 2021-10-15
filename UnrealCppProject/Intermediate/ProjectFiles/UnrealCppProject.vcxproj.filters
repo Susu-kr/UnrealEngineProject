@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\UnrealCppProject.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{C8E82734-D962-444A-913F-A1D2D3B99B51}</UniqueIdentifier>
+      <UniqueIdentifier>{F006AFC8-4CA9-4D6E-8E5B-421321626FA6}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\UnrealCppProject.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{14AA964F-2DFE-47CC-AE50-C7B0EC81EB4E}</UniqueIdentifier>
+      <UniqueIdentifier>{1C8652F0-658D-4F23-813C-F447ED7C72FF}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -24,8 +24,14 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\UnrealCppProject">
-      <UniqueIdentifier>{22261B11-4DCB-4036-8C9C-D5215233DB19}</UniqueIdentifier>
+      <UniqueIdentifier>{3877DB36-4696-4072-953C-505177B78E23}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\UnrealCppProject\CPlayer.cpp">
+      <Filter>Source\UnrealCppProject</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\UnrealCppProject\CPlayer.h">
+      <Filter>Source\UnrealCppProject</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\UnrealCppProject\Global.h">
       <Filter>Source\UnrealCppProject</Filter>
     </ClInclude>
@@ -45,7 +51,7 @@
       <Filter>Source\UnrealCppProject</Filter>
     </ClInclude>
     <Filter Include="Source\UnrealCppProject\Actor">
-      <UniqueIdentifier>{5D7B830D-F4F7-4490-AE08-E4697B559D97}</UniqueIdentifier>
+      <UniqueIdentifier>{6013B0D4-7608-423D-8D3E-90266800B822}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\UnrealCppProject\Actor\CProperty.cpp">
       <Filter>Source\UnrealCppProject\Actor</Filter>
@@ -78,7 +84,7 @@
       <Filter>Source\UnrealCppProject\Actor</Filter>
     </ClInclude>
     <Filter Include="Source\UnrealCppProject\Utilities">
-      <UniqueIdentifier>{9D5FBBF0-40F9-415F-AD80-D134CD98FF60}</UniqueIdentifier>
+      <UniqueIdentifier>{358C8412-4E50-4FD6-9E82-0A2663A9EA69}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\UnrealCppProject\Utilities\CHelpers.h">
       <Filter>Source\UnrealCppProject\Utilities</Filter>

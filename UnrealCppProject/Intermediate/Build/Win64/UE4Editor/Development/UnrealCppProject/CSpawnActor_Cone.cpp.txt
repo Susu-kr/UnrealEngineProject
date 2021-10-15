@@ -4,4 +4,9 @@ D:\Github\GitHub\UnrealEngineProject\UnrealCppProject\Source\UnrealCppProject\Ac
 D:\Github\GitHub\UnrealEngineProject\UnrealCppProject\Intermediate\Build\Win64\UE4Editor\Inc\UnrealCppProject\CSpawnActor.generated.h
 D:\Github\GitHub\UnrealEngineProject\UnrealCppProject\Intermediate\Build\Win64\UE4Editor\Inc\UnrealCppProject\CSpawnActor_Cone.generated.h
 D:\Github\GitHub\UnrealEngineProject\UnrealCppProject\Source\UnrealCppProject\Global.h
+D:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Kismet/KismetSystemLibrary.h
+D:\Epic Games\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/PropertyAccessUtil.h
+D:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Engine/CollisionProfile.h
+D:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CollisionProfile.generated.h
+D:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\KismetSystemLibrary.generated.h
 d:\github\github\unrealengineproject\unrealcppproject\source\unrealcppproject\Utilities/CHelpers.h

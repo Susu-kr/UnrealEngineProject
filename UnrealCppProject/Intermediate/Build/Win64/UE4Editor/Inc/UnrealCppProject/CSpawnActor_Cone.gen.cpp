@@ -72,7 +72,7 @@ void EmptyLinkFunctionForGeneratedCodeCSpawnActor_Cone() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ACSpawnActor_Cone, 2697402689);
+	IMPLEMENT_CLASS(ACSpawnActor_Cone, 1164836827);
 	template<> UNREALCPPPROJECT_API UClass* StaticClass<ACSpawnActor_Cone>()
 	{
 		return ACSpawnActor_Cone::StaticClass();

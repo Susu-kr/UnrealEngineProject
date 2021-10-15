@@ -72,7 +72,7 @@ void EmptyLinkFunctionForGeneratedCodeCSpawnActor_Sphere() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ACSpawnActor_Sphere, 1378667509);
+	IMPLEMENT_CLASS(ACSpawnActor_Sphere, 4166983147);
 	template<> UNREALCPPPROJECT_API UClass* StaticClass<ACSpawnActor_Sphere>()
 	{
 		return ACSpawnActor_Sphere::StaticClass();
