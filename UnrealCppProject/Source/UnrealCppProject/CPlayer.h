@@ -25,5 +25,13 @@ private:
 		class USpringArmComponent* SpringArm;
 	UPROPERTY(VisibleDefaultsOnly)
 		class UCameraComponent* Camera;
+private:
+	void OnMoveForward(float Axis);
+	void OnMoveRight(float Axis);
 
+	void OnHorizontalLook(float Axis);
+	void OnVerticalLook(float Axis);
+
+	void OnRunning();
+	void OffRunning();
 };

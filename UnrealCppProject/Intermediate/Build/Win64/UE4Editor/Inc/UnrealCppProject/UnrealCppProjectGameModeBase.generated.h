@@ -36,7 +36,7 @@ public: \
 
 #define UnrealCppProject_Source_UnrealCppProject_UnrealCppProjectGameModeBase_h_15_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API AUnrealCppProjectGameModeBase(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+	NO_API AUnrealCppProjectGameModeBase(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AUnrealCppProjectGameModeBase) \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, AUnrealCppProjectGameModeBase); \
 DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AUnrealCppProjectGameModeBase); \
@@ -48,8 +48,6 @@ public:
 
 
 #define UnrealCppProject_Source_UnrealCppProject_UnrealCppProjectGameModeBase_h_15_ENHANCED_CONSTRUCTORS \
-	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API AUnrealCppProjectGameModeBase(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AUnrealCppProjectGameModeBase(AUnrealCppProjectGameModeBase&&); \
@@ -57,7 +55,7 @@ private: \
 public: \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, AUnrealCppProjectGameModeBase); \
 DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AUnrealCppProjectGameModeBase); \
-	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AUnrealCppProjectGameModeBase)
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AUnrealCppProjectGameModeBase)
 
 
 #define UnrealCppProject_Source_UnrealCppProject_UnrealCppProjectGameModeBase_h_15_PRIVATE_PROPERTY_OFFSET

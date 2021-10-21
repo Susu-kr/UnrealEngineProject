@@ -14,4 +14,7 @@ class UNREALCPPPROJECT_API AUnrealCppProjectGameModeBase : public AGameModeBase
 {
 	GENERATED_BODY()
 	
+public:
+	AUnrealCppProjectGameModeBase();
+
 };

@@ -10,3 +10,5 @@ D:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Engine/CollisionProfi
 D:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CollisionProfile.generated.h
 D:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\KismetSystemLibrary.generated.h
 d:\github\github\unrealengineproject\unrealcppproject\source\unrealcppproject\Utilities/CHelpers.h
+d:\github\github\unrealengineproject\unrealcppproject\source\unrealcppproject\Utilities/Defines.h
+d:\github\github\unrealengineproject\unrealcppproject\source\unrealcppproject\Utilities/CLog.h
