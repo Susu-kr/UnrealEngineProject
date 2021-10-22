@@ -108,4 +108,25 @@
       <Filter>Source\UnrealCppProject\Utilities</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\UnrealCppProject\Debug\CDrawDebug.cpp">
+      <Filter>Source\UnrealCppProject\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\UnrealCppProject\Debug\CLogActor.cpp">
+      <Filter>Source\UnrealCppProject\Debug</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\UnrealCppProject\Debug\CDrawDebug.h">
+      <Filter>Source\UnrealCppProject\Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\UnrealCppProject\Debug\CLogActor.h">
+      <Filter>Source\UnrealCppProject\Debug</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source\UnrealCppProject\Debug">
+      <UniqueIdentifier>{dfeb2e8c-5ee3-4f82-9a02-4727ff29a459}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
 </Project>
