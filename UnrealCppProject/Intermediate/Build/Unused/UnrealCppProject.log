@@ -1,12 +1,21 @@
 ﻿  Using 'git status' to determine working set for adaptive non-unity build (D:\Github\GitHub\UnrealEngineProject).
   Building UnrealCppProjectEditor...
   Using Visual Studio 2017 14.16.27045 toolchain (D:\Program Files\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023) and Windows 10.0.16299.0 SDK (D:\Windows Kits\10).
-  Building 4 actions with 6 processes...
-    [1/4] CDrawDebug.cpp
-    [2/4] UE4Editor-UnrealCppProject-0017.lib
-       Creating library D:\Github\GitHub\UnrealEngineProject\UnrealCppProject\Intermediate\Build\Win64\UE4Editor\Development\UnrealCppProject\UE4Editor-UnrealCppProject-0017.lib and object D:\Github\GitHub\UnrealEngineProject\UnrealCppProject\Intermediate\Build\Win64\UE4Editor\Development\UnrealCppProject\UE4Editor-UnrealCppProject-0017.exp
-    [3/4] UE4Editor-UnrealCppProject-0017.dll
-       Creating library D:\Github\GitHub\UnrealEngineProject\UnrealCppProject\Intermediate\Build\Win64\UE4Editor\Development\UnrealCppProject\UE4Editor-UnrealCppProject-0017.suppressed.lib and object D:\Github\GitHub\UnrealEngineProject\UnrealCppProject\Intermediate\Build\Win64\UE4Editor\Development\UnrealCppProject\UE4Editor-UnrealCppProject-0017.suppressed.exp
-    [4/4] UnrealCppProjectEditor.target
-  Total time in Parallel executor: 9.68 seconds
-  Total execution time: 10.31 seconds
+  Building 13 actions with 6 processes...
+    [1/13] CAnimInstance.cpp
+    [2/13] CLogActor.cpp
+    [3/13] CActorOverlap.cpp
+    [4/13] UnrealCppProjectGameModeBase.cpp
+    [5/13] CSpawnActor_Sphere.cpp
+    [6/13] CPlayer.cpp
+    [7/13] CSpawner.cpp
+    [8/13] CSpawnActor_Cone.cpp
+    [9/13] CSpawnActor.cpp
+    [10/13] CDrawDebug.cpp
+    [11/13] UE4Editor-UnrealCppProject-0002.lib
+       Creating library D:\Github\GitHub\UnrealEngineProject\UnrealCppProject\Intermediate\Build\Win64\UE4Editor\Development\UnrealCppProject\UE4Editor-UnrealCppProject-0002.lib and object D:\Github\GitHub\UnrealEngineProject\UnrealCppProject\Intermediate\Build\Win64\UE4Editor\Development\UnrealCppProject\UE4Editor-UnrealCppProject-0002.exp
+    [12/13] UE4Editor-UnrealCppProject-0002.dll
+       Creating library D:\Github\GitHub\UnrealEngineProject\UnrealCppProject\Intermediate\Build\Win64\UE4Editor\Development\UnrealCppProject\UE4Editor-UnrealCppProject-0002.suppressed.lib and object D:\Github\GitHub\UnrealEngineProject\UnrealCppProject\Intermediate\Build\Win64\UE4Editor\Development\UnrealCppProject\UE4Editor-UnrealCppProject-0002.suppressed.exp
+    [13/13] UnrealCppProjectEditor.target
+  Total time in Parallel executor: 9.51 seconds
+  Total execution time: 10.06 seconds
