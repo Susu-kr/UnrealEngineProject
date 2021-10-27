@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\UnrealCppProject.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{A3F6DE4F-DAE3-4CFC-BD91-678D5F77536F}</UniqueIdentifier>
+      <UniqueIdentifier>{F1731222-F385-4588-8116-F2FDC3C8CA61}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\UnrealCppProject.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{36A6C21F-2FA2-4011-9914-76D09934B831}</UniqueIdentifier>
+      <UniqueIdentifier>{BD36C928-9ED9-4649-BF53-8C55E622C48B}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,7 +27,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\UnrealCppProject">
-      <UniqueIdentifier>{6B036345-6ED0-4A3A-A917-6AD831B0E3AE}</UniqueIdentifier>
+      <UniqueIdentifier>{75C88C84-5F12-405A-97E1-1A97BC66F1AA}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\UnrealCppProject\CAnimInstance.cpp">
       <Filter>Source\UnrealCppProject</Filter>
@@ -60,7 +60,7 @@
       <Filter>Source\UnrealCppProject</Filter>
     </ClInclude>
     <Filter Include="Source\UnrealCppProject\Actor">
-      <UniqueIdentifier>{A4C5173A-BD28-4B44-A77C-46146F2B3222}</UniqueIdentifier>
+      <UniqueIdentifier>{D04B5B33-054B-4EAD-AF99-FA0CF825ECB2}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\UnrealCppProject\Actor\CProperty.cpp">
       <Filter>Source\UnrealCppProject\Actor</Filter>
@@ -93,7 +93,7 @@
       <Filter>Source\UnrealCppProject\Actor</Filter>
     </ClInclude>
     <Filter Include="Source\UnrealCppProject\Collision">
-      <UniqueIdentifier>{C3B2277C-5054-485D-BA7C-D03904145F3C}</UniqueIdentifier>
+      <UniqueIdentifier>{7B7D84B0-2683-4305-BD3E-62DE2F854918}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\UnrealCppProject\Collision\CActorOverlap.cpp">
       <Filter>Source\UnrealCppProject\Collision</Filter>
@@ -101,8 +101,26 @@
     <ClInclude Include="..\..\Source\UnrealCppProject\Collision\CActorOverlap.h">
       <Filter>Source\UnrealCppProject\Collision</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\UnrealCppProject\Collision\CComponentOverlap.cpp">
+      <Filter>Source\UnrealCppProject\Collision</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\UnrealCppProject\Collision\CComponentOverlap.h">
+      <Filter>Source\UnrealCppProject\Collision</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\UnrealCppProject\Collision\CLight.cpp">
+      <Filter>Source\UnrealCppProject\Collision</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\UnrealCppProject\Collision\CLight.h">
+      <Filter>Source\UnrealCppProject\Collision</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\UnrealCppProject\Collision\CTrigger.cpp">
+      <Filter>Source\UnrealCppProject\Collision</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\UnrealCppProject\Collision\CTrigger.h">
+      <Filter>Source\UnrealCppProject\Collision</Filter>
+    </ClInclude>
     <Filter Include="Source\UnrealCppProject\Debug">
-      <UniqueIdentifier>{DD844AE5-17AD-4EEE-A10C-BCA3E458809B}</UniqueIdentifier>
+      <UniqueIdentifier>{2DBCFFDE-4444-4A9C-A710-28B8E45B93DD}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\UnrealCppProject\Debug\CDrawDebug.cpp">
       <Filter>Source\UnrealCppProject\Debug</Filter>
@@ -117,7 +135,7 @@
       <Filter>Source\UnrealCppProject\Debug</Filter>
     </ClInclude>
     <Filter Include="Source\UnrealCppProject\Utilities">
-      <UniqueIdentifier>{2AE504DC-BC0F-41A3-9803-9CE4F1B84C75}</UniqueIdentifier>
+      <UniqueIdentifier>{63F022C9-41DC-42BB-ACA9-7B1E3049266F}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\UnrealCppProject\Utilities\CHelpers.h">
       <Filter>Source\UnrealCppProject\Utilities</Filter>

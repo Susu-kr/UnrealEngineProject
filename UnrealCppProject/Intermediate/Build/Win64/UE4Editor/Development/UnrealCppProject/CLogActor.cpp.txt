@@ -2,11 +2,18 @@ D:\Github\GitHub\UnrealEngineProject\UnrealCppProject\Intermediate\Build\Win64\U
 d:\github\github\unrealengineproject\unrealcppproject\source\unrealcppproject\debug\CLogActor.h
 D:\Github\GitHub\UnrealEngineProject\UnrealCppProject\Intermediate\Build\Win64\UE4Editor\Inc\UnrealCppProject\CLogActor.generated.h
 D:\Github\GitHub\UnrealEngineProject\UnrealCppProject\Source\UnrealCppProject\Global.h
+D:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Public\DrawDebugHelpers.h
 D:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Kismet/KismetSystemLibrary.h
 D:\Epic Games\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/PropertyAccessUtil.h
 D:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Engine/CollisionProfile.h
 D:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CollisionProfile.generated.h
 D:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\KismetSystemLibrary.generated.h
+D:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Kismet/GameplayStatics.h
+D:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Sound/DialogueTypes.h
+D:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\DialogueTypes.generated.h
+d:\epic games\ue_4.25\engine\source\runtime\engine\classes\kismet\GameplayStaticsTypes.h
+D:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameplayStaticsTypes.generated.h
+D:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameplayStatics.generated.h
 d:\github\github\unrealengineproject\unrealcppproject\source\unrealcppproject\Utilities/CHelpers.h
 d:\github\github\unrealengineproject\unrealcppproject\source\unrealcppproject\Utilities/Defines.h
 d:\github\github\unrealengineproject\unrealcppproject\source\unrealcppproject\Utilities/CLog.h
