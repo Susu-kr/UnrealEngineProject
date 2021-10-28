@@ -6,6 +6,7 @@
 
 DECLARE_DELEGATE(FBoxLightBeginOverlap);
 DECLARE_DELEGATE(FBoxLightEndOverlap);
+DECLARE_DELEGATE_RetVal_OneParam(FString, FBoxLightRandomBeginOverlap, FLinearColor)
 
 UCLASS()
 class UNREALCPPPROJECT_API ACTrigger : public AActor
@@ -36,6 +37,7 @@ private:
 		void ActorEndOverlap(AActor* OverlappedActor, AActor* OtherActor);
 
 public:
-	FBoxLightBeginOverlap	OnBoxLightBeginOverlap;
-	FBoxLightEndOverlap		OnBoxLightEndOverlap;
+	FBoxLightBeginOverlap		OnBoxLightBeginOverlap;
+	FBoxLightEndOverlap			OnBoxLightEndOverlap;
+	FBoxLightRandomBeginOverlap OnBoxLightRandomBeginOverlap;
 };

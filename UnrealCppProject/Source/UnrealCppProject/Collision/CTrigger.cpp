@@ -31,6 +31,18 @@ void ACTrigger::ActorBeginOverlap(AActor * OverlappedActor, AActor * OtherActor)
 {
 	if (OnBoxLightBeginOverlap.IsBound())
 		OnBoxLightBeginOverlap.Execute();
+
+	if (OnBoxLightRandomBeginOverlap.IsBound())
+	{
+		FLinearColor color;
+		color.R = UKismetMathLibrary::RandomFloatInRange(0, 1);
+		color.G = UKismetMathLibrary::RandomFloatInRange(0, 1);
+		color.B = UKismetMathLibrary::RandomFloatInRange(0, 1);
+		color.A = 1.0f;
+
+		FString str = OnBoxLightRandomBeginOverlap.Execute(color);
+		CLog::Log(str);
+	}
 }
 
 void ACTrigger::ActorEndOverlap(AActor * OverlappedActor, AActor * OtherActor)

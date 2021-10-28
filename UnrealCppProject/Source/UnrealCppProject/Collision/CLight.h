@@ -25,9 +25,15 @@ private:
 	UPROPERTY(VisibleDefaultsOnly)
 		class UPointLightComponent* Light;
 
+	UPROPERTY(VisibleDefaultsOnly)
+		class UPointLightComponent* Light2;
+
 	UFUNCTION()
 		void OnLight();
 
 	UFUNCTION()
 		void OffLight();
+
+	UFUNCTION()
+		FString OnRandomLight(FLinearColor color);
 };

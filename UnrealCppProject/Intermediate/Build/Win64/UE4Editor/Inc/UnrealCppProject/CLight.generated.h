@@ -8,6 +8,7 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+struct FLinearColor;
 #ifdef UNREALCPPPROJECT_CLight_generated_h
 #error "CLight.generated.h already included, missing '#pragma once' in CLight.h"
 #endif
@@ -16,12 +17,14 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define UnrealCppProject_Source_UnrealCppProject_Collision_CLight_h_10_SPARSE_DATA
 #define UnrealCppProject_Source_UnrealCppProject_Collision_CLight_h_10_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execOnRandomLight); \
 	DECLARE_FUNCTION(execOffLight); \
 	DECLARE_FUNCTION(execOnLight);
 
 
 #define UnrealCppProject_Source_UnrealCppProject_Collision_CLight_h_10_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execOnRandomLight); \
 	DECLARE_FUNCTION(execOffLight); \
 	DECLARE_FUNCTION(execOnLight);
 
@@ -71,7 +74,8 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ACLight); \
 #define UnrealCppProject_Source_UnrealCppProject_Collision_CLight_h_10_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__Scene() { return STRUCT_OFFSET(ACLight, Scene); } \
 	FORCEINLINE static uint32 __PPO__Text() { return STRUCT_OFFSET(ACLight, Text); } \
-	FORCEINLINE static uint32 __PPO__Light() { return STRUCT_OFFSET(ACLight, Light); }
+	FORCEINLINE static uint32 __PPO__Light() { return STRUCT_OFFSET(ACLight, Light); } \
+	FORCEINLINE static uint32 __PPO__Light2() { return STRUCT_OFFSET(ACLight, Light2); }
 
 
 #define UnrealCppProject_Source_UnrealCppProject_Collision_CLight_h_7_PROLOG
