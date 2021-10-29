@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\UnrealCppProject.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{D27FE86E-DA3B-4A29-AEF4-0541E600AD8A}</UniqueIdentifier>
+      <UniqueIdentifier>{B2C3EA88-E1CE-490A-848A-71D9A2C16B28}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\UnrealCppProject.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{25845149-85F4-42D7-997D-206EB7C3F6A3}</UniqueIdentifier>
+      <UniqueIdentifier>{C31AE7FD-89FC-4FAD-ACC4-FF6BC2A68CA4}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,7 +27,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\UnrealCppProject">
-      <UniqueIdentifier>{CD9CE6F2-9857-47BC-972B-B21DC631D90C}</UniqueIdentifier>
+      <UniqueIdentifier>{270F7C46-0A5F-46AD-A86D-6AB424912E51}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\UnrealCppProject\CAnimInstance.cpp">
       <Filter>Source\UnrealCppProject</Filter>
@@ -60,7 +60,7 @@
       <Filter>Source\UnrealCppProject</Filter>
     </ClInclude>
     <Filter Include="Source\UnrealCppProject\Actor">
-      <UniqueIdentifier>{D217B671-7DE0-48CC-BFEC-CADCA27794E8}</UniqueIdentifier>
+      <UniqueIdentifier>{92520311-6C44-4FC8-B7C8-9C1D7CE4D909}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\UnrealCppProject\Actor\CProperty.cpp">
       <Filter>Source\UnrealCppProject\Actor</Filter>
@@ -93,7 +93,7 @@
       <Filter>Source\UnrealCppProject\Actor</Filter>
     </ClInclude>
     <Filter Include="Source\UnrealCppProject\Collision">
-      <UniqueIdentifier>{7B5C858C-C420-4376-9BE4-708A0FEE24A1}</UniqueIdentifier>
+      <UniqueIdentifier>{CA4BBC63-D48B-4D5D-9B0A-F357BE71AE61}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\UnrealCppProject\Collision\CActorOverlap.cpp">
       <Filter>Source\UnrealCppProject\Collision</Filter>
@@ -113,6 +113,12 @@
     <ClInclude Include="..\..\Source\UnrealCppProject\Collision\CComponentOverlap.h">
       <Filter>Source\UnrealCppProject\Collision</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\UnrealCppProject\Collision\CEventTrigger.cpp">
+      <Filter>Source\UnrealCppProject\Collision</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\UnrealCppProject\Collision\CEventTrigger.h">
+      <Filter>Source\UnrealCppProject\Collision</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\UnrealCppProject\Collision\CLight.cpp">
       <Filter>Source\UnrealCppProject\Collision</Filter>
     </ClCompile>
@@ -125,6 +131,24 @@
     <ClInclude Include="..\..\Source\UnrealCppProject\Collision\CMulticastTrigger.h">
       <Filter>Source\UnrealCppProject\Collision</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\UnrealCppProject\Collision\COverride.cpp">
+      <Filter>Source\UnrealCppProject\Collision</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\UnrealCppProject\Collision\COverride.h">
+      <Filter>Source\UnrealCppProject\Collision</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\UnrealCppProject\Collision\CParticles.cpp">
+      <Filter>Source\UnrealCppProject\Collision</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\UnrealCppProject\Collision\CParticles.h">
+      <Filter>Source\UnrealCppProject\Collision</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\UnrealCppProject\Collision\CSpotLight.cpp">
+      <Filter>Source\UnrealCppProject\Collision</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\UnrealCppProject\Collision\CSpotLight.h">
+      <Filter>Source\UnrealCppProject\Collision</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\UnrealCppProject\Collision\CTrigger.cpp">
       <Filter>Source\UnrealCppProject\Collision</Filter>
     </ClCompile>
@@ -132,7 +156,7 @@
       <Filter>Source\UnrealCppProject\Collision</Filter>
     </ClInclude>
     <Filter Include="Source\UnrealCppProject\Debug">
-      <UniqueIdentifier>{89336199-5555-42D1-ABCB-DC660B245AA7}</UniqueIdentifier>
+      <UniqueIdentifier>{3C6D5ECB-D8FC-4436-B1ED-227148AEEC4F}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\UnrealCppProject\Debug\CDrawDebug.cpp">
       <Filter>Source\UnrealCppProject\Debug</Filter>
@@ -147,7 +171,7 @@
       <Filter>Source\UnrealCppProject\Debug</Filter>
     </ClInclude>
     <Filter Include="Source\UnrealCppProject\Utilities">
-      <UniqueIdentifier>{B13C9787-898F-4A65-BFB2-EAFBAE4DFBAD}</UniqueIdentifier>
+      <UniqueIdentifier>{1D111937-4C2B-4642-A1E1-D9AC253D066F}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\UnrealCppProject\Utilities\CHelpers.h">
       <Filter>Source\UnrealCppProject\Utilities</Filter>
@@ -160,16 +184,6 @@
     </ClInclude>
     <ClInclude Include="..\..\Source\UnrealCppProject\Utilities\Defines.h">
       <Filter>Source\UnrealCppProject\Utilities</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\Source\UnrealCppProject\Collision\CSpotLight.cpp">
-      <Filter>Source\UnrealCppProject\Collision</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\Source\UnrealCppProject\Collision\CSpotLight.h">
-      <Filter>Source\UnrealCppProject\Collision</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

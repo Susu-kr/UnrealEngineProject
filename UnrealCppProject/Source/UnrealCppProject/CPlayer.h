@@ -9,9 +9,6 @@ class UNREALCPPPROJECT_API ACPlayer : public ACharacter
 {
 	GENERATED_BODY()
 
-public:
-	ACPlayer();
-
 protected:
 	virtual void BeginPlay() override;
 
@@ -20,12 +17,15 @@ public:
 
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+	ACPlayer();
+
 private:
 	UPROPERTY(VisibleDefaultsOnly)
 		class USpringArmComponent* SpringArm;
+
 	UPROPERTY(VisibleDefaultsOnly)
 		class UCameraComponent* Camera;
-private:
+
 	void OnMoveForward(float Axis);
 	void OnMoveRight(float Axis);
 
@@ -34,4 +34,7 @@ private:
 
 	void OnRunning();
 	void OffRunning();
+
+	class UMaterialInstanceDynamic* BodyMaterial;
+	class UMaterialInstanceDynamic* LogoMaterial;
 };
