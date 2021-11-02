@@ -22,6 +22,13 @@ void EmptyLinkFunctionForGeneratedCodeCOverride() {}
 	ENGINE_API UClass* Z_Construct_UClass_UBoxComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USceneComponent_NoRegister();
 // End Cross Module References
+	DEFINE_FUNCTION(ACOverride::execChangeColorWhite)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->ChangeColorWhite_Implementation();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(ACOverride::execActorEndOverlap)
 	{
 		P_GET_OBJECT(AActor,Z_Param_OverlappedActor);
@@ -45,12 +52,18 @@ void EmptyLinkFunctionForGeneratedCodeCOverride() {}
 	{
 		ProcessEvent(FindFunctionChecked(NAME_ACOverride_ChangeColorRed),NULL);
 	}
+	static FName NAME_ACOverride_ChangeColorWhite = FName(TEXT("ChangeColorWhite"));
+	void ACOverride::ChangeColorWhite()
+	{
+		ProcessEvent(FindFunctionChecked(NAME_ACOverride_ChangeColorWhite),NULL);
+	}
 	void ACOverride::StaticRegisterNativesACOverride()
 	{
 		UClass* Class = ACOverride::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
 			{ "ActorBeginOverlap", &ACOverride::execActorBeginOverlap },
 			{ "ActorEndOverlap", &ACOverride::execActorEndOverlap },
+			{ "ChangeColorWhite", &ACOverride::execChangeColorWhite },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
@@ -148,6 +161,28 @@ void EmptyLinkFunctionForGeneratedCodeCOverride() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_ACOverride_ChangeColorWhite_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACOverride_ChangeColorWhite_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Collision/COverride.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ACOverride_ChangeColorWhite_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACOverride, nullptr, "ChangeColorWhite", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08080C00, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ACOverride_ChangeColorWhite_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ACOverride_ChangeColorWhite_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ACOverride_ChangeColorWhite()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ACOverride_ChangeColorWhite_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	UClass* Z_Construct_UClass_ACOverride_NoRegister()
 	{
 		return ACOverride::StaticClass();
@@ -183,6 +218,7 @@ void EmptyLinkFunctionForGeneratedCodeCOverride() {}
 		{ &Z_Construct_UFunction_ACOverride_ActorBeginOverlap, "ActorBeginOverlap" }, // 3762969169
 		{ &Z_Construct_UFunction_ACOverride_ActorEndOverlap, "ActorEndOverlap" }, // 247384810
 		{ &Z_Construct_UFunction_ACOverride_ChangeColorRed, "ChangeColorRed" }, // 1500371113
+		{ &Z_Construct_UFunction_ACOverride_ChangeColorWhite, "ChangeColorWhite" }, // 3094511607
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACOverride_Statics::Class_MetaDataParams[] = {
@@ -246,7 +282,7 @@ void EmptyLinkFunctionForGeneratedCodeCOverride() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ACOverride, 2522845422);
+	IMPLEMENT_CLASS(ACOverride, 3466671720);
 	template<> UNREALCPPPROJECT_API UClass* StaticClass<ACOverride>()
 	{
 		return ACOverride::StaticClass();

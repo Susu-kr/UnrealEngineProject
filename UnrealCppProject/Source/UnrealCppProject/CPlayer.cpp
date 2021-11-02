@@ -119,3 +119,9 @@ void ACPlayer::OffRunning()
 {
 	GetCharacterMovement()->MaxWalkSpeed = 400.0f;
 }
+
+void ACPlayer::ChangeColor(FLinearColor InColor)
+{
+	BodyMaterial->SetVectorParameterValue("BodyColor", InColor);
+	LogoMaterial->SetVectorParameterValue("BodyColor", InColor);
+}

@@ -16,13 +16,16 @@ class AActor;
 
 #define UnrealCppProject_Source_UnrealCppProject_Collision_COverride_h_10_SPARSE_DATA
 #define UnrealCppProject_Source_UnrealCppProject_Collision_COverride_h_10_RPC_WRAPPERS \
+	virtual void ChangeColorWhite_Implementation(); \
  \
+	DECLARE_FUNCTION(execChangeColorWhite); \
 	DECLARE_FUNCTION(execActorEndOverlap); \
 	DECLARE_FUNCTION(execActorBeginOverlap);
 
 
 #define UnrealCppProject_Source_UnrealCppProject_Collision_COverride_h_10_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execChangeColorWhite); \
 	DECLARE_FUNCTION(execActorEndOverlap); \
 	DECLARE_FUNCTION(execActorBeginOverlap);
 

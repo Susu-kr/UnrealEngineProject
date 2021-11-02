@@ -17,11 +17,57 @@ void EmptyLinkFunctionForGeneratedCodeCPlayer() {}
 	UNREALCPPPROJECT_API UClass* Z_Construct_UClass_ACPlayer();
 	ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 	UPackage* Z_Construct_UPackage__Script_UnrealCppProject();
+	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FLinearColor();
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 // End Cross Module References
+	DEFINE_FUNCTION(ACPlayer::execChangeColor)
+	{
+		P_GET_STRUCT(FLinearColor,Z_Param_InColor);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->ChangeColor(Z_Param_InColor);
+		P_NATIVE_END;
+	}
 	void ACPlayer::StaticRegisterNativesACPlayer()
 	{
+		UClass* Class = ACPlayer::StaticClass();
+		static const FNameNativePtrPair Funcs[] = {
+			{ "ChangeColor", &ACPlayer::execChangeColor },
+		};
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_ACPlayer_ChangeColor_Statics
+	{
+		struct CPlayer_eventChangeColor_Parms
+		{
+			FLinearColor InColor;
+		};
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_InColor;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_ACPlayer_ChangeColor_Statics::NewProp_InColor = { "InColor", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(CPlayer_eventChangeColor_Parms, InColor), Z_Construct_UScriptStruct_FLinearColor, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ACPlayer_ChangeColor_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACPlayer_ChangeColor_Statics::NewProp_InColor,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACPlayer_ChangeColor_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "CPlayer.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ACPlayer_ChangeColor_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACPlayer, nullptr, "ChangeColor", nullptr, nullptr, sizeof(CPlayer_eventChangeColor_Parms), Z_Construct_UFunction_ACPlayer_ChangeColor_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ACPlayer_ChangeColor_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04820401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ACPlayer_ChangeColor_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ACPlayer_ChangeColor_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ACPlayer_ChangeColor()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ACPlayer_ChangeColor_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	UClass* Z_Construct_UClass_ACPlayer_NoRegister()
 	{
@@ -30,6 +76,7 @@ void EmptyLinkFunctionForGeneratedCodeCPlayer() {}
 	struct Z_Construct_UClass_ACPlayer_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
+		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
@@ -48,6 +95,9 @@ void EmptyLinkFunctionForGeneratedCodeCPlayer() {}
 	UObject* (*const Z_Construct_UClass_ACPlayer_Statics::DependentSingletons[])() = {
 		(UObject* (*)())Z_Construct_UClass_ACharacter,
 		(UObject* (*)())Z_Construct_UPackage__Script_UnrealCppProject,
+	};
+	const FClassFunctionLinkInfo Z_Construct_UClass_ACPlayer_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_ACPlayer_ChangeColor, "ChangeColor" }, // 3280510380
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACPlayer_Statics::Class_MetaDataParams[] = {
@@ -84,11 +134,11 @@ void EmptyLinkFunctionForGeneratedCodeCPlayer() {}
 		"Game",
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
-		nullptr,
+		FuncInfo,
 		Z_Construct_UClass_ACPlayer_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
-		0,
+		UE_ARRAY_COUNT(FuncInfo),
 		UE_ARRAY_COUNT(Z_Construct_UClass_ACPlayer_Statics::PropPointers),
 		0,
 		0x009000A4u,
@@ -103,7 +153,7 @@ void EmptyLinkFunctionForGeneratedCodeCPlayer() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ACPlayer, 739770021);
+	IMPLEMENT_CLASS(ACPlayer, 1354865723);
 	template<> UNREALCPPPROJECT_API UClass* StaticClass<ACPlayer>()
 	{
 		return ACPlayer::StaticClass();
