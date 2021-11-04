@@ -10,6 +10,7 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 class AActor;
 struct FLinearColor;
+class ACPlayer;
 #ifdef UNREALCPPPROJECT_CLineTrace_generated_h
 #error "CLineTrace.generated.h already included, missing '#pragma once' in CLineTrace.h"
 #endif
@@ -31,8 +32,18 @@ static inline void FTraceResult_DelegateWrapper(const FMulticastScriptDelegate& 
 
 
 #define UnrealCppProject_Source_UnrealCppProject_Trace_CLineTrace_h_12_SPARSE_DATA
-#define UnrealCppProject_Source_UnrealCppProject_Trace_CLineTrace_h_12_RPC_WRAPPERS
-#define UnrealCppProject_Source_UnrealCppProject_Trace_CLineTrace_h_12_RPC_WRAPPERS_NO_PURE_DECLS
+#define UnrealCppProject_Source_UnrealCppProject_Trace_CLineTrace_h_12_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execRestoreColor); \
+	DECLARE_FUNCTION(execStartJump);
+
+
+#define UnrealCppProject_Source_UnrealCppProject_Trace_CLineTrace_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execRestoreColor); \
+	DECLARE_FUNCTION(execStartJump);
+
+
 #define UnrealCppProject_Source_UnrealCppProject_Trace_CLineTrace_h_12_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesACLineTrace(); \

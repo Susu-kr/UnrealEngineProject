@@ -20,6 +20,7 @@ void EmptyLinkFunctionForGeneratedCodeCLineTrace() {}
 	UNREALCPPPROJECT_API UClass* Z_Construct_UClass_ACLineTrace_NoRegister();
 	UNREALCPPPROJECT_API UClass* Z_Construct_UClass_ACLineTrace();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
+	UNREALCPPPROJECT_API UClass* Z_Construct_UClass_ACPlayer_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UTextRenderComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USceneComponent_NoRegister();
 // End Cross Module References
@@ -59,8 +60,99 @@ void EmptyLinkFunctionForGeneratedCodeCLineTrace() {}
 		}
 		return ReturnFunction;
 	}
+	DEFINE_FUNCTION(ACLineTrace::execRestoreColor)
+	{
+		P_GET_OBJECT(ACPlayer,Z_Param_InPlayer);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->RestoreColor(Z_Param_InPlayer);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(ACLineTrace::execStartJump)
+	{
+		P_GET_OBJECT(AActor,Z_Param_InActor);
+		P_GET_STRUCT(FLinearColor,Z_Param_InColor);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->StartJump(Z_Param_InActor,Z_Param_InColor);
+		P_NATIVE_END;
+	}
 	void ACLineTrace::StaticRegisterNativesACLineTrace()
 	{
+		UClass* Class = ACLineTrace::StaticClass();
+		static const FNameNativePtrPair Funcs[] = {
+			{ "RestoreColor", &ACLineTrace::execRestoreColor },
+			{ "StartJump", &ACLineTrace::execStartJump },
+		};
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_ACLineTrace_RestoreColor_Statics
+	{
+		struct CLineTrace_eventRestoreColor_Parms
+		{
+			ACPlayer* InPlayer;
+		};
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_InPlayer;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ACLineTrace_RestoreColor_Statics::NewProp_InPlayer = { "InPlayer", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(CLineTrace_eventRestoreColor_Parms, InPlayer), Z_Construct_UClass_ACPlayer_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ACLineTrace_RestoreColor_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACLineTrace_RestoreColor_Statics::NewProp_InPlayer,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACLineTrace_RestoreColor_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Trace/CLineTrace.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ACLineTrace_RestoreColor_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACLineTrace, nullptr, "RestoreColor", nullptr, nullptr, sizeof(CLineTrace_eventRestoreColor_Parms), Z_Construct_UFunction_ACLineTrace_RestoreColor_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ACLineTrace_RestoreColor_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ACLineTrace_RestoreColor_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ACLineTrace_RestoreColor_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ACLineTrace_RestoreColor()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ACLineTrace_RestoreColor_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_ACLineTrace_StartJump_Statics
+	{
+		struct CLineTrace_eventStartJump_Parms
+		{
+			AActor* InActor;
+			FLinearColor InColor;
+		};
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_InColor;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_InActor;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_ACLineTrace_StartJump_Statics::NewProp_InColor = { "InColor", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(CLineTrace_eventStartJump_Parms, InColor), Z_Construct_UScriptStruct_FLinearColor, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ACLineTrace_StartJump_Statics::NewProp_InActor = { "InActor", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(CLineTrace_eventStartJump_Parms, InActor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ACLineTrace_StartJump_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACLineTrace_StartJump_Statics::NewProp_InColor,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACLineTrace_StartJump_Statics::NewProp_InActor,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACLineTrace_StartJump_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Trace/CLineTrace.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ACLineTrace_StartJump_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACLineTrace, nullptr, "StartJump", nullptr, nullptr, sizeof(CLineTrace_eventStartJump_Parms), Z_Construct_UFunction_ACLineTrace_StartJump_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ACLineTrace_StartJump_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00840401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ACLineTrace_StartJump_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ACLineTrace_StartJump_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ACLineTrace_StartJump()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ACLineTrace_StartJump_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	UClass* Z_Construct_UClass_ACLineTrace_NoRegister()
 	{
@@ -69,6 +161,7 @@ void EmptyLinkFunctionForGeneratedCodeCLineTrace() {}
 	struct Z_Construct_UClass_ACLineTrace_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
+		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
@@ -91,6 +184,10 @@ void EmptyLinkFunctionForGeneratedCodeCLineTrace() {}
 	UObject* (*const Z_Construct_UClass_ACLineTrace_Statics::DependentSingletons[])() = {
 		(UObject* (*)())Z_Construct_UClass_AActor,
 		(UObject* (*)())Z_Construct_UPackage__Script_UnrealCppProject,
+	};
+	const FClassFunctionLinkInfo Z_Construct_UClass_ACLineTrace_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_ACLineTrace_RestoreColor, "RestoreColor" }, // 2400033338
+		{ &Z_Construct_UFunction_ACLineTrace_StartJump, "StartJump" }, // 4194771116
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACLineTrace_Statics::Class_MetaDataParams[] = {
@@ -133,11 +230,11 @@ void EmptyLinkFunctionForGeneratedCodeCLineTrace() {}
 		"Engine",
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
-		nullptr,
+		FuncInfo,
 		Z_Construct_UClass_ACLineTrace_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
-		0,
+		UE_ARRAY_COUNT(FuncInfo),
 		UE_ARRAY_COUNT(Z_Construct_UClass_ACLineTrace_Statics::PropPointers),
 		0,
 		0x009000A4u,
@@ -152,7 +249,7 @@ void EmptyLinkFunctionForGeneratedCodeCLineTrace() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ACLineTrace, 2282881163);
+	IMPLEMENT_CLASS(ACLineTrace, 3215272141);
 	template<> UNREALCPPPROJECT_API UClass* StaticClass<ACLineTrace>()
 	{
 		return ACLineTrace::StaticClass();

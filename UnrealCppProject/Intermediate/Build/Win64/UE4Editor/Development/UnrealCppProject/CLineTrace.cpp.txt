@@ -22,5 +22,11 @@ d:\github\github\unrealengineproject\unrealcppproject\source\unrealcppproject\Ut
 d:\github\github\unrealengineproject\unrealcppproject\source\unrealcppproject\Utilities/CLog.h
 d:\github\github\unrealengineproject\unrealcppproject\source\unrealcppproject\trace\CCylinder.h
 D:\Github\GitHub\UnrealEngineProject\UnrealCppProject\Intermediate\Build\Win64\UE4Editor\Inc\UnrealCppProject\CCylinder.generated.h
+D:\Github\GitHub\UnrealEngineProject\UnrealCppProject\Source\UnrealCppProject\CPlayer.h
+D:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\GameFramework/Character.h
+D:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
+D:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
+D:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
+D:\Github\GitHub\UnrealEngineProject\UnrealCppProject\Intermediate\Build\Win64\UE4Editor\Inc\UnrealCppProject\CPlayer.generated.h
 D:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Components/TextRenderComponent.h
 D:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\TextRenderComponent.generated.h
