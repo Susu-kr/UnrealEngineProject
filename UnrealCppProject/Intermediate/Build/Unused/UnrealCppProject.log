@@ -1,21 +1,12 @@
 ﻿  Using 'git status' to determine working set for adaptive non-unity build (D:\Github\GitHub\UnrealEngineProject).
-  Parsing headers for UnrealCppProjectEditor
-    Running UnrealHeaderTool "D:\Github\GitHub\UnrealEngineProject\UnrealCppProject\UnrealCppProject.uproject" "D:\Github\GitHub\UnrealEngineProject\UnrealCppProject\Intermediate\Build\Win64\UnrealCppProjectEditor\Development\UnrealCppProjectEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\이수현\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
-  Reflection code generated for UnrealCppProjectEditor in 4.8804479 seconds
-  Deleted hot-reload file: D:\Github\GitHub\UnrealEngineProject\UnrealCppProject\Binaries\Win64\UE4Editor-UnrealCppProject-0001.dll
-  Deleted hot-reload file: D:\Github\GitHub\UnrealEngineProject\UnrealCppProject\Binaries\Win64\UE4Editor-UnrealCppProject-0002.dll
-  Deleted hot-reload file: D:\Github\GitHub\UnrealEngineProject\UnrealCppProject\Intermediate\Build\Win64\UE4Editor\Development\UnrealCppProject\UE4Editor-UnrealCppProject-0001.lib
-  Deleted hot-reload file: D:\Github\GitHub\UnrealEngineProject\UnrealCppProject\Intermediate\Build\Win64\UE4Editor\Development\UnrealCppProject\UE4Editor-UnrealCppProject-0002.lib
   Building UnrealCppProjectEditor...
   Using Visual Studio 2017 14.16.27045 toolchain (D:\Program Files\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023) and Windows 10.0.16299.0 SDK (D:\Windows Kits\10).
-  Building 6 actions with 6 processes...
-    [1/6] CExplosion.gen.cpp
-    [2/6] CSweepTrigger.cpp
-    [3/6] CExplosion.cpp
-    [4/6] UE4Editor-UnrealCppProject.lib
-       Creating library D:\Github\GitHub\UnrealEngineProject\UnrealCppProject\Intermediate\Build\Win64\UE4Editor\Development\UnrealCppProject\UE4Editor-UnrealCppProject.lib and object D:\Github\GitHub\UnrealEngineProject\UnrealCppProject\Intermediate\Build\Win64\UE4Editor\Development\UnrealCppProject\UE4Editor-UnrealCppProject.exp
-    [5/6] UE4Editor-UnrealCppProject.dll
-       Creating library D:\Github\GitHub\UnrealEngineProject\UnrealCppProject\Intermediate\Build\Win64\UE4Editor\Development\UnrealCppProject\UE4Editor-UnrealCppProject.suppressed.lib and object D:\Github\GitHub\UnrealEngineProject\UnrealCppProject\Intermediate\Build\Win64\UE4Editor\Development\UnrealCppProject\UE4Editor-UnrealCppProject.suppressed.exp
-    [6/6] UnrealCppProjectEditor.target
-  Total time in Parallel executor: 2.19 seconds
-  Total execution time: 7.58 seconds
+  Building 4 actions with 6 processes...
+    [1/4] CExplosion.cpp
+    [2/4] UE4Editor-UnrealCppProject-0002.lib
+       Creating library D:\Github\GitHub\UnrealEngineProject\UnrealCppProject\Intermediate\Build\Win64\UE4Editor\Development\UnrealCppProject\UE4Editor-UnrealCppProject-0002.lib and object D:\Github\GitHub\UnrealEngineProject\UnrealCppProject\Intermediate\Build\Win64\UE4Editor\Development\UnrealCppProject\UE4Editor-UnrealCppProject-0002.exp
+    [3/4] UE4Editor-UnrealCppProject-0002.dll
+       Creating library D:\Github\GitHub\UnrealEngineProject\UnrealCppProject\Intermediate\Build\Win64\UE4Editor\Development\UnrealCppProject\UE4Editor-UnrealCppProject-0002.suppressed.lib and object D:\Github\GitHub\UnrealEngineProject\UnrealCppProject\Intermediate\Build\Win64\UE4Editor\Development\UnrealCppProject\UE4Editor-UnrealCppProject-0002.suppressed.exp
+    [4/4] UnrealCppProjectEditor.target
+  Total time in Parallel executor: 8.85 seconds
+  Total execution time: 9.55 seconds
