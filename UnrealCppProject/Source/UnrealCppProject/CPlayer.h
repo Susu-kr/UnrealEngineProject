@@ -38,6 +38,10 @@ private:
 	class UMaterialInstanceDynamic* BodyMaterial;
 	class UMaterialInstanceDynamic* LogoMaterial;
 
+	// Add Rifle
+	class ACRifle* Rifle;
+	void OnRifle();
+
 public:
 	UFUNCTION(BlueprintCallable)
 		void ChangeColor(FLinearColor InColor);

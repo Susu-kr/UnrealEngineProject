@@ -52,3 +52,5 @@ D:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Shape
 D:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CapsuleComponent.generated.h
 D:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Materials/MaterialInstanceConstant.h
 D:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\MaterialInstanceConstant.generated.h
+d:\github\github\unrealengineproject\unrealcppproject\source\unrealcppproject\CRifle.h
+D:\Github\GitHub\UnrealEngineProject\UnrealCppProject\Intermediate\Build\Win64\UE4Editor\Inc\UnrealCppProject\CRifle.generated.h

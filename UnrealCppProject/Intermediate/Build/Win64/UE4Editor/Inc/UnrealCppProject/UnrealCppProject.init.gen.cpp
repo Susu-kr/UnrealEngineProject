@@ -25,8 +25,8 @@ void EmptyLinkFunctionForGeneratedCodeUnrealCppProject_init() {}
 				SingletonFuncArray,
 				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0xDAD0BA89,
-				0x30B01879,
+				0x7ED4DC88,
+				0x883FE621,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);
