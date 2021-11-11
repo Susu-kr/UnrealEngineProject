@@ -2,10 +2,12 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "IRifle.h"
+
 #include "CPlayer.generated.h"
 
 UCLASS()
-class UNREALCPPPROJECT_API ACPlayer : public ACharacter
+class UNREALCPPPROJECT_API ACPlayer : public ACharacter, public IIRifle
 {
 	GENERATED_BODY()
 
@@ -45,4 +47,7 @@ private:
 public:
 	UFUNCTION(BlueprintCallable)
 		void ChangeColor(FLinearColor InColor);
+
+	// Add Rifle
+	FORCEINLINE class ACRifle* GetRifle() override { return Rifle; }
 };

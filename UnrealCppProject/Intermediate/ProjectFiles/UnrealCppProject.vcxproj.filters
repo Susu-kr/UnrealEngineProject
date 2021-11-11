@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\UnrealCppProject.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{B650CCE9-9478-4901-B6F4-43FA83B490BD}</UniqueIdentifier>
+      <UniqueIdentifier>{4D0A95B8-EC3B-47E3-9741-A7A98196E854}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\UnrealCppProject.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{63D859E3-F662-4A2B-AD42-D9F7DD122995}</UniqueIdentifier>
+      <UniqueIdentifier>{16A3B8FB-72F9-4AAF-89DF-9C6FB2CC1D8B}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,7 +27,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\UnrealCppProject">
-      <UniqueIdentifier>{56B54631-D605-4A2B-815E-721B22B0CF4F}</UniqueIdentifier>
+      <UniqueIdentifier>{CC24DD59-416B-4CAE-BEF4-A334C43E3618}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\UnrealCppProject\CAnimInstance.cpp">
       <Filter>Source\UnrealCppProject</Filter>
@@ -50,6 +50,12 @@
     <ClInclude Include="..\..\Source\UnrealCppProject\Global.h">
       <Filter>Source\UnrealCppProject</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\UnrealCppProject\IRifle.cpp">
+      <Filter>Source\UnrealCppProject</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\UnrealCppProject\IRifle.h">
+      <Filter>Source\UnrealCppProject</Filter>
+    </ClInclude>
     <None Include="..\..\Source\UnrealCppProject\UnrealCppProject.Build.cs">
       <Filter>Source\UnrealCppProject</Filter>
     </None>
@@ -66,7 +72,7 @@
       <Filter>Source\UnrealCppProject</Filter>
     </ClInclude>
     <Filter Include="Source\UnrealCppProject\Actor">
-      <UniqueIdentifier>{D9EAA98D-8ED2-463C-BFDE-E5E792C1C0E8}</UniqueIdentifier>
+      <UniqueIdentifier>{3CC9C76F-D0DA-4E9C-843E-765294F12127}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\UnrealCppProject\Actor\CProperty.cpp">
       <Filter>Source\UnrealCppProject\Actor</Filter>
@@ -99,7 +105,7 @@
       <Filter>Source\UnrealCppProject\Actor</Filter>
     </ClInclude>
     <Filter Include="Source\UnrealCppProject\Collision">
-      <UniqueIdentifier>{16CD6FD5-D208-4F04-B69C-D31D2E28F916}</UniqueIdentifier>
+      <UniqueIdentifier>{29BD38E3-1095-4687-89E5-905B9EE8A038}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\UnrealCppProject\Collision\CActorOverlap.cpp">
       <Filter>Source\UnrealCppProject\Collision</Filter>
@@ -162,7 +168,7 @@
       <Filter>Source\UnrealCppProject\Collision</Filter>
     </ClInclude>
     <Filter Include="Source\UnrealCppProject\Debug">
-      <UniqueIdentifier>{823E5DC7-5E86-42A8-B5A2-9C30823CF3B3}</UniqueIdentifier>
+      <UniqueIdentifier>{F3DCC2F7-6ADA-44DC-964A-22D180591342}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\UnrealCppProject\Debug\CDrawDebug.cpp">
       <Filter>Source\UnrealCppProject\Debug</Filter>
@@ -176,8 +182,17 @@
     <ClInclude Include="..\..\Source\UnrealCppProject\Debug\CLogActor.h">
       <Filter>Source\UnrealCppProject\Debug</Filter>
     </ClInclude>
+    <Filter Include="Source\UnrealCppProject\Notifies">
+      <UniqueIdentifier>{29D73D81-9557-46BF-827D-F5E39471A737}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\UnrealCppProject\Notifies\CAnimNotifyState_Equip.cpp">
+      <Filter>Source\UnrealCppProject\Notifies</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\UnrealCppProject\Notifies\CAnimNotifyState_Equip.h">
+      <Filter>Source\UnrealCppProject\Notifies</Filter>
+    </ClInclude>
     <Filter Include="Source\UnrealCppProject\Trace">
-      <UniqueIdentifier>{3D8419F0-1F55-4271-8210-AADE323E1577}</UniqueIdentifier>
+      <UniqueIdentifier>{CEE54B77-E3F7-4027-BF34-BD7C1A068D9C}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\UnrealCppProject\Trace\CCube.cpp">
       <Filter>Source\UnrealCppProject\Trace</Filter>
@@ -210,7 +225,7 @@
       <Filter>Source\UnrealCppProject\Trace</Filter>
     </ClInclude>
     <Filter Include="Source\UnrealCppProject\Utilities">
-      <UniqueIdentifier>{176424CE-6421-4B09-BB67-BCDBDC1EE655}</UniqueIdentifier>
+      <UniqueIdentifier>{B385EB1A-FA3D-4A3F-9C72-7A2192D2E8CE}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\UnrealCppProject\Utilities\CHelpers.h">
       <Filter>Source\UnrealCppProject\Utilities</Filter>

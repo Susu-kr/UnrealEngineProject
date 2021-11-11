@@ -13,10 +13,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define UNREALCPPPROJECT_CAnimInstance_generated_h
 
-#define UnrealCppProject_Source_UnrealCppProject_CAnimInstance_h_15_SPARSE_DATA
-#define UnrealCppProject_Source_UnrealCppProject_CAnimInstance_h_15_RPC_WRAPPERS
-#define UnrealCppProject_Source_UnrealCppProject_CAnimInstance_h_15_RPC_WRAPPERS_NO_PURE_DECLS
-#define UnrealCppProject_Source_UnrealCppProject_CAnimInstance_h_15_INCLASS_NO_PURE_DECLS \
+#define UnrealCppProject_Source_UnrealCppProject_CAnimInstance_h_10_SPARSE_DATA
+#define UnrealCppProject_Source_UnrealCppProject_CAnimInstance_h_10_RPC_WRAPPERS
+#define UnrealCppProject_Source_UnrealCppProject_CAnimInstance_h_10_RPC_WRAPPERS_NO_PURE_DECLS
+#define UnrealCppProject_Source_UnrealCppProject_CAnimInstance_h_10_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUCAnimInstance(); \
 	friend struct Z_Construct_UClass_UCAnimInstance_Statics; \
@@ -25,7 +25,7 @@ public: \
 	DECLARE_SERIALIZER(UCAnimInstance)
 
 
-#define UnrealCppProject_Source_UnrealCppProject_CAnimInstance_h_15_INCLASS \
+#define UnrealCppProject_Source_UnrealCppProject_CAnimInstance_h_10_INCLASS \
 private: \
 	static void StaticRegisterNativesUCAnimInstance(); \
 	friend struct Z_Construct_UClass_UCAnimInstance_Statics; \
@@ -34,7 +34,7 @@ public: \
 	DECLARE_SERIALIZER(UCAnimInstance)
 
 
-#define UnrealCppProject_Source_UnrealCppProject_CAnimInstance_h_15_STANDARD_CONSTRUCTORS \
+#define UnrealCppProject_Source_UnrealCppProject_CAnimInstance_h_10_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UCAnimInstance(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UCAnimInstance) \
@@ -47,7 +47,7 @@ private: \
 public:
 
 
-#define UnrealCppProject_Source_UnrealCppProject_CAnimInstance_h_15_ENHANCED_CONSTRUCTORS \
+#define UnrealCppProject_Source_UnrealCppProject_CAnimInstance_h_10_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UCAnimInstance(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
@@ -60,31 +60,32 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UCAnimInstance); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UCAnimInstance)
 
 
-#define UnrealCppProject_Source_UnrealCppProject_CAnimInstance_h_15_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__Speed() { return STRUCT_OFFSET(UCAnimInstance, Speed); }
+#define UnrealCppProject_Source_UnrealCppProject_CAnimInstance_h_10_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__Speed() { return STRUCT_OFFSET(UCAnimInstance, Speed); } \
+	FORCEINLINE static uint32 __PPO__bEquipped() { return STRUCT_OFFSET(UCAnimInstance, bEquipped); }
 
 
-#define UnrealCppProject_Source_UnrealCppProject_CAnimInstance_h_12_PROLOG
-#define UnrealCppProject_Source_UnrealCppProject_CAnimInstance_h_15_GENERATED_BODY_LEGACY \
+#define UnrealCppProject_Source_UnrealCppProject_CAnimInstance_h_7_PROLOG
+#define UnrealCppProject_Source_UnrealCppProject_CAnimInstance_h_10_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	UnrealCppProject_Source_UnrealCppProject_CAnimInstance_h_15_PRIVATE_PROPERTY_OFFSET \
-	UnrealCppProject_Source_UnrealCppProject_CAnimInstance_h_15_SPARSE_DATA \
-	UnrealCppProject_Source_UnrealCppProject_CAnimInstance_h_15_RPC_WRAPPERS \
-	UnrealCppProject_Source_UnrealCppProject_CAnimInstance_h_15_INCLASS \
-	UnrealCppProject_Source_UnrealCppProject_CAnimInstance_h_15_STANDARD_CONSTRUCTORS \
+	UnrealCppProject_Source_UnrealCppProject_CAnimInstance_h_10_PRIVATE_PROPERTY_OFFSET \
+	UnrealCppProject_Source_UnrealCppProject_CAnimInstance_h_10_SPARSE_DATA \
+	UnrealCppProject_Source_UnrealCppProject_CAnimInstance_h_10_RPC_WRAPPERS \
+	UnrealCppProject_Source_UnrealCppProject_CAnimInstance_h_10_INCLASS \
+	UnrealCppProject_Source_UnrealCppProject_CAnimInstance_h_10_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define UnrealCppProject_Source_UnrealCppProject_CAnimInstance_h_15_GENERATED_BODY \
+#define UnrealCppProject_Source_UnrealCppProject_CAnimInstance_h_10_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	UnrealCppProject_Source_UnrealCppProject_CAnimInstance_h_15_PRIVATE_PROPERTY_OFFSET \
-	UnrealCppProject_Source_UnrealCppProject_CAnimInstance_h_15_SPARSE_DATA \
-	UnrealCppProject_Source_UnrealCppProject_CAnimInstance_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	UnrealCppProject_Source_UnrealCppProject_CAnimInstance_h_15_INCLASS_NO_PURE_DECLS \
-	UnrealCppProject_Source_UnrealCppProject_CAnimInstance_h_15_ENHANCED_CONSTRUCTORS \
+	UnrealCppProject_Source_UnrealCppProject_CAnimInstance_h_10_PRIVATE_PROPERTY_OFFSET \
+	UnrealCppProject_Source_UnrealCppProject_CAnimInstance_h_10_SPARSE_DATA \
+	UnrealCppProject_Source_UnrealCppProject_CAnimInstance_h_10_RPC_WRAPPERS_NO_PURE_DECLS \
+	UnrealCppProject_Source_UnrealCppProject_CAnimInstance_h_10_INCLASS_NO_PURE_DECLS \
+	UnrealCppProject_Source_UnrealCppProject_CAnimInstance_h_10_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

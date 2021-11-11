@@ -61,7 +61,9 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ACRifle); \
 #define UnrealCppProject_Source_UnrealCppProject_CRifle_h_10_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__Mesh() { return STRUCT_OFFSET(ACRifle, Mesh); } \
 	FORCEINLINE static uint32 __PPO__HandSocket() { return STRUCT_OFFSET(ACRifle, HandSocket); } \
-	FORCEINLINE static uint32 __PPO__HolsterSocket() { return STRUCT_OFFSET(ACRifle, HolsterSocket); }
+	FORCEINLINE static uint32 __PPO__HolsterSocket() { return STRUCT_OFFSET(ACRifle, HolsterSocket); } \
+	FORCEINLINE static uint32 __PPO__GrabMontage() { return STRUCT_OFFSET(ACRifle, GrabMontage); } \
+	FORCEINLINE static uint32 __PPO__UngrabMontage() { return STRUCT_OFFSET(ACRifle, UngrabMontage); }
 
 
 #define UnrealCppProject_Source_UnrealCppProject_CRifle_h_7_PROLOG

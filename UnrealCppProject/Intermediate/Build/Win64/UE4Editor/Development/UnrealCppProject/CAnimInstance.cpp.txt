@@ -24,3 +24,7 @@ D:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\GameFramework/Charact
 D:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
 D:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
 D:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
+d:\github\github\unrealengineproject\unrealcppproject\source\unrealcppproject\IRifle.h
+D:\Github\GitHub\UnrealEngineProject\UnrealCppProject\Intermediate\Build\Win64\UE4Editor\Inc\UnrealCppProject\IRifle.generated.h
+d:\github\github\unrealengineproject\unrealcppproject\source\unrealcppproject\CRifle.h
+D:\Github\GitHub\UnrealEngineProject\UnrealCppProject\Intermediate\Build\Win64\UE4Editor\Inc\UnrealCppProject\CRifle.generated.h
