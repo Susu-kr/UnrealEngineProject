@@ -35,7 +35,7 @@ void ACRifle::End_Equip()
 void ACRifle::Unequip()
 {
 	CheckFalse(bEquipped);
-	CheckFalse(bEquipping);
+	CheckTrue(bEquipping);
 
 	bEquipping = true;
 	OwnerCharacter->PlayAnimMontage(UngrabMontage);

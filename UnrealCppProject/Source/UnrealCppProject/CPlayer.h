@@ -44,6 +44,10 @@ private:
 	class ACRifle* Rifle;
 	void OnRifle();
 
+	// #. Aim
+	void OnAim();
+	void OffAim();
+
 public:
 	UFUNCTION(BlueprintCallable)
 		void ChangeColor(FLinearColor InColor);
