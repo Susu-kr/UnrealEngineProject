@@ -25,6 +25,8 @@ struct FLinearColor;
 	DECLARE_FUNCTION(execChangeColor);
 
 
+#define UnrealCppProject_Source_UnrealCppProject_CPlayer_h_12_EVENT_PARMS
+#define UnrealCppProject_Source_UnrealCppProject_CPlayer_h_12_CALLBACK_WRAPPERS
 #define UnrealCppProject_Source_UnrealCppProject_CPlayer_h_12_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesACPlayer(); \
@@ -74,13 +76,17 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ACPlayer); \
 	FORCEINLINE static uint32 __PPO__Camera() { return STRUCT_OFFSET(ACPlayer, Camera); }
 
 
-#define UnrealCppProject_Source_UnrealCppProject_CPlayer_h_9_PROLOG
+#define UnrealCppProject_Source_UnrealCppProject_CPlayer_h_9_PROLOG \
+	UnrealCppProject_Source_UnrealCppProject_CPlayer_h_12_EVENT_PARMS
+
+
 #define UnrealCppProject_Source_UnrealCppProject_CPlayer_h_12_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	UnrealCppProject_Source_UnrealCppProject_CPlayer_h_12_PRIVATE_PROPERTY_OFFSET \
 	UnrealCppProject_Source_UnrealCppProject_CPlayer_h_12_SPARSE_DATA \
 	UnrealCppProject_Source_UnrealCppProject_CPlayer_h_12_RPC_WRAPPERS \
+	UnrealCppProject_Source_UnrealCppProject_CPlayer_h_12_CALLBACK_WRAPPERS \
 	UnrealCppProject_Source_UnrealCppProject_CPlayer_h_12_INCLASS \
 	UnrealCppProject_Source_UnrealCppProject_CPlayer_h_12_STANDARD_CONSTRUCTORS \
 public: \
@@ -93,6 +99,7 @@ public: \
 	UnrealCppProject_Source_UnrealCppProject_CPlayer_h_12_PRIVATE_PROPERTY_OFFSET \
 	UnrealCppProject_Source_UnrealCppProject_CPlayer_h_12_SPARSE_DATA \
 	UnrealCppProject_Source_UnrealCppProject_CPlayer_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+	UnrealCppProject_Source_UnrealCppProject_CPlayer_h_12_CALLBACK_WRAPPERS \
 	UnrealCppProject_Source_UnrealCppProject_CPlayer_h_12_INCLASS_NO_PURE_DECLS \
 	UnrealCppProject_Source_UnrealCppProject_CPlayer_h_12_ENHANCED_CONSTRUCTORS \
 private: \
