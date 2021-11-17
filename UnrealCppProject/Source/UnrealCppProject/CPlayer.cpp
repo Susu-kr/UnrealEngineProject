@@ -150,6 +150,7 @@ void ACPlayer::OnAim()
 	SpringArm->SocketOffset = FVector(0, 30, 10);
 	//Camera->FieldOfView = 40.0f;
 	OnZoomIn();
+	Rifle->Begin_Aiming();
 }
 
 void ACPlayer::OffAim()
@@ -164,6 +165,7 @@ void ACPlayer::OffAim()
 	SpringArm->SocketOffset = FVector(0, 60, 0);
 	//Camera->FieldOfView = 90.0f;
 	OnZoomOut();
+	Rifle->End_Aiming();
 }
 
 void ACPlayer::ChangeColor(FLinearColor InColor)

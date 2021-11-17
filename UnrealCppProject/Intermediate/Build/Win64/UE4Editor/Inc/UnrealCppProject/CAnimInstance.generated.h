@@ -63,6 +63,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UCAnimInstance); \
 #define UnrealCppProject_Source_UnrealCppProject_CAnimInstance_h_10_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__Speed() { return STRUCT_OFFSET(UCAnimInstance, Speed); } \
 	FORCEINLINE static uint32 __PPO__Direction() { return STRUCT_OFFSET(UCAnimInstance, Direction); } \
+	FORCEINLINE static uint32 __PPO__Pitch() { return STRUCT_OFFSET(UCAnimInstance, Pitch); } \
 	FORCEINLINE static uint32 __PPO__bAiming() { return STRUCT_OFFSET(UCAnimInstance, bAiming); } \
 	FORCEINLINE static uint32 __PPO__bEquipped() { return STRUCT_OFFSET(UCAnimInstance, bEquipped); }
 

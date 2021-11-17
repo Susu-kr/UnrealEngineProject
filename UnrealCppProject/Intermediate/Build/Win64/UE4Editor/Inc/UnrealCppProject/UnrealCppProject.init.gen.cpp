@@ -25,7 +25,7 @@ void EmptyLinkFunctionForGeneratedCodeUnrealCppProject_init() {}
 				SingletonFuncArray,
 				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0x3133DC45,
+				0x43C1B5FF,
 				0x4F136190,
 				METADATA_PARAMS(nullptr, 0)
 			};
