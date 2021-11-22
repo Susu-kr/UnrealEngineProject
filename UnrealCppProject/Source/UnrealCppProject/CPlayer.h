@@ -25,6 +25,8 @@ private:
 	UPROPERTY(VisibleDefaultsOnly)
 		class USpringArmComponent* SpringArm;
 
+	UPROPERTY(EditDefaultsOnly, Category = "Widgets")
+		TSubclassOf<class UCUserWidget_CrossHair> CrossHairClass;
 protected:
 	UPROPERTY(BlueprintReadOnly, VisibleDefaultsOnly)
 		class UCameraComponent* Camera;
@@ -41,6 +43,9 @@ private:
 
 	class UMaterialInstanceDynamic* BodyMaterial;
 	class UMaterialInstanceDynamic* LogoMaterial;
+
+	// CrossHair
+	class UCUserWidget_CrossHair* CrossHair;
 
 	// Add Rifle
 	class ACRifle* Rifle;

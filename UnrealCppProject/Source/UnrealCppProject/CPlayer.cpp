@@ -8,6 +8,7 @@
 #include "Materials/MaterialInstanceConstant.h"
 #include "Materials/MaterialInstanceDynamic.h"
 #include "CRifle.h"
+#include "Widgets/CUserWidget_CrossHair.h"
 
 // MaterialInstanceConstant'/Game/Material/M_UE4Man_Body_Inst.M_UE4Man_Body_Inst'
 // MaterialInstanceConstant'/Game/Material/M_UE4Man_ChestLogo_Inst.M_UE4Man_ChestLogo_Inst'
@@ -46,6 +47,8 @@ ACPlayer::ACPlayer()
 	SpringArm->bDoCollisionTest = false;
 	SpringArm->bUsePawnControlRotation = true;
 	SpringArm->SocketOffset = FVector(0, 60, 0);
+
+	CHelpers::GetClass<UCUserWidget_CrossHair>(&CrossHairClass, "WidgetBlueprint'/Game/Widgets/WB_CrossHair.WB_CrossHair_C'");
 }
 
 void ACPlayer::BeginPlay()
@@ -68,6 +71,12 @@ void ACPlayer::BeginPlay()
 
 	// #. Add Rifle
 	Rifle = ACRifle::Spawn(GetWorld(), this);
+
+	// #. CrossHair
+	CrossHair = CreateWidget<UCUserWidget_CrossHair, APlayerController>
+		(GetController<APlayerController>(), CrossHairClass);
+	CrossHair->AddToViewport();
+	CrossHair->SetVisibility(ESlateVisibility::Hidden);
 
 	OnRifle();
 }
@@ -151,6 +160,7 @@ void ACPlayer::OnAim()
 	//Camera->FieldOfView = 40.0f;
 	OnZoomIn();
 	Rifle->Begin_Aiming();
+	CrossHair->SetVisibility(ESlateVisibility::Visible);
 }
 
 void ACPlayer::OffAim()
@@ -166,6 +176,7 @@ void ACPlayer::OffAim()
 	//Camera->FieldOfView = 90.0f;
 	OnZoomOut();
 	Rifle->End_Aiming();
+	CrossHair->SetVisibility(ESlateVisibility::Hidden);
 }
 
 void ACPlayer::ChangeColor(FLinearColor InColor)
