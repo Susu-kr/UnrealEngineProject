@@ -15,7 +15,6 @@
 #include "D:/Github/GitHub/UnrealEngineProject/UnrealCppProject/Source/UnrealCppProject/Collision/CParticles.cpp"
 #include "D:/Github/GitHub/UnrealEngineProject/UnrealCppProject/Source/UnrealCppProject/Collision/CSpotLight.cpp"
 #include "D:/Github/GitHub/UnrealEngineProject/UnrealCppProject/Source/UnrealCppProject/Collision/CTrigger.cpp"
-#include "D:/Github/GitHub/UnrealEngineProject/UnrealCppProject/Source/UnrealCppProject/CRifle.cpp"
 #include "D:/Github/GitHub/UnrealEngineProject/UnrealCppProject/Source/UnrealCppProject/Debug/CDrawDebug.cpp"
 #include "D:/Github/GitHub/UnrealEngineProject/UnrealCppProject/Source/UnrealCppProject/Debug/CLogActor.cpp"
 #include "D:/Github/GitHub/UnrealEngineProject/UnrealCppProject/Source/UnrealCppProject/IRifle.cpp"
@@ -29,3 +28,4 @@
 #include "D:/Github/GitHub/UnrealEngineProject/UnrealCppProject/Source/UnrealCppProject/UnrealCppProject.cpp"
 #include "D:/Github/GitHub/UnrealEngineProject/UnrealCppProject/Source/UnrealCppProject/UnrealCppProjectGameModeBase.cpp"
 #include "D:/Github/GitHub/UnrealEngineProject/UnrealCppProject/Source/UnrealCppProject/Utilities/CLog.cpp"
+#include "D:/Github/GitHub/UnrealEngineProject/UnrealCppProject/Source/UnrealCppProject/Widgets/CUserWidget_CrossHair.cpp"

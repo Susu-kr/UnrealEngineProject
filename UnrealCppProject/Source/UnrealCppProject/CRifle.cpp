@@ -4,6 +4,7 @@
 #include "Components/SkeletalMeshComponent.h"
 #include "GameFramework/Character.h"
 #include "Animation/AnimMontage.h"
+#include "Engine/StaticMeshActor.h" // #. Shooting
 
 ACRifle * ACRifle::Spawn(UWorld * InWorld, ACharacter * InOwner)
 {
@@ -62,6 +63,62 @@ void ACRifle::End_Aiming()
 	bAiming = false;
 }
 
+void ACRifle::Begin_Fire()
+{
+	CheckFalse(bEquipped);
+	CheckTrue(bEquipping);
+	CheckFalse(bAiming);
+	CheckTrue(bFiring);
+
+	Firing();
+}
+
+void ACRifle::Firing()
+{
+	// #. Shooting
+	IIRifle* rifle = Cast<IIRifle>(OwnerCharacter);
+	CheckNull(rifle);
+
+	FVector start, end, direction;
+	rifle->GetLocationAndDirection(start, end, direction);
+
+	// #. Bullet Line
+	//DrawDebugLine(GetWorld(), start, end, FColor::Green, false, 3.0f);
+
+	// #. Ignore Actors
+	FCollisionQueryParams params;
+	params.AddIgnoredActor(this);
+	params.AddIgnoredActor(OwnerCharacter);
+
+	// #. Find Hit Component
+	FHitResult hitResult;
+	if (GetWorld()->LineTraceSingleByChannel(hitResult, start, end, ECollisionChannel::ECC_WorldDynamic, params))
+	{
+		AStaticMeshActor* staticMeshActor = Cast<AStaticMeshActor>(hitResult.GetActor());
+		if (!!staticMeshActor)
+		{
+			UStaticMeshComponent* meshComponent = Cast<UStaticMeshComponent>(staticMeshActor->GetRootComponent());
+			if (!!meshComponent)
+			{
+				// #. Components -> bSimulatePhysics is True
+				if (meshComponent->BodyInstance.bSimulatePhysics)
+				{
+					// #. Direction
+					direction = staticMeshActor->GetActorLocation() - OwnerCharacter->GetActorLocation();
+					direction.Normalize();
+					// #. Add Impulse
+					meshComponent->AddImpulseAtLocation(direction * meshComponent->GetMass() * 100, OwnerCharacter->GetActorLocation());
+					return;
+				}
+			}
+		}
+	}
+}
+
+void ACRifle::End_Fire()
+{
+}
+
 ACRifle::ACRifle()
 {
 	PrimaryActorTick.bCanEverTick = true;
@@ -92,5 +149,43 @@ void ACRifle::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	// #. Shooting
+	CheckFalse(bAiming);
+
+	IIRifle* rifle = Cast<IIRifle>(OwnerCharacter);
+	CheckNull(rifle);
+
+	FVector start, end, direction;
+	rifle->GetLocationAndDirection(start, end, direction);
+
+	// #. Bullet Line
+	//DrawDebugLine(GetWorld(), start, end, FColor::Green, false, 3.0f);
+
+	// #. Ignore Actors
+	FCollisionQueryParams params;
+	params.AddIgnoredActor(this);
+	params.AddIgnoredActor(OwnerCharacter);
+
+	// #. Find Hit Component
+	FHitResult hitResult;
+	if (GetWorld()->LineTraceSingleByChannel(hitResult, start, end, ECollisionChannel::ECC_WorldDynamic, params))
+	{
+		AStaticMeshActor* staticMeshActor = Cast<AStaticMeshActor>(hitResult.GetActor());
+		if (!!staticMeshActor)
+		{
+			UStaticMeshComponent* meshComponent = Cast<UStaticMeshComponent>(staticMeshActor->GetRootComponent());
+			if (!!meshComponent)
+			{
+				// #. Components -> bSimulatePhysics is True
+				if (meshComponent->BodyInstance.bSimulatePhysics) 
+				{
+					rifle->OnFocus();
+					return;
+				}
+			}
+		}
+	}
+
+	rifle->OffFocus();
 }
 

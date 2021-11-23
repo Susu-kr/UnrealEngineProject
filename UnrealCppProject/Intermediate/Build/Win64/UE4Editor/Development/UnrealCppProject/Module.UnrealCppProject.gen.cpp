@@ -25,5 +25,6 @@
 #include "D:/Github/GitHub/UnrealEngineProject/UnrealCppProject/Intermediate/Build/Win64/UE4Editor/Inc/UnrealCppProject/CSpotLight.gen.cpp"
 #include "D:/Github/GitHub/UnrealEngineProject/UnrealCppProject/Intermediate/Build/Win64/UE4Editor/Inc/UnrealCppProject/CSweepTrigger.gen.cpp"
 #include "D:/Github/GitHub/UnrealEngineProject/UnrealCppProject/Intermediate/Build/Win64/UE4Editor/Inc/UnrealCppProject/CTrigger.gen.cpp"
+#include "D:/Github/GitHub/UnrealEngineProject/UnrealCppProject/Intermediate/Build/Win64/UE4Editor/Inc/UnrealCppProject/CUserWidget_CrossHair.gen.cpp"
 #include "D:/Github/GitHub/UnrealEngineProject/UnrealCppProject/Intermediate/Build/Win64/UE4Editor/Inc/UnrealCppProject/IRifle.gen.cpp"
 #include "D:/Github/GitHub/UnrealEngineProject/UnrealCppProject/Intermediate/Build/Win64/UE4Editor/Inc/UnrealCppProject/UnrealCppProjectGameModeBase.gen.cpp"

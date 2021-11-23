@@ -30,3 +30,4 @@
 #include "D:/Github/GitHub/UnrealEngineProject/UnrealCppProject/Source/UnrealCppProject/UnrealCppProject.cpp"
 #include "D:/Github/GitHub/UnrealEngineProject/UnrealCppProject/Source/UnrealCppProject/UnrealCppProjectGameModeBase.cpp"
 #include "D:/Github/GitHub/UnrealEngineProject/UnrealCppProject/Source/UnrealCppProject/Utilities/CLog.cpp"
+#include "D:/Github/GitHub/UnrealEngineProject/UnrealCppProject/Source/UnrealCppProject/Widgets/CUserWidget_CrossHair.cpp"

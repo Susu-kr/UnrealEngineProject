@@ -87,6 +87,38 @@ void ACPlayer::Tick(float DeltaTime)
 
 }
 
+void ACPlayer::ChangeColor(FLinearColor InColor)
+{
+	BodyMaterial->SetVectorParameterValue("BodyColor", InColor);
+	LogoMaterial->SetVectorParameterValue("BodyColor", InColor);
+}
+
+void ACPlayer::GetLocationAndDirection(FVector & OutStart, FVector & OutEnd, FVector & OutDirection)
+{
+	// #. Fire Point Direction
+	OutDirection = Camera->GetForwardVector();
+
+	FTransform transform = Camera->GetComponentToWorld();
+	FVector cameraLocation = transform.GetLocation();
+
+	OutStart = cameraLocation + OutDirection;
+
+	// #. Bullet Radius
+	FVector conDirection = UKismetMathLibrary::RandomUnitVectorInEllipticalConeInDegrees(OutDirection, 0.2f, 0.3f);
+	conDirection *= 3000.0f;
+	OutEnd = cameraLocation + conDirection;
+}
+
+void ACPlayer::OnFocus()
+{
+	CrossHair->OnFocus();
+}
+
+void ACPlayer::OffFocus()
+{
+	CrossHair->OffFocus();
+}
+
 // Called to bind functionality to input
 void ACPlayer::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
@@ -101,6 +133,8 @@ void ACPlayer::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 	PlayerInputComponent->BindAction("Rifle", EInputEvent::IE_Pressed, this, &ACPlayer::OnRifle);
 	PlayerInputComponent->BindAction("Aim", EInputEvent::IE_Pressed, this, &ACPlayer::OnAim);
 	PlayerInputComponent->BindAction("Aim", EInputEvent::IE_Released, this, &ACPlayer::OffAim);
+	PlayerInputComponent->BindAction("Fire", EInputEvent::IE_Pressed, this, &ACPlayer::OnFire);
+	PlayerInputComponent->BindAction("Fire", EInputEvent::IE_Released, this, &ACPlayer::OffFire);
 }
 
 void ACPlayer::OnMoveForward(float Axis)
@@ -179,8 +213,12 @@ void ACPlayer::OffAim()
 	CrossHair->SetVisibility(ESlateVisibility::Hidden);
 }
 
-void ACPlayer::ChangeColor(FLinearColor InColor)
+void ACPlayer::OnFire()
 {
-	BodyMaterial->SetVectorParameterValue("BodyColor", InColor);
-	LogoMaterial->SetVectorParameterValue("BodyColor", InColor);
+	Rifle->Begin_Fire();
+}
+
+void ACPlayer::OffFire()
+{
+	Rifle->End_Fire();
 }

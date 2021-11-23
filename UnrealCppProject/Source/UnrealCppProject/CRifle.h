@@ -30,6 +30,7 @@ private:
 	bool bEquipped;
 	bool bEquipping;
 	bool bAiming;
+	bool bFiring;
 
 public:
 	static ACRifle* Spawn(class UWorld* InWorld, class ACharacter* InOwner);
@@ -38,16 +39,25 @@ public:
 	FORCEINLINE bool GetEquipping() { return bEquipping; }
 	FORCEINLINE bool GetAiming() { return bAiming; }
 
+	// #. Equip Rifle
 	void Equip();
 	void Begin_Equip();
 	void End_Equip();
 
+	// #. Unequip Rifle
 	void Unequip();
 	void Begin_Unequip();
 	void End_Unequip();
 
+	// #. Aiming
 	void Begin_Aiming();
 	void End_Aiming();
+
+	// #. Firing
+	void Begin_Fire();
+	void Firing();
+	void End_Fire();
+
 public:	
 	ACRifle();
 

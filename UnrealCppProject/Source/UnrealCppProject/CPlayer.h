@@ -21,17 +21,33 @@ public:
 
 	ACPlayer();
 
-private:
-	UPROPERTY(VisibleDefaultsOnly)
-		class USpringArmComponent* SpringArm;
+	UFUNCTION(BlueprintCallable)
+		void ChangeColor(FLinearColor InColor);
 
-	UPROPERTY(EditDefaultsOnly, Category = "Widgets")
-		TSubclassOf<class UCUserWidget_CrossHair> CrossHairClass;
+	// #. Add Rifle
+	FORCEINLINE class ACRifle* GetRifle() override { return Rifle; }
+
+	// #. Shooting
+	void GetLocationAndDirection(FVector& OutStart, FVector& OutEnd, FVector& OutDirection) override;
+	void OnFocus() override;
+	void OffFocus() override;
+
 protected:
 	UPROPERTY(BlueprintReadOnly, VisibleDefaultsOnly)
 		class UCameraComponent* Camera;
 
+	// #. Zoom in, Out
+	UFUNCTION(BlueprintImplementableEvent)
+		void OnZoomIn();
+
+	UFUNCTION(BlueprintImplementableEvent)
+		void OnZoomOut();
+
 private:
+	UPROPERTY(VisibleDefaultsOnly)
+		class USpringArmComponent* SpringArm;
+
+
 	void OnMoveForward(float Axis);
 	void OnMoveRight(float Axis);
 
@@ -44,10 +60,7 @@ private:
 	class UMaterialInstanceDynamic* BodyMaterial;
 	class UMaterialInstanceDynamic* LogoMaterial;
 
-	// CrossHair
-	class UCUserWidget_CrossHair* CrossHair;
-
-	// Add Rifle
+	// #. Add Rifle
 	class ACRifle* Rifle;
 	void OnRifle();
 
@@ -55,17 +68,13 @@ private:
 	void OnAim();
 	void OffAim();
 
-public:
-	UFUNCTION(BlueprintCallable)
-		void ChangeColor(FLinearColor InColor);
+	// #. CrossHair
+	UPROPERTY(EditDefaultsOnly, Category = "Widgets")
+		TSubclassOf<class UCUserWidget_CrossHair> CrossHairClass;
 
-protected:
-	UFUNCTION(BlueprintImplementableEvent)
-		void OnZoomIn();
+	class UCUserWidget_CrossHair* CrossHair;
 
-	UFUNCTION(BlueprintImplementableEvent)
-		void OnZoomOut();
-public:
-	// Add Rifle
-	FORCEINLINE class ACRifle* GetRifle() override { return Rifle; }
+	// #. Fire
+	void OnFire();
+	void OffFire();
 };
