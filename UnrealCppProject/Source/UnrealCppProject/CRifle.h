@@ -25,6 +25,9 @@ private:
 	UPROPERTY(VisibleDefaultsOnly, Category = "Rifle")
 		class UAnimMontage* UngrabMontage;
 
+	UPROPERTY(VisibleDefaultsOnly, Category = "Rifle")
+		class UAnimMontage* FireMontage;
+
 	class ACharacter* OwnerCharacter;
 
 	bool bEquipped;

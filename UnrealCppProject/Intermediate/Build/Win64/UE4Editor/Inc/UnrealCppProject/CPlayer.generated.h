@@ -74,7 +74,8 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ACPlayer); \
 #define UnrealCppProject_Source_UnrealCppProject_CPlayer_h_12_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__Camera() { return STRUCT_OFFSET(ACPlayer, Camera); } \
 	FORCEINLINE static uint32 __PPO__SpringArm() { return STRUCT_OFFSET(ACPlayer, SpringArm); } \
-	FORCEINLINE static uint32 __PPO__CrossHairClass() { return STRUCT_OFFSET(ACPlayer, CrossHairClass); }
+	FORCEINLINE static uint32 __PPO__CrossHairClass() { return STRUCT_OFFSET(ACPlayer, CrossHairClass); } \
+	FORCEINLINE static uint32 __PPO__CameraShakeClass() { return STRUCT_OFFSET(ACPlayer, CameraShakeClass); }
 
 
 #define UnrealCppProject_Source_UnrealCppProject_CPlayer_h_9_PROLOG \

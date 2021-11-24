@@ -54,7 +54,6 @@
 			"COverride.gen.cpp.obj",
 			"CParticles.gen.cpp.obj",
 			"CProperty.gen.cpp.obj",
-			"CRifle.gen.cpp.obj",
 			"CSpawnActor.gen.cpp.obj",
 			"CSpawnActor_Cone.gen.cpp.obj",
 			"CSpawnActor_Sphere.gen.cpp.obj",
@@ -66,6 +65,7 @@
 			"IRifle.gen.cpp.obj",
 			"UnrealCppProjectGameModeBase.gen.cpp.obj",
 			"CPlayer.gen.cpp.obj",
+			"CRifle.gen.cpp.obj",
 			"UnrealCppProject.init.gen.cpp.obj"
 		]
 	}

@@ -85,6 +85,14 @@ void ACRifle::Firing()
 	// #. Bullet Line
 	//DrawDebugLine(GetWorld(), start, end, FColor::Green, false, 3.0f);
 
+	// #. Play Animation Montage
+	OwnerCharacter->PlayAnimMontage(FireMontage);
+
+	// #. Play Camera Shake
+	ACPlayer* player = Cast<ACPlayer>(OwnerCharacter);
+	if (!!player)
+		player->PlayCameraShake();
+
 	// #. Ignore Actors
 	FCollisionQueryParams params;
 	params.AddIgnoredActor(this);
@@ -130,6 +138,7 @@ ACRifle::ACRifle()
 
 	CHelpers::GetAsset<UAnimMontage>(&GrabMontage, "AnimMontage'/Game/Character/Montage/Rifle_Grab_Montage.Rifle_Grab_Montage'");
 	CHelpers::GetAsset<UAnimMontage>(&UngrabMontage, "AnimMontage'/Game/Character/Montage/Rifle_Ungrab_Montage.Rifle_Ungrab_Montage'");
+	CHelpers::GetAsset<UAnimMontage>(&FireMontage, "AnimMontage'/Game/Character/Montage/Rifle_Fire_Montage.Rifle_Fire_Montage'");
 
 }
 

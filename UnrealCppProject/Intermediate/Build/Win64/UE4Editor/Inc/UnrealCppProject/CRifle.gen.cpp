@@ -34,6 +34,10 @@ void EmptyLinkFunctionForGeneratedCodeCRifle() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_FireMontage_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_FireMontage;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_UngrabMontage_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_UngrabMontage;
@@ -67,6 +71,13 @@ void EmptyLinkFunctionForGeneratedCodeCRifle() {}
 		{ "ModuleRelativePath", "CRifle.h" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACRifle_Statics::NewProp_FireMontage_MetaData[] = {
+		{ "Category", "Rifle" },
+		{ "ModuleRelativePath", "CRifle.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACRifle_Statics::NewProp_FireMontage = { "FireMontage", nullptr, (EPropertyFlags)0x0040000000030001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACRifle, FireMontage), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ACRifle_Statics::NewProp_FireMontage_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACRifle_Statics::NewProp_FireMontage_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACRifle_Statics::NewProp_UngrabMontage_MetaData[] = {
 		{ "Category", "Rifle" },
@@ -104,6 +115,7 @@ void EmptyLinkFunctionForGeneratedCodeCRifle() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACRifle_Statics::NewProp_Mesh = { "Mesh", nullptr, (EPropertyFlags)0x00400000000b0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACRifle, Mesh), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ACRifle_Statics::NewProp_Mesh_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACRifle_Statics::NewProp_Mesh_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ACRifle_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACRifle_Statics::NewProp_FireMontage,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACRifle_Statics::NewProp_UngrabMontage,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACRifle_Statics::NewProp_GrabMontage,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACRifle_Statics::NewProp_HolsterSocket,
@@ -137,7 +149,7 @@ void EmptyLinkFunctionForGeneratedCodeCRifle() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ACRifle, 409152666);
+	IMPLEMENT_CLASS(ACRifle, 2231602202);
 	template<> UNREALCPPPROJECT_API UClass* StaticClass<ACRifle>()
 	{
 		return ACRifle::StaticClass();

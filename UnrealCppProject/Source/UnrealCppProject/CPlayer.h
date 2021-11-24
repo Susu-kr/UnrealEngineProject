@@ -31,7 +31,8 @@ public:
 	void GetLocationAndDirection(FVector& OutStart, FVector& OutEnd, FVector& OutDirection) override;
 	void OnFocus() override;
 	void OffFocus() override;
-
+	void PlayCameraShake();
+	
 protected:
 	UPROPERTY(BlueprintReadOnly, VisibleDefaultsOnly)
 		class UCameraComponent* Camera;
@@ -77,4 +78,8 @@ private:
 	// #. Fire
 	void OnFire();
 	void OffFire();
+
+	UPROPERTY(EditDefaultsOnly, Category = "Camera")
+		TSubclassOf<class UCameraShake> CameraShakeClass;
+
 };

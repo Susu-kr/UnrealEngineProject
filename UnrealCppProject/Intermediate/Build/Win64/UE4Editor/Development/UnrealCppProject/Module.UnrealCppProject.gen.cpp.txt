@@ -57,9 +57,6 @@ d:\github\github\unrealengineproject\unrealcppproject\intermediate\build\win64\u
 D:/Github/GitHub/UnrealEngineProject/UnrealCppProject/Intermediate/Build/Win64/UE4Editor/Inc/UnrealCppProject/CProperty.gen.cpp
 D:\Github\GitHub\UnrealEngineProject\UnrealCppProject\Source\UnrealCppProject/Actor/CProperty.h
 d:\github\github\unrealengineproject\unrealcppproject\intermediate\build\win64\ue4editor\inc\unrealcppproject\CProperty.generated.h
-D:/Github/GitHub/UnrealEngineProject/UnrealCppProject/Intermediate/Build/Win64/UE4Editor/Inc/UnrealCppProject/CRifle.gen.cpp
-D:\Github\GitHub\UnrealEngineProject\UnrealCppProject\Source\UnrealCppProject/CRifle.h
-d:\github\github\unrealengineproject\unrealcppproject\intermediate\build\win64\ue4editor\inc\unrealcppproject\CRifle.generated.h
 D:/Github/GitHub/UnrealEngineProject/UnrealCppProject/Intermediate/Build/Win64/UE4Editor/Inc/UnrealCppProject/CSpawnActor.gen.cpp
 D:\Github\GitHub\UnrealEngineProject\UnrealCppProject\Source\UnrealCppProject/Actor/CSpawnActor.h
 d:\github\github\unrealengineproject\unrealcppproject\intermediate\build\win64\ue4editor\inc\unrealcppproject\CSpawnActor.generated.h

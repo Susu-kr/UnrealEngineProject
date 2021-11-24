@@ -9,6 +9,7 @@
 #include "Materials/MaterialInstanceDynamic.h"
 #include "CRifle.h"
 #include "Widgets/CUserWidget_CrossHair.h"
+#include "Camera/CameraShake.h"
 
 // MaterialInstanceConstant'/Game/Material/M_UE4Man_Body_Inst.M_UE4Man_Body_Inst'
 // MaterialInstanceConstant'/Game/Material/M_UE4Man_ChestLogo_Inst.M_UE4Man_ChestLogo_Inst'
@@ -49,6 +50,8 @@ ACPlayer::ACPlayer()
 	SpringArm->SocketOffset = FVector(0, 60, 0);
 
 	CHelpers::GetClass<UCUserWidget_CrossHair>(&CrossHairClass, "WidgetBlueprint'/Game/Widgets/WB_CrossHair.WB_CrossHair_C'");
+
+	CHelpers::GetClass<UCameraShake>(&CameraShakeClass, "Blueprint'/Game/BluePrint/BP_CameraShake.BP_CameraShake_C'");
 }
 
 void ACPlayer::BeginPlay()
@@ -117,6 +120,11 @@ void ACPlayer::OnFocus()
 void ACPlayer::OffFocus()
 {
 	CrossHair->OffFocus();
+}
+
+void ACPlayer::PlayCameraShake()
+{
+	GetController<APlayerController>()->PlayerCameraManager->PlayCameraShake(CameraShakeClass);
 }
 
 // Called to bind functionality to input
