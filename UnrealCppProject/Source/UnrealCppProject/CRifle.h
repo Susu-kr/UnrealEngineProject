@@ -28,6 +28,24 @@ private:
 	UPROPERTY(VisibleDefaultsOnly, Category = "Rifle")
 		class UAnimMontage* FireMontage;
 
+	UPROPERTY(VisibleDefaultsOnly, Category = "Rifle")
+		class UParticleSystem* FlashParticle;
+
+	UPROPERTY(VisibleDefaultsOnly, Category = "Rifle")
+		class UParticleSystem* EjectParticle;
+
+	UPROPERTY(VisibleDefaultsOnly, Category = "Rifle")
+		class USoundCue* FireSoundCue;
+
+	UPROPERTY(VisibleDefaultsOnly, Category = "Rifle")
+		TSubclassOf<class ACBullet> BulletClass;
+
+	UPROPERTY(VisibleDefaultsOnly, Category = "Rifle")
+		class UParticleSystem* ImpactParticle;
+
+	UPROPERTY(VisibleDefaultsOnly, Category = "Rifle")
+		class UMaterialInstanceConstant* DecalMaterial;
+
 	class ACharacter* OwnerCharacter;
 
 	bool bEquipped;

@@ -54,6 +54,15 @@ d:\github\github\unrealengineproject\unrealcppproject\intermediate\build\win64\u
 D:/Github/GitHub/UnrealEngineProject/UnrealCppProject/Intermediate/Build/Win64/UE4Editor/Inc/UnrealCppProject/CParticles.gen.cpp
 D:\Github\GitHub\UnrealEngineProject\UnrealCppProject\Source\UnrealCppProject/Collision/CParticles.h
 d:\github\github\unrealengineproject\unrealcppproject\intermediate\build\win64\ue4editor\inc\unrealcppproject\CParticles.generated.h
+D:/Github/GitHub/UnrealEngineProject/UnrealCppProject/Intermediate/Build/Win64/UE4Editor/Inc/UnrealCppProject/CPlayer.gen.cpp
+D:\Github\GitHub\UnrealEngineProject\UnrealCppProject\Source\UnrealCppProject/CPlayer.h
+D:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\GameFramework/Character.h
+D:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
+D:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
+D:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
+d:\github\github\unrealengineproject\unrealcppproject\source\unrealcppproject\IRifle.h
+d:\github\github\unrealengineproject\unrealcppproject\intermediate\build\win64\ue4editor\inc\unrealcppproject\IRifle.generated.h
+d:\github\github\unrealengineproject\unrealcppproject\intermediate\build\win64\ue4editor\inc\unrealcppproject\CPlayer.generated.h
 D:/Github/GitHub/UnrealEngineProject/UnrealCppProject/Intermediate/Build/Win64/UE4Editor/Inc/UnrealCppProject/CProperty.gen.cpp
 D:\Github\GitHub\UnrealEngineProject\UnrealCppProject\Source\UnrealCppProject/Actor/CProperty.h
 d:\github\github\unrealengineproject\unrealcppproject\intermediate\build\win64\ue4editor\inc\unrealcppproject\CProperty.generated.h
@@ -199,8 +208,6 @@ D:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\WidgetBl
 D:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\UserWidget.generated.h
 d:\github\github\unrealengineproject\unrealcppproject\intermediate\build\win64\ue4editor\inc\unrealcppproject\CUserWidget_CrossHair.generated.h
 D:/Github/GitHub/UnrealEngineProject/UnrealCppProject/Intermediate/Build/Win64/UE4Editor/Inc/UnrealCppProject/IRifle.gen.cpp
-D:\Github\GitHub\UnrealEngineProject\UnrealCppProject\Source\UnrealCppProject/IRifle.h
-d:\github\github\unrealengineproject\unrealcppproject\intermediate\build\win64\ue4editor\inc\unrealcppproject\IRifle.generated.h
 D:/Github/GitHub/UnrealEngineProject/UnrealCppProject/Intermediate/Build/Win64/UE4Editor/Inc/UnrealCppProject/UnrealCppProjectGameModeBase.gen.cpp
 D:\Github\GitHub\UnrealEngineProject\UnrealCppProject\Source\UnrealCppProject/UnrealCppProjectGameModeBase.h
 D:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h

@@ -16,6 +16,7 @@
 #include "D:/Github/GitHub/UnrealEngineProject/UnrealCppProject/Intermediate/Build/Win64/UE4Editor/Inc/UnrealCppProject/CMulticastTrigger.gen.cpp"
 #include "D:/Github/GitHub/UnrealEngineProject/UnrealCppProject/Intermediate/Build/Win64/UE4Editor/Inc/UnrealCppProject/COverride.gen.cpp"
 #include "D:/Github/GitHub/UnrealEngineProject/UnrealCppProject/Intermediate/Build/Win64/UE4Editor/Inc/UnrealCppProject/CParticles.gen.cpp"
+#include "D:/Github/GitHub/UnrealEngineProject/UnrealCppProject/Intermediate/Build/Win64/UE4Editor/Inc/UnrealCppProject/CPlayer.gen.cpp"
 #include "D:/Github/GitHub/UnrealEngineProject/UnrealCppProject/Intermediate/Build/Win64/UE4Editor/Inc/UnrealCppProject/CProperty.gen.cpp"
 #include "D:/Github/GitHub/UnrealEngineProject/UnrealCppProject/Intermediate/Build/Win64/UE4Editor/Inc/UnrealCppProject/CSpawnActor.gen.cpp"
 #include "D:/Github/GitHub/UnrealEngineProject/UnrealCppProject/Intermediate/Build/Win64/UE4Editor/Inc/UnrealCppProject/CSpawnActor_Cone.gen.cpp"

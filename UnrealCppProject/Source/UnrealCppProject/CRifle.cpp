@@ -5,6 +5,10 @@
 #include "GameFramework/Character.h"
 #include "Animation/AnimMontage.h"
 #include "Engine/StaticMeshActor.h" // #. Shooting
+#include "Particles/ParticleSystem.h"
+#include "Sound/SoundCue.h"
+#include "CBullet.h"
+#include "Materials/MaterialInstanceConstant.h"
 
 ACRifle * ACRifle::Spawn(UWorld * InWorld, ACharacter * InOwner)
 {
@@ -93,6 +97,19 @@ void ACRifle::Firing()
 	if (!!player)
 		player->PlayCameraShake();
 
+	// #. Flash Particle
+	UGameplayStatics::SpawnEmitterAttached(FlashParticle, Mesh, "MuzzleFlash", FVector::ZeroVector, FRotator::ZeroRotator, EAttachLocation::KeepRelativeOffset);
+	UGameplayStatics::SpawnEmitterAttached(EjectParticle, Mesh, "EjectBullet", FVector::ZeroVector, FRotator::ZeroRotator, EAttachLocation::KeepRelativeOffset);
+
+	// #. Fire Sound
+	FVector muzzleLocation = Mesh->GetSocketLocation("MuzzleFlash");
+	UGameplayStatics::PlaySoundAtLocation(GetWorld(), FireSoundCue, muzzleLocation);
+
+	// #. Bullet
+	if (!!BulletClass)
+		GetWorld()->SpawnActor<ACBullet>(BulletClass, muzzleLocation, direction.Rotation());
+
+
 	// #. Ignore Actors
 	FCollisionQueryParams params;
 	params.AddIgnoredActor(this);
@@ -100,6 +117,18 @@ void ACRifle::Firing()
 
 	// #. Find Hit Component
 	FHitResult hitResult;
+
+	// #. Impact Particle
+	if (GetWorld()->LineTraceSingleByChannel(hitResult, start, end, ECollisionChannel::ECC_Visibility, params))
+	{
+		FRotator rotator = hitResult.ImpactNormal.Rotation();
+		UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), ImpactParticle, hitResult.Location, rotator);
+
+		// #. Decal
+		UGameplayStatics::SpawnDecalAtLocation(GetWorld(), DecalMaterial, FVector(5), hitResult.Location, rotator);
+	}
+
+
 	if (GetWorld()->LineTraceSingleByChannel(hitResult, start, end, ECollisionChannel::ECC_WorldDynamic, params))
 	{
 		AStaticMeshActor* staticMeshActor = Cast<AStaticMeshActor>(hitResult.GetActor());
@@ -140,6 +169,15 @@ ACRifle::ACRifle()
 	CHelpers::GetAsset<UAnimMontage>(&UngrabMontage, "AnimMontage'/Game/Character/Montage/Rifle_Ungrab_Montage.Rifle_Ungrab_Montage'");
 	CHelpers::GetAsset<UAnimMontage>(&FireMontage, "AnimMontage'/Game/Character/Montage/Rifle_Fire_Montage.Rifle_Fire_Montage'");
 
+	CHelpers::GetAsset<UParticleSystem>(&FlashParticle, "ParticleSystem'/Game/Particles_Rifle/Particles/VFX_Muzzleflash.VFX_Muzzleflash'");
+	CHelpers::GetAsset<UParticleSystem>(&EjectParticle, "ParticleSystem'/Game/Particles_Rifle/Particles/VFX_Eject_bullet.VFX_Eject_bullet'");
+	CHelpers::GetAsset<UParticleSystem>(&ImpactParticle, "ParticleSystem'/Game/Particles_Rifle/Particles/VFX_Impact_Default.VFX_Impact_Default'");
+
+	CHelpers::GetAsset<USoundCue>(&FireSoundCue, "SoundCue'/Game/Sounds/S_RifleShoot_Cue.S_RifleShoot_Cue'");
+
+	CHelpers::GetClass<ACBullet>(&BulletClass, "Blueprint'/Game/BluePrint/BP_CBullet.BP_CBullet_C'");
+
+	CHelpers::GetAsset<UMaterialInstanceConstant>(&DecalMaterial, "MaterialInstanceConstant'/Game/Material/M_Decal_Inst.M_Decal_Inst'");
 }
 
 void ACRifle::BeginPlay()

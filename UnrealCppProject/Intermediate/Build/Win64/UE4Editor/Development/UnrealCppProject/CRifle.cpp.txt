@@ -30,3 +30,14 @@ D:\Github\GitHub\UnrealEngineProject\UnrealCppProject\Intermediate\Build\Win64\U
 D:\Github\GitHub\UnrealEngineProject\UnrealCppProject\Intermediate\Build\Win64\UE4Editor\Inc\UnrealCppProject\CPlayer.generated.h
 D:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Engine/StaticMeshActor.h
 D:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\StaticMeshActor.generated.h
+D:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Particles/ParticleSystem.h
+D:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Particles/ParticlePerfStats.h
+D:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ParticleSystem.generated.h
+D:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Sound/SoundCue.h
+D:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Sound/SoundNode.h
+D:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\SoundNode.generated.h
+D:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\SoundCue.generated.h
+d:\github\github\unrealengineproject\unrealcppproject\source\unrealcppproject\CBullet.h
+D:\Github\GitHub\UnrealEngineProject\UnrealCppProject\Intermediate\Build\Win64\UE4Editor\Inc\UnrealCppProject\CBullet.generated.h
+D:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Materials/MaterialInstanceConstant.h
+D:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\MaterialInstanceConstant.generated.h

@@ -15,6 +15,7 @@
 #include "D:/Github/GitHub/UnrealEngineProject/UnrealCppProject/Source/UnrealCppProject/Collision/CParticles.cpp"
 #include "D:/Github/GitHub/UnrealEngineProject/UnrealCppProject/Source/UnrealCppProject/Collision/CSpotLight.cpp"
 #include "D:/Github/GitHub/UnrealEngineProject/UnrealCppProject/Source/UnrealCppProject/Collision/CTrigger.cpp"
+#include "D:/Github/GitHub/UnrealEngineProject/UnrealCppProject/Source/UnrealCppProject/CPlayer.cpp"
 #include "D:/Github/GitHub/UnrealEngineProject/UnrealCppProject/Source/UnrealCppProject/Debug/CDrawDebug.cpp"
 #include "D:/Github/GitHub/UnrealEngineProject/UnrealCppProject/Source/UnrealCppProject/Debug/CLogActor.cpp"
 #include "D:/Github/GitHub/UnrealEngineProject/UnrealCppProject/Source/UnrealCppProject/IRifle.cpp"

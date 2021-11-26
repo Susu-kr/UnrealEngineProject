@@ -18,6 +18,7 @@
 			"CParticles.cpp.obj",
 			"CSpotLight.cpp.obj",
 			"CTrigger.cpp.obj",
+			"CPlayer.cpp.obj",
 			"CDrawDebug.cpp.obj",
 			"CLogActor.cpp.obj",
 			"IRifle.cpp.obj",
@@ -32,7 +33,7 @@
 			"UnrealCppProjectGameModeBase.cpp.obj",
 			"CLog.cpp.obj",
 			"CUserWidget_CrossHair.cpp.obj",
-			"CPlayer.cpp.obj",
+			"CBullet.cpp.obj",
 			"CRifle.cpp.obj"
 		],
 		"Module.UnrealCppProject.gen.cpp.obj": [
@@ -53,6 +54,7 @@
 			"CMulticastTrigger.gen.cpp.obj",
 			"COverride.gen.cpp.obj",
 			"CParticles.gen.cpp.obj",
+			"CPlayer.gen.cpp.obj",
 			"CProperty.gen.cpp.obj",
 			"CSpawnActor.gen.cpp.obj",
 			"CSpawnActor_Cone.gen.cpp.obj",
@@ -64,7 +66,7 @@
 			"CUserWidget_CrossHair.gen.cpp.obj",
 			"IRifle.gen.cpp.obj",
 			"UnrealCppProjectGameModeBase.gen.cpp.obj",
-			"CPlayer.gen.cpp.obj",
+			"CBullet.gen.cpp.obj",
 			"CRifle.gen.cpp.obj",
 			"UnrealCppProject.init.gen.cpp.obj"
 		]

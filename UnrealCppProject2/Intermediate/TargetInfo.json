@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "UnrealCppProject2",
+			"Path": "D:\\Github\\GitHub\\UnrealEngineProject\\UnrealCppProject2\\Source\\UnrealCppProject2.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "UnrealCppProject2Editor",
+			"Path": "D:\\Github\\GitHub\\UnrealEngineProject\\UnrealCppProject2\\Source\\UnrealCppProject2Editor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
