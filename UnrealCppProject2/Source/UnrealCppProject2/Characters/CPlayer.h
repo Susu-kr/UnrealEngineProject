@@ -19,4 +19,17 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+	UPROPERTY(VisibleDefaultsOnly)
+		class USpringArmComponent* SpringArm;
+
+	UPROPERTY(VisibleDefaultsOnly)
+		class UCameraComponent* Camera;
+
+private:
+	void OnMoveForward(float InAxis);
+	void OnMoveRight(float InAxis);
+	void OnHorizontalLook(float InAxis);
+	void OnVerticalLook(float InAxis);
+
 };

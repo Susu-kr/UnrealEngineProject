@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\UnrealCppProject2.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{CF735D35-7917-4111-BD56-0C96AAF4F8DD}</UniqueIdentifier>
+      <UniqueIdentifier>{4B0558DF-0FCE-479B-957D-890F11CF4D51}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\UnrealCppProject2.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{A7F9F23C-3B08-4316-A422-81A68E57CBB4}</UniqueIdentifier>
+      <UniqueIdentifier>{1E5CEB39-2C54-4EBE-95D0-1C8208640A33}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -24,8 +24,17 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\UnrealCppProject2">
-      <UniqueIdentifier>{E6F006C6-603F-4EC3-80D2-0781B9378F61}</UniqueIdentifier>
+      <UniqueIdentifier>{D2AF4FD0-DC7A-40CF-8C36-90D2FFD7543F}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\UnrealCppProject2\CGameMode.cpp">
+      <Filter>Source\UnrealCppProject2</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\UnrealCppProject2\CGameMode.h">
+      <Filter>Source\UnrealCppProject2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\UnrealCppProject2\Global.h">
+      <Filter>Source\UnrealCppProject2</Filter>
+    </ClInclude>
     <None Include="..\..\Source\UnrealCppProject2\UnrealCppProject2.Build.cs">
       <Filter>Source\UnrealCppProject2</Filter>
     </None>
@@ -36,7 +45,7 @@
       <Filter>Source\UnrealCppProject2</Filter>
     </ClInclude>
     <Filter Include="Source\UnrealCppProject2\Characters">
-      <UniqueIdentifier>{378BAF93-1E73-478D-B35B-D74083B23B34}</UniqueIdentifier>
+      <UniqueIdentifier>{C8726F8A-2234-4DCE-952F-33CB0F2090B4}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\UnrealCppProject2\Characters\CPlayer.cpp">
       <Filter>Source\UnrealCppProject2\Characters</Filter>
@@ -44,35 +53,20 @@
     <ClInclude Include="..\..\Source\UnrealCppProject2\Characters\CPlayer.h">
       <Filter>Source\UnrealCppProject2\Characters</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
     <Filter Include="Source\UnrealCppProject2\Utilities">
-      <UniqueIdentifier>{7e0e4096-e962-4a21-926f-e7cb8326e507}</UniqueIdentifier>
+      <UniqueIdentifier>{EE069F3A-DD63-4044-844B-3F920E836F9E}</UniqueIdentifier>
     </Filter>
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="..\..\Source\UnrealCppProject2\Utilities\CHelpers.h">
       <Filter>Source\UnrealCppProject2\Utilities</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\UnrealCppProject2\Utilities\CLog.cpp">
+      <Filter>Source\UnrealCppProject2\Utilities</Filter>
+    </ClCompile>
     <ClInclude Include="..\..\Source\UnrealCppProject2\Utilities\CLog.h">
       <Filter>Source\UnrealCppProject2\Utilities</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\UnrealCppProject2\Utilities\Defines.h">
       <Filter>Source\UnrealCppProject2\Utilities</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\UnrealCppProject2\Global.h">
-      <Filter>Source\UnrealCppProject2</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\UnrealCppProject2\CGameMode.h">
-      <Filter>Source\UnrealCppProject2</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\Source\UnrealCppProject2\Utilities\CLog.cpp">
-      <Filter>Source\UnrealCppProject2\Utilities</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\UnrealCppProject2\CGameMode.cpp">
-      <Filter>Source\UnrealCppProject2</Filter>
-    </ClCompile>
   </ItemGroup>
 </Project>

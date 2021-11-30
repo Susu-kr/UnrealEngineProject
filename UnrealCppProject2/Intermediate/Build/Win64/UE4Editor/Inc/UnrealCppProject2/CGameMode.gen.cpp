@@ -40,7 +40,6 @@ void EmptyLinkFunctionForGeneratedCodeCGameMode() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACGameMode_Statics::Class_MetaDataParams[] = {
-		{ "Comment", "/**\n * \n */" },
 		{ "HideCategories", "Info Rendering MovementReplication Replication Actor Input Movement Collision Rendering Utilities|Transformation" },
 		{ "IncludePath", "CGameMode.h" },
 		{ "ModuleRelativePath", "CGameMode.h" },
@@ -74,7 +73,7 @@ void EmptyLinkFunctionForGeneratedCodeCGameMode() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ACGameMode, 2700841974);
+	IMPLEMENT_CLASS(ACGameMode, 2609770988);
 	template<> UNREALCPPPROJECT2_API UClass* StaticClass<ACGameMode>()
 	{
 		return ACGameMode::StaticClass();

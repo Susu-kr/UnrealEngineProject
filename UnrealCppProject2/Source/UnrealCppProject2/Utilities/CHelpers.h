@@ -1,6 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Uobject/ConstructorHelpers.h"
+#include "Engine/World.h"
 
 class UNREALCPPPROJECT2_API CHelpers
 {

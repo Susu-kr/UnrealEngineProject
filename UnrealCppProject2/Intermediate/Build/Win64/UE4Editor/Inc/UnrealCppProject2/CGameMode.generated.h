@@ -13,10 +13,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define UNREALCPPPROJECT2_CGameMode_generated_h
 
-#define UnrealCppProject2_Source_UnrealCppProject2_CGameMode_h_15_SPARSE_DATA
-#define UnrealCppProject2_Source_UnrealCppProject2_CGameMode_h_15_RPC_WRAPPERS
-#define UnrealCppProject2_Source_UnrealCppProject2_CGameMode_h_15_RPC_WRAPPERS_NO_PURE_DECLS
-#define UnrealCppProject2_Source_UnrealCppProject2_CGameMode_h_15_INCLASS_NO_PURE_DECLS \
+#define UnrealCppProject2_Source_UnrealCppProject2_CGameMode_h_10_SPARSE_DATA
+#define UnrealCppProject2_Source_UnrealCppProject2_CGameMode_h_10_RPC_WRAPPERS
+#define UnrealCppProject2_Source_UnrealCppProject2_CGameMode_h_10_RPC_WRAPPERS_NO_PURE_DECLS
+#define UnrealCppProject2_Source_UnrealCppProject2_CGameMode_h_10_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesACGameMode(); \
 	friend struct Z_Construct_UClass_ACGameMode_Statics; \
@@ -25,7 +25,7 @@ public: \
 	DECLARE_SERIALIZER(ACGameMode)
 
 
-#define UnrealCppProject2_Source_UnrealCppProject2_CGameMode_h_15_INCLASS \
+#define UnrealCppProject2_Source_UnrealCppProject2_CGameMode_h_10_INCLASS \
 private: \
 	static void StaticRegisterNativesACGameMode(); \
 	friend struct Z_Construct_UClass_ACGameMode_Statics; \
@@ -34,9 +34,9 @@ public: \
 	DECLARE_SERIALIZER(ACGameMode)
 
 
-#define UnrealCppProject2_Source_UnrealCppProject2_CGameMode_h_15_STANDARD_CONSTRUCTORS \
+#define UnrealCppProject2_Source_UnrealCppProject2_CGameMode_h_10_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API ACGameMode(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+	NO_API ACGameMode(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ACGameMode) \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, ACGameMode); \
 DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ACGameMode); \
@@ -47,9 +47,7 @@ private: \
 public:
 
 
-#define UnrealCppProject2_Source_UnrealCppProject2_CGameMode_h_15_ENHANCED_CONSTRUCTORS \
-	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API ACGameMode(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
+#define UnrealCppProject2_Source_UnrealCppProject2_CGameMode_h_10_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ACGameMode(ACGameMode&&); \
@@ -57,31 +55,31 @@ private: \
 public: \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, ACGameMode); \
 DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ACGameMode); \
-	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ACGameMode)
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ACGameMode)
 
 
-#define UnrealCppProject2_Source_UnrealCppProject2_CGameMode_h_15_PRIVATE_PROPERTY_OFFSET
-#define UnrealCppProject2_Source_UnrealCppProject2_CGameMode_h_12_PROLOG
-#define UnrealCppProject2_Source_UnrealCppProject2_CGameMode_h_15_GENERATED_BODY_LEGACY \
+#define UnrealCppProject2_Source_UnrealCppProject2_CGameMode_h_10_PRIVATE_PROPERTY_OFFSET
+#define UnrealCppProject2_Source_UnrealCppProject2_CGameMode_h_7_PROLOG
+#define UnrealCppProject2_Source_UnrealCppProject2_CGameMode_h_10_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	UnrealCppProject2_Source_UnrealCppProject2_CGameMode_h_15_PRIVATE_PROPERTY_OFFSET \
-	UnrealCppProject2_Source_UnrealCppProject2_CGameMode_h_15_SPARSE_DATA \
-	UnrealCppProject2_Source_UnrealCppProject2_CGameMode_h_15_RPC_WRAPPERS \
-	UnrealCppProject2_Source_UnrealCppProject2_CGameMode_h_15_INCLASS \
-	UnrealCppProject2_Source_UnrealCppProject2_CGameMode_h_15_STANDARD_CONSTRUCTORS \
+	UnrealCppProject2_Source_UnrealCppProject2_CGameMode_h_10_PRIVATE_PROPERTY_OFFSET \
+	UnrealCppProject2_Source_UnrealCppProject2_CGameMode_h_10_SPARSE_DATA \
+	UnrealCppProject2_Source_UnrealCppProject2_CGameMode_h_10_RPC_WRAPPERS \
+	UnrealCppProject2_Source_UnrealCppProject2_CGameMode_h_10_INCLASS \
+	UnrealCppProject2_Source_UnrealCppProject2_CGameMode_h_10_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define UnrealCppProject2_Source_UnrealCppProject2_CGameMode_h_15_GENERATED_BODY \
+#define UnrealCppProject2_Source_UnrealCppProject2_CGameMode_h_10_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	UnrealCppProject2_Source_UnrealCppProject2_CGameMode_h_15_PRIVATE_PROPERTY_OFFSET \
-	UnrealCppProject2_Source_UnrealCppProject2_CGameMode_h_15_SPARSE_DATA \
-	UnrealCppProject2_Source_UnrealCppProject2_CGameMode_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	UnrealCppProject2_Source_UnrealCppProject2_CGameMode_h_15_INCLASS_NO_PURE_DECLS \
-	UnrealCppProject2_Source_UnrealCppProject2_CGameMode_h_15_ENHANCED_CONSTRUCTORS \
+	UnrealCppProject2_Source_UnrealCppProject2_CGameMode_h_10_PRIVATE_PROPERTY_OFFSET \
+	UnrealCppProject2_Source_UnrealCppProject2_CGameMode_h_10_SPARSE_DATA \
+	UnrealCppProject2_Source_UnrealCppProject2_CGameMode_h_10_RPC_WRAPPERS_NO_PURE_DECLS \
+	UnrealCppProject2_Source_UnrealCppProject2_CGameMode_h_10_INCLASS_NO_PURE_DECLS \
+	UnrealCppProject2_Source_UnrealCppProject2_CGameMode_h_10_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
