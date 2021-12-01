@@ -58,7 +58,12 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ACPlayer); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ACPlayer)
 
 
-#define UnrealCppProject2_Source_UnrealCppProject2_Characters_CPlayer_h_10_PRIVATE_PROPERTY_OFFSET
+#define UnrealCppProject2_Source_UnrealCppProject2_Characters_CPlayer_h_10_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__SpringArm() { return STRUCT_OFFSET(ACPlayer, SpringArm); } \
+	FORCEINLINE static uint32 __PPO__Camera() { return STRUCT_OFFSET(ACPlayer, Camera); } \
+	FORCEINLINE static uint32 __PPO__Option() { return STRUCT_OFFSET(ACPlayer, Option); }
+
+
 #define UnrealCppProject2_Source_UnrealCppProject2_Characters_CPlayer_h_7_PROLOG
 #define UnrealCppProject2_Source_UnrealCppProject2_Characters_CPlayer_h_10_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

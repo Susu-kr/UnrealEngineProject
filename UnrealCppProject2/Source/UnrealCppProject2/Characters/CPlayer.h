@@ -20,11 +20,15 @@ public:
 
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+private:
 	UPROPERTY(VisibleDefaultsOnly)
 		class USpringArmComponent* SpringArm;
 
 	UPROPERTY(VisibleDefaultsOnly)
 		class UCameraComponent* Camera;
+
+	UPROPERTY(VisibleDefaultsOnly)
+		class UCOptionComponent* Option;
 
 private:
 	void OnMoveForward(float InAxis);
