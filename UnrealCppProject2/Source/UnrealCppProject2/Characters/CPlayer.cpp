@@ -6,6 +6,9 @@
 #include "Components/SkeletalMeshComponent.h"
 #include "Components/InputComponent.h"
 #include "Components/COptionComponent.h"
+#include "Components/CStatusComponent.h"
+#include "Components/CStateComponent.h"
+#include "Components/CMontagesComponent.h"
 
 ACPlayer::ACPlayer()
 {
@@ -14,6 +17,9 @@ ACPlayer::ACPlayer()
 	CHelpers::CreateComponent<USpringArmComponent>(this, &SpringArm, "SpringArm", GetMesh());
 	CHelpers::CreateComponent<UCameraComponent>(this, &Camera, "Camera", SpringArm);
 	CHelpers::CreateActorComponent<UCOptionComponent>(this, &Option, "Option");
+	CHelpers::CreateActorComponent<UCStatusComponent>(this, &Status, "Status");
+	CHelpers::CreateActorComponent<UCStateComponent>(this, &State, "State");
+	CHelpers::CreateActorComponent<UCMontagesComponent>(this, &Montages, "Montages");
 
 	bUseControllerRotationYaw = false;
 
@@ -28,7 +34,7 @@ ACPlayer::ACPlayer()
 	CHelpers::GetClass<UAnimInstance>(&animInstance, "AnimBlueprint'/Game/Player/ABP_CPlayer.ABP_CPlayer_C'");
 	GetMesh()->SetAnimInstanceClass(animInstance);
 
-	SpringArm->TargetArmLength = 200.0f;
+	SpringArm->TargetArmLength = 400.0f;
 	SpringArm->bDoCollisionTest = false;
 	SpringArm->bUsePawnControlRotation = true;
 	SpringArm->bEnableCameraLag = true;
@@ -41,6 +47,7 @@ void ACPlayer::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	State->OnStateTypeChanged.AddDynamic(this, &ACPlayer::OnStateTypeChanged);
 }
 
 void ACPlayer::Tick(float DeltaTime)
@@ -58,10 +65,25 @@ void ACPlayer::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 	PlayerInputComponent->BindAxis("HorizontalLook", this, &ACPlayer::OnHorizontalLook);
 	PlayerInputComponent->BindAxis("VerticalLook", this, &ACPlayer::OnVerticalLook);
 
+	PlayerInputComponent->BindAction("Avoid", EInputEvent::IE_Pressed, this, &ACPlayer::OnAvoid);
+}
+
+void ACPlayer::OnStateTypeChanged(EStateType InPrevType, EStateType InNewType)
+{
+	switch (InNewType)
+	{
+	case EStateType::Roll:
+		Begin_Roll();
+		break;
+	case EStateType::Backstep:
+		Begin_Backstep();
+		break;
+	}
 }
 
 void ACPlayer::OnMoveForward(float InAxis)
 {
+	CheckFalse(Status->CanMove());
 	FRotator rotator = FRotator(0, GetControlRotation().Yaw, 0);
 	FVector direction = FQuat(rotator).GetForwardVector();
 	AddMovementInput(direction, InAxis);
@@ -69,6 +91,7 @@ void ACPlayer::OnMoveForward(float InAxis)
 
 void ACPlayer::OnMoveRight(float InAxis)
 {
+	CheckFalse(Status->CanMove());
 	FRotator rotator = FRotator(0, GetControlRotation().Yaw, 0);
 	FVector direction = FQuat(rotator).GetRightVector();
 	AddMovementInput(direction, InAxis);
@@ -84,5 +107,51 @@ void ACPlayer::OnVerticalLook(float InAxis)
 {
 	float rate = Option->GetVerticalLookRate();
 	AddControllerPitchInput(InAxis * rate * GetWorld()->GetDeltaSeconds());
+}
+
+void ACPlayer::OnAvoid()
+{
+	CheckFalse(Status->CanMove());
+	CheckFalse(State->IsIdleMode());
+
+	if (InputComponent->GetAxisValue("MoveForward") < 0.0f)
+	{
+		State->SetBackstepMode();
+		return;
+	}
+
+	State->SetRollMode();
+}
+
+void ACPlayer::Begin_Roll()
+{
+	bUseControllerRotationYaw = false;
+	GetCharacterMovement()->bOrientRotationToMovement = true;
+
+	FVector start = GetActorLocation();
+	FVector dest = start + GetVelocity().GetSafeNormal2D();
+	SetActorRotation(UKismetMathLibrary::FindLookAtRotation(start, dest));
+
+	Montages->PlayRoll();
+}
+
+void ACPlayer::Begin_Backstep()
+{
+	bUseControllerRotationYaw = true;
+	GetCharacterMovement()->bOrientRotationToMovement = false;
+
+	Montages->PlayBackstep();
+}
+
+void ACPlayer::End_Roll()
+{
+	State->SetIdleMode();
+}
+
+void ACPlayer::End_Backstep()
+{
+	bUseControllerRotationYaw = false;
+	GetCharacterMovement()->bOrientRotationToMovement = true;
+	State->SetIdleMode();
 }
 
