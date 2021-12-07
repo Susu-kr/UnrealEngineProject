@@ -76,7 +76,7 @@ void EmptyLinkFunctionForGeneratedCodeCStateComponent() {}
 		return EStateType_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EStateType(EStateType_StaticEnum, TEXT("/Script/UnrealCppProject2"), TEXT("EStateType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_UnrealCppProject2_EStateType_Hash() { return 2178977504U; }
+	uint32 Get_Z_Construct_UEnum_UnrealCppProject2_EStateType_Hash() { return 1693215261U; }
 	UEnum* Z_Construct_UEnum_UnrealCppProject2_EStateType()
 	{
 #if WITH_HOT_RELOAD
@@ -91,16 +91,20 @@ void EmptyLinkFunctionForGeneratedCodeCStateComponent() {}
 				{ "EStateType::Idle", (int64)EStateType::Idle },
 				{ "EStateType::Roll", (int64)EStateType::Roll },
 				{ "EStateType::Backstep", (int64)EStateType::Backstep },
+				{ "EStateType::Equip", (int64)EStateType::Equip },
+				{ "EStateType::Unequip", (int64)EStateType::Unequip },
 				{ "EStateType::Max", (int64)EStateType::Max },
 			};
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
 				{ "Backstep.Name", "EStateType::Backstep" },
 				{ "BlueprintType", "true" },
+				{ "Equip.Name", "EStateType::Equip" },
 				{ "Idle.Name", "EStateType::Idle" },
 				{ "Max.Name", "EStateType::Max" },
 				{ "ModuleRelativePath", "Components/CStateComponent.h" },
 				{ "Roll.Name", "EStateType::Roll" },
+				{ "Unequip.Name", "EStateType::Unequip" },
 			};
 #endif
 			static const UE4CodeGen_Private::FEnumParams EnumParams = {
@@ -118,6 +122,20 @@ void EmptyLinkFunctionForGeneratedCodeCStateComponent() {}
 			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
 		}
 		return ReturnEnum;
+	}
+	DEFINE_FUNCTION(UCStateComponent::execIsUnequipMode)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->IsUnequipMode();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UCStateComponent::execIsEquipMode)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->IsEquipMode();
+		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(UCStateComponent::execIsBackstepMode)
 	{
@@ -145,8 +163,10 @@ void EmptyLinkFunctionForGeneratedCodeCStateComponent() {}
 		UClass* Class = UCStateComponent::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
 			{ "IsBackstepMode", &UCStateComponent::execIsBackstepMode },
+			{ "IsEquipMode", &UCStateComponent::execIsEquipMode },
 			{ "IsIdleMode", &UCStateComponent::execIsIdleMode },
 			{ "IsRollMode", &UCStateComponent::execIsRollMode },
+			{ "IsUnequipMode", &UCStateComponent::execIsUnequipMode },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
@@ -184,6 +204,43 @@ void EmptyLinkFunctionForGeneratedCodeCStateComponent() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCStateComponent_IsBackstepMode_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UCStateComponent_IsEquipMode_Statics
+	{
+		struct CStateComponent_eventIsEquipMode_Parms
+		{
+			bool ReturnValue;
+		};
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_UCStateComponent_IsEquipMode_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((CStateComponent_eventIsEquipMode_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UCStateComponent_IsEquipMode_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(CStateComponent_eventIsEquipMode_Parms), &Z_Construct_UFunction_UCStateComponent_IsEquipMode_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UCStateComponent_IsEquipMode_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UCStateComponent_IsEquipMode_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UCStateComponent_IsEquipMode_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Components/CStateComponent.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCStateComponent_IsEquipMode_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCStateComponent, nullptr, "IsEquipMode", nullptr, nullptr, sizeof(CStateComponent_eventIsEquipMode_Parms), Z_Construct_UFunction_UCStateComponent_IsEquipMode_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UCStateComponent_IsEquipMode_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UCStateComponent_IsEquipMode_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UCStateComponent_IsEquipMode_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UCStateComponent_IsEquipMode()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCStateComponent_IsEquipMode_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -261,6 +318,43 @@ void EmptyLinkFunctionForGeneratedCodeCStateComponent() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_UCStateComponent_IsUnequipMode_Statics
+	{
+		struct CStateComponent_eventIsUnequipMode_Parms
+		{
+			bool ReturnValue;
+		};
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_UCStateComponent_IsUnequipMode_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((CStateComponent_eventIsUnequipMode_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UCStateComponent_IsUnequipMode_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(CStateComponent_eventIsUnequipMode_Parms), &Z_Construct_UFunction_UCStateComponent_IsUnequipMode_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UCStateComponent_IsUnequipMode_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UCStateComponent_IsUnequipMode_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UCStateComponent_IsUnequipMode_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Components/CStateComponent.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCStateComponent_IsUnequipMode_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCStateComponent, nullptr, "IsUnequipMode", nullptr, nullptr, sizeof(CStateComponent_eventIsUnequipMode_Parms), Z_Construct_UFunction_UCStateComponent_IsUnequipMode_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UCStateComponent_IsUnequipMode_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UCStateComponent_IsUnequipMode_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UCStateComponent_IsUnequipMode_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UCStateComponent_IsUnequipMode()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCStateComponent_IsUnequipMode_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	UClass* Z_Construct_UClass_UCStateComponent_NoRegister()
 	{
 		return UCStateComponent::StaticClass();
@@ -286,8 +380,10 @@ void EmptyLinkFunctionForGeneratedCodeCStateComponent() {}
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_UCStateComponent_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_UCStateComponent_IsBackstepMode, "IsBackstepMode" }, // 1794936434
+		{ &Z_Construct_UFunction_UCStateComponent_IsEquipMode, "IsEquipMode" }, // 3398613677
 		{ &Z_Construct_UFunction_UCStateComponent_IsIdleMode, "IsIdleMode" }, // 194709872
 		{ &Z_Construct_UFunction_UCStateComponent_IsRollMode, "IsRollMode" }, // 3443837502
+		{ &Z_Construct_UFunction_UCStateComponent_IsUnequipMode, "IsUnequipMode" }, // 309581477
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCStateComponent_Statics::Class_MetaDataParams[] = {
@@ -333,7 +429,7 @@ void EmptyLinkFunctionForGeneratedCodeCStateComponent() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UCStateComponent, 385251570);
+	IMPLEMENT_CLASS(UCStateComponent, 2681574330);
 	template<> UNREALCPPPROJECT2_API UClass* StaticClass<UCStateComponent>()
 	{
 		return UCStateComponent::StaticClass();

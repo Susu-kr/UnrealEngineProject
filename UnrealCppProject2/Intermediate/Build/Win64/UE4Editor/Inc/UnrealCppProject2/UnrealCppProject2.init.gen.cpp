@@ -12,6 +12,7 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeUnrealCppProject2_init() {}
 	UNREALCPPPROJECT2_API UFunction* Z_Construct_UDelegateFunction_UnrealCppProject2_StateTypeChanged__DelegateSignature();
+	UNREALCPPPROJECT2_API UFunction* Z_Construct_UDelegateFunction_UnrealCppProject2_ActionTypeChanged__DelegateSignature();
 	UPackage* Z_Construct_UPackage__Script_UnrealCppProject2()
 	{
 		static UPackage* ReturnPackage = nullptr;
@@ -19,14 +20,15 @@ void EmptyLinkFunctionForGeneratedCodeUnrealCppProject2_init() {}
 		{
 			static UObject* (*const SingletonFuncArray[])() = {
 				(UObject* (*)())Z_Construct_UDelegateFunction_UnrealCppProject2_StateTypeChanged__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_UnrealCppProject2_ActionTypeChanged__DelegateSignature,
 			};
 			static const UE4CodeGen_Private::FPackageParams PackageParams = {
 				"/Script/UnrealCppProject2",
 				SingletonFuncArray,
 				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0xFDB56DE8,
-				0x31D21269,
+				0xA40B40E8,
+				0xF26AB144,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);
