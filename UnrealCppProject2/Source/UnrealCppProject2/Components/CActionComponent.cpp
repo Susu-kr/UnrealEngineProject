@@ -1,5 +1,8 @@
 #include "CActionComponent.h"
 #include "Global.h"
+#include "GameFramework/Character.h"
+#include "Actions/CActionData.h"
+#include "Actions/CEquipment.h"
 
 UCActionComponent::UCActionComponent()
 {
@@ -10,6 +13,12 @@ void UCActionComponent::BeginPlay()
 {
 	Super::BeginPlay();
 
+	ACharacter* character = Cast<ACharacter>(GetOwner());
+	for (int32 i = 0; i < (int32)EActionType::Max; i++)
+	{
+		if (!!Datas[i])
+			Datas[i]->BeginPlay(character);
+	}
 }
 
 void UCActionComponent::ChangeType(EActionType InNewType)
@@ -30,21 +39,34 @@ void UCActionComponent::SetMode(EActionType InType)
 	else if (IsUnarmedMode() == false)
 	{
 		// #. Unequip Weapon
-
+		ACEquipment* equipment = Datas[(int32)InType]->GetEquipment();
+		CheckNull(equipment);
+		equipment->Unequip();
 	}
 
 	// #. Equip Weapon
-	
+	ACEquipment* equipment = Datas[(int32)InType]->GetEquipment();
+	CheckNull(equipment);
+	equipment->Equip();
+
 	ChangeType(InType);
 }
 
 void UCActionComponent::SetUnarmedMode()
 {
-	SetMode(EActionType::Unarmed);
+	if (!!Datas[(int32)Type])
+	{
+		ACEquipment* equipment = Datas[(int32)Type]->GetEquipment();
+		CheckNull(equipment);
+
+		equipment->Unequip();
+	}
+	ChangeType(EActionType::Unarmed);
 }
 
 void UCActionComponent::SetOneHandMode()
 {
+
 	SetMode(EActionType::OneHand);
 }
 

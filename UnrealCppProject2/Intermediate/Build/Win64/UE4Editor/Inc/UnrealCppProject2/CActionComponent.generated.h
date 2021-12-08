@@ -9,6 +9,7 @@
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 enum class EActionType : uint8;
+class UCActionData;
 #ifdef UNREALCPPPROJECT2_CActionComponent_generated_h
 #error "CActionComponent.generated.h already included, missing '#pragma once' in CActionComponent.h"
 #endif
@@ -32,6 +33,7 @@ static inline void FActionTypeChanged_DelegateWrapper(const FMulticastScriptDele
 #define UnrealCppProject2_Source_UnrealCppProject2_Components_CActionComponent_h_21_SPARSE_DATA
 #define UnrealCppProject2_Source_UnrealCppProject2_Components_CActionComponent_h_21_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execGetCurrent); \
 	DECLARE_FUNCTION(execIsTwoHandMode); \
 	DECLARE_FUNCTION(execIsOneHandMode); \
 	DECLARE_FUNCTION(execIsUnarmedMode);
@@ -39,6 +41,7 @@ static inline void FActionTypeChanged_DelegateWrapper(const FMulticastScriptDele
 
 #define UnrealCppProject2_Source_UnrealCppProject2_Components_CActionComponent_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execGetCurrent); \
 	DECLARE_FUNCTION(execIsTwoHandMode); \
 	DECLARE_FUNCTION(execIsOneHandMode); \
 	DECLARE_FUNCTION(execIsUnarmedMode);
@@ -86,7 +89,10 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UCActionComponent); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(UCActionComponent)
 
 
-#define UnrealCppProject2_Source_UnrealCppProject2_Components_CActionComponent_h_21_PRIVATE_PROPERTY_OFFSET
+#define UnrealCppProject2_Source_UnrealCppProject2_Components_CActionComponent_h_21_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__Datas() { return STRUCT_OFFSET(UCActionComponent, Datas); }
+
+
 #define UnrealCppProject2_Source_UnrealCppProject2_Components_CActionComponent_h_18_PROLOG
 #define UnrealCppProject2_Source_UnrealCppProject2_Components_CActionComponent_h_21_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

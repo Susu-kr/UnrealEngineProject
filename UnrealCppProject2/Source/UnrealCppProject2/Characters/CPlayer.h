@@ -38,6 +38,9 @@ private:
 		class UCStateComponent* State;
 
 	UPROPERTY(VisibleDefaultsOnly)
+		class UCActionComponent* Action;
+
+	UPROPERTY(VisibleDefaultsOnly)
 		class UCMontagesComponent* Montages;
 
 private:
@@ -49,6 +52,7 @@ private:
 	void OnHorizontalLook(float InAxis);
 	void OnVerticalLook(float InAxis);
 	void OnAvoid();
+	void OnOneHand();
 
 	void Begin_Roll();
 	void Begin_Backstep();

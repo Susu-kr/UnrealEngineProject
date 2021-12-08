@@ -36,4 +36,7 @@ public:
 
 	UPROPERTY(BlueprintReadOnly, EditAnywhere)
 		FEquipmentData EquipmentData;
+
+public:
+	FORCEINLINE class ACEquipment* GetEquipment() { return Equipment; }
 };

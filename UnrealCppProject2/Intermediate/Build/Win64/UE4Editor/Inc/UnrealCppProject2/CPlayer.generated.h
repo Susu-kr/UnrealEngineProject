@@ -73,6 +73,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ACPlayer); \
 	FORCEINLINE static uint32 __PPO__Option() { return STRUCT_OFFSET(ACPlayer, Option); } \
 	FORCEINLINE static uint32 __PPO__Status() { return STRUCT_OFFSET(ACPlayer, Status); } \
 	FORCEINLINE static uint32 __PPO__State() { return STRUCT_OFFSET(ACPlayer, State); } \
+	FORCEINLINE static uint32 __PPO__Action() { return STRUCT_OFFSET(ACPlayer, Action); } \
 	FORCEINLINE static uint32 __PPO__Montages() { return STRUCT_OFFSET(ACPlayer, Montages); }
 
 
