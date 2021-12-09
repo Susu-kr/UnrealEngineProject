@@ -26,11 +26,15 @@ class UNREALCPPPROJECT2_API UCActionData : public UDataAsset
 	GENERATED_BODY()
 	
 private:
+	class ACAttachment* Attachment;
 	class ACEquipment* Equipment;
 public:
 	void BeginPlay(class ACharacter* InOwnerCharacter);
 	
 public:
+	UPROPERTY(BlueprintReadOnly, EditAnywhere)
+		TSubclassOf<class ACAttachment> AttachmentClass;
+
 	UPROPERTY(BlueprintReadOnly, EditAnywhere)
 		TSubclassOf<class ACEquipment> EquipmentClass;
 

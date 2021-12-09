@@ -21,6 +21,7 @@ void EmptyLinkFunctionForGeneratedCodeCActionData() {}
 	ENGINE_API UClass* Z_Construct_UClass_UDataAsset();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	UNREALCPPPROJECT2_API UClass* Z_Construct_UClass_ACEquipment_NoRegister();
+	UNREALCPPPROJECT2_API UClass* Z_Construct_UClass_ACAttachment_NoRegister();
 // End Cross Module References
 class UScriptStruct* FEquipmentData::StaticStruct()
 {
@@ -168,6 +169,10 @@ static struct FScriptStruct_UnrealCppProject2_StaticRegisterNativesFEquipmentDat
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_EquipmentClass_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FClassPropertyParams NewProp_EquipmentClass;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AttachmentClass_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_AttachmentClass;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -196,9 +201,17 @@ static struct FScriptStruct_UnrealCppProject2_StaticRegisterNativesFEquipmentDat
 	};
 #endif
 	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_UCActionData_Statics::NewProp_EquipmentClass = { "EquipmentClass", nullptr, (EPropertyFlags)0x0014000000000015, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UCActionData, EquipmentClass), Z_Construct_UClass_ACEquipment_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_UCActionData_Statics::NewProp_EquipmentClass_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UCActionData_Statics::NewProp_EquipmentClass_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCActionData_Statics::NewProp_AttachmentClass_MetaData[] = {
+		{ "Category", "CActionData" },
+		{ "ModuleRelativePath", "Actions/CActionData.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_UCActionData_Statics::NewProp_AttachmentClass = { "AttachmentClass", nullptr, (EPropertyFlags)0x0014000000000015, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UCActionData, AttachmentClass), Z_Construct_UClass_ACAttachment_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_UCActionData_Statics::NewProp_AttachmentClass_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UCActionData_Statics::NewProp_AttachmentClass_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UCActionData_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCActionData_Statics::NewProp_EquipmentData,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCActionData_Statics::NewProp_EquipmentClass,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCActionData_Statics::NewProp_AttachmentClass,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UCActionData_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UCActionData>::IsAbstract,
@@ -227,7 +240,7 @@ static struct FScriptStruct_UnrealCppProject2_StaticRegisterNativesFEquipmentDat
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UCActionData, 1261671353);
+	IMPLEMENT_CLASS(UCActionData, 1785231762);
 	template<> UNREALCPPPROJECT2_API UClass* StaticClass<UCActionData>()
 	{
 		return UCActionData::StaticClass();
