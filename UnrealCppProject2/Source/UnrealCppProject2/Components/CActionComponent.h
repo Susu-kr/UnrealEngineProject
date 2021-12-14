@@ -50,6 +50,8 @@ public:
 	void SetOneHandMode();
 	void SetTwoHandMode();
 
+	void DoAction();
+
 private:
 	UPROPERTY(EditDefaultsOnly, Category = "Weapons")
 		class UCActionData* Datas[(int32)EActionType::Max];

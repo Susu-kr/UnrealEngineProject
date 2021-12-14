@@ -13,6 +13,14 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define UNREALCPPPROJECT2_CActionData_generated_h
 
+#define UnrealCppProject2_Source_UnrealCppProject2_Actions_CActionData_h_26_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FDoActionData_Statics; \
+	UNREALCPPPROJECT2_API static class UScriptStruct* StaticStruct(); \
+	typedef FEquipmentData Super;
+
+
+template<> UNREALCPPPROJECT2_API UScriptStruct* StaticStruct<struct FDoActionData>();
+
 #define UnrealCppProject2_Source_UnrealCppProject2_Actions_CActionData_h_10_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FEquipmentData_Statics; \
 	UNREALCPPPROJECT2_API static class UScriptStruct* StaticStruct();
@@ -20,10 +28,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 template<> UNREALCPPPROJECT2_API UScriptStruct* StaticStruct<struct FEquipmentData>();
 
-#define UnrealCppProject2_Source_UnrealCppProject2_Actions_CActionData_h_26_SPARSE_DATA
-#define UnrealCppProject2_Source_UnrealCppProject2_Actions_CActionData_h_26_RPC_WRAPPERS
-#define UnrealCppProject2_Source_UnrealCppProject2_Actions_CActionData_h_26_RPC_WRAPPERS_NO_PURE_DECLS
-#define UnrealCppProject2_Source_UnrealCppProject2_Actions_CActionData_h_26_INCLASS_NO_PURE_DECLS \
+#define UnrealCppProject2_Source_UnrealCppProject2_Actions_CActionData_h_44_SPARSE_DATA
+#define UnrealCppProject2_Source_UnrealCppProject2_Actions_CActionData_h_44_RPC_WRAPPERS
+#define UnrealCppProject2_Source_UnrealCppProject2_Actions_CActionData_h_44_RPC_WRAPPERS_NO_PURE_DECLS
+#define UnrealCppProject2_Source_UnrealCppProject2_Actions_CActionData_h_44_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUCActionData(); \
 	friend struct Z_Construct_UClass_UCActionData_Statics; \
@@ -32,7 +40,7 @@ public: \
 	DECLARE_SERIALIZER(UCActionData)
 
 
-#define UnrealCppProject2_Source_UnrealCppProject2_Actions_CActionData_h_26_INCLASS \
+#define UnrealCppProject2_Source_UnrealCppProject2_Actions_CActionData_h_44_INCLASS \
 private: \
 	static void StaticRegisterNativesUCActionData(); \
 	friend struct Z_Construct_UClass_UCActionData_Statics; \
@@ -41,7 +49,7 @@ public: \
 	DECLARE_SERIALIZER(UCActionData)
 
 
-#define UnrealCppProject2_Source_UnrealCppProject2_Actions_CActionData_h_26_STANDARD_CONSTRUCTORS \
+#define UnrealCppProject2_Source_UnrealCppProject2_Actions_CActionData_h_44_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UCActionData(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UCActionData) \
@@ -54,7 +62,7 @@ private: \
 public:
 
 
-#define UnrealCppProject2_Source_UnrealCppProject2_Actions_CActionData_h_26_ENHANCED_CONSTRUCTORS \
+#define UnrealCppProject2_Source_UnrealCppProject2_Actions_CActionData_h_44_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UCActionData(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
@@ -67,28 +75,28 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UCActionData); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UCActionData)
 
 
-#define UnrealCppProject2_Source_UnrealCppProject2_Actions_CActionData_h_26_PRIVATE_PROPERTY_OFFSET
-#define UnrealCppProject2_Source_UnrealCppProject2_Actions_CActionData_h_23_PROLOG
-#define UnrealCppProject2_Source_UnrealCppProject2_Actions_CActionData_h_26_GENERATED_BODY_LEGACY \
+#define UnrealCppProject2_Source_UnrealCppProject2_Actions_CActionData_h_44_PRIVATE_PROPERTY_OFFSET
+#define UnrealCppProject2_Source_UnrealCppProject2_Actions_CActionData_h_41_PROLOG
+#define UnrealCppProject2_Source_UnrealCppProject2_Actions_CActionData_h_44_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	UnrealCppProject2_Source_UnrealCppProject2_Actions_CActionData_h_26_PRIVATE_PROPERTY_OFFSET \
-	UnrealCppProject2_Source_UnrealCppProject2_Actions_CActionData_h_26_SPARSE_DATA \
-	UnrealCppProject2_Source_UnrealCppProject2_Actions_CActionData_h_26_RPC_WRAPPERS \
-	UnrealCppProject2_Source_UnrealCppProject2_Actions_CActionData_h_26_INCLASS \
-	UnrealCppProject2_Source_UnrealCppProject2_Actions_CActionData_h_26_STANDARD_CONSTRUCTORS \
+	UnrealCppProject2_Source_UnrealCppProject2_Actions_CActionData_h_44_PRIVATE_PROPERTY_OFFSET \
+	UnrealCppProject2_Source_UnrealCppProject2_Actions_CActionData_h_44_SPARSE_DATA \
+	UnrealCppProject2_Source_UnrealCppProject2_Actions_CActionData_h_44_RPC_WRAPPERS \
+	UnrealCppProject2_Source_UnrealCppProject2_Actions_CActionData_h_44_INCLASS \
+	UnrealCppProject2_Source_UnrealCppProject2_Actions_CActionData_h_44_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define UnrealCppProject2_Source_UnrealCppProject2_Actions_CActionData_h_26_GENERATED_BODY \
+#define UnrealCppProject2_Source_UnrealCppProject2_Actions_CActionData_h_44_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	UnrealCppProject2_Source_UnrealCppProject2_Actions_CActionData_h_26_PRIVATE_PROPERTY_OFFSET \
-	UnrealCppProject2_Source_UnrealCppProject2_Actions_CActionData_h_26_SPARSE_DATA \
-	UnrealCppProject2_Source_UnrealCppProject2_Actions_CActionData_h_26_RPC_WRAPPERS_NO_PURE_DECLS \
-	UnrealCppProject2_Source_UnrealCppProject2_Actions_CActionData_h_26_INCLASS_NO_PURE_DECLS \
-	UnrealCppProject2_Source_UnrealCppProject2_Actions_CActionData_h_26_ENHANCED_CONSTRUCTORS \
+	UnrealCppProject2_Source_UnrealCppProject2_Actions_CActionData_h_44_PRIVATE_PROPERTY_OFFSET \
+	UnrealCppProject2_Source_UnrealCppProject2_Actions_CActionData_h_44_SPARSE_DATA \
+	UnrealCppProject2_Source_UnrealCppProject2_Actions_CActionData_h_44_RPC_WRAPPERS_NO_PURE_DECLS \
+	UnrealCppProject2_Source_UnrealCppProject2_Actions_CActionData_h_44_INCLASS_NO_PURE_DECLS \
+	UnrealCppProject2_Source_UnrealCppProject2_Actions_CActionData_h_44_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

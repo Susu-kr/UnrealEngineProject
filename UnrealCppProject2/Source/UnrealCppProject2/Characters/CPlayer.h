@@ -60,4 +60,7 @@ private:
 public:
 	void End_Roll();
 	void End_Backstep();
+
+private:
+	void OnDoAction();
 };

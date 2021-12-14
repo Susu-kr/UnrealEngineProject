@@ -3,5 +3,7 @@ D:\Epic Games\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/Generated
 D:\Epic Games\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
 D:\Github\GitHub\UnrealEngineProject\UnrealCppProject2\Source\UnrealCppProject2/Actions/CDoAction_Melee.h
 D:\Github\GitHub\UnrealEngineProject\UnrealCppProject2\Source\UnrealCppProject2\Actions/CDoAction.h
+D:\Github\GitHub\UnrealEngineProject\UnrealCppProject2\Source\UnrealCppProject2\Actions/CActionData.h
+d:\github\github\unrealengineproject\unrealcppproject2\intermediate\build\win64\ue4editor\inc\unrealcppproject2\CActionData.generated.h
 d:\github\github\unrealengineproject\unrealcppproject2\intermediate\build\win64\ue4editor\inc\unrealcppproject2\CDoAction.generated.h
 d:\github\github\unrealengineproject\unrealcppproject2\intermediate\build\win64\ue4editor\inc\unrealcppproject2\CDoAction_Melee.generated.h

@@ -159,4 +159,14 @@
       <Filter>Source\UnrealCppProject2\Utilities</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\UnrealCppProject2\Actions\CDoAction_Melee.cpp">
+      <Filter>Source\UnrealCppProject2\Actions</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\UnrealCppProject2\Actions\CDoAction_Melee.h">
+      <Filter>Source\UnrealCppProject2\Actions</Filter>
+    </ClInclude>
+  </ItemGroup>
 </Project>

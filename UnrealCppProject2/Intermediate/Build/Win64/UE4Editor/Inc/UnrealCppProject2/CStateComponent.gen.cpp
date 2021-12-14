@@ -76,7 +76,7 @@ void EmptyLinkFunctionForGeneratedCodeCStateComponent() {}
 		return EStateType_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EStateType(EStateType_StaticEnum, TEXT("/Script/UnrealCppProject2"), TEXT("EStateType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_UnrealCppProject2_EStateType_Hash() { return 1693215261U; }
+	uint32 Get_Z_Construct_UEnum_UnrealCppProject2_EStateType_Hash() { return 1746508259U; }
 	UEnum* Z_Construct_UEnum_UnrealCppProject2_EStateType()
 	{
 #if WITH_HOT_RELOAD
@@ -92,11 +92,14 @@ void EmptyLinkFunctionForGeneratedCodeCStateComponent() {}
 				{ "EStateType::Roll", (int64)EStateType::Roll },
 				{ "EStateType::Backstep", (int64)EStateType::Backstep },
 				{ "EStateType::Equip", (int64)EStateType::Equip },
-				{ "EStateType::Unequip", (int64)EStateType::Unequip },
+				{ "EStateType::Action", (int64)EStateType::Action },
 				{ "EStateType::Max", (int64)EStateType::Max },
 			};
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
+				{ "Action.Comment", "//Unequip,\n" },
+				{ "Action.Name", "EStateType::Action" },
+				{ "Action.ToolTip", "Unequip," },
 				{ "Backstep.Name", "EStateType::Backstep" },
 				{ "BlueprintType", "true" },
 				{ "Equip.Name", "EStateType::Equip" },
@@ -104,7 +107,6 @@ void EmptyLinkFunctionForGeneratedCodeCStateComponent() {}
 				{ "Max.Name", "EStateType::Max" },
 				{ "ModuleRelativePath", "Components/CStateComponent.h" },
 				{ "Roll.Name", "EStateType::Roll" },
-				{ "Unequip.Name", "EStateType::Unequip" },
 			};
 #endif
 			static const UE4CodeGen_Private::FEnumParams EnumParams = {

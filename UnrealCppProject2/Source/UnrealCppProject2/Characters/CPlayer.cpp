@@ -70,6 +70,7 @@ void ACPlayer::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
 	PlayerInputComponent->BindAction("Avoid", EInputEvent::IE_Pressed, this, &ACPlayer::OnAvoid);
 	PlayerInputComponent->BindAction("OneHand", EInputEvent::IE_Pressed, this, &ACPlayer::OnOneHand);
+	PlayerInputComponent->BindAction("Action", EInputEvent::IE_Pressed, this, &ACPlayer::OnDoAction);
 
 }
 
@@ -132,6 +133,11 @@ void ACPlayer::OnOneHand()
 {
 	CheckFalse(State->IsIdleMode());
 	Action->SetOneHandMode();
+}
+
+void ACPlayer::OnDoAction()
+{
+	Action->DoAction();
 }
 
 void ACPlayer::Begin_Roll()

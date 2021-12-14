@@ -1,5 +1,7 @@
 D:\Github\GitHub\UnrealEngineProject\UnrealCppProject2\Intermediate\Build\Win64\UE4Editor\Development\UnrealCppProject2\Definitions.UnrealCppProject2.h
 d:\github\github\unrealengineproject\unrealcppproject2\source\unrealcppproject2\actions\CDoAction.h
+D:\Github\GitHub\UnrealEngineProject\UnrealCppProject2\Source\UnrealCppProject2\Actions/CActionData.h
+D:\Github\GitHub\UnrealEngineProject\UnrealCppProject2\Intermediate\Build\Win64\UE4Editor\Inc\UnrealCppProject2\CActionData.generated.h
 D:\Github\GitHub\UnrealEngineProject\UnrealCppProject2\Intermediate\Build\Win64\UE4Editor\Inc\UnrealCppProject2\CDoAction.generated.h
 D:\Github\GitHub\UnrealEngineProject\UnrealCppProject2\Source\UnrealCppProject2\Global.h
 D:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Public\DrawDebugHelpers.h
