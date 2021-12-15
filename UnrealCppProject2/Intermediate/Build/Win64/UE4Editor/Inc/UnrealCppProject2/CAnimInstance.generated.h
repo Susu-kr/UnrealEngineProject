@@ -8,15 +8,24 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+enum class EActionType : uint8;
 #ifdef UNREALCPPPROJECT2_CAnimInstance_generated_h
 #error "CAnimInstance.generated.h already included, missing '#pragma once' in CAnimInstance.h"
 #endif
 #define UNREALCPPPROJECT2_CAnimInstance_generated_h
 
-#define UnrealCppProject2_Source_UnrealCppProject2_Characters_CAnimInstance_h_10_SPARSE_DATA
-#define UnrealCppProject2_Source_UnrealCppProject2_Characters_CAnimInstance_h_10_RPC_WRAPPERS
-#define UnrealCppProject2_Source_UnrealCppProject2_Characters_CAnimInstance_h_10_RPC_WRAPPERS_NO_PURE_DECLS
-#define UnrealCppProject2_Source_UnrealCppProject2_Characters_CAnimInstance_h_10_INCLASS_NO_PURE_DECLS \
+#define UnrealCppProject2_Source_UnrealCppProject2_Characters_CAnimInstance_h_11_SPARSE_DATA
+#define UnrealCppProject2_Source_UnrealCppProject2_Characters_CAnimInstance_h_11_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execOnActionTypeChanged);
+
+
+#define UnrealCppProject2_Source_UnrealCppProject2_Characters_CAnimInstance_h_11_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execOnActionTypeChanged);
+
+
+#define UnrealCppProject2_Source_UnrealCppProject2_Characters_CAnimInstance_h_11_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUCAnimInstance(); \
 	friend struct Z_Construct_UClass_UCAnimInstance_Statics; \
@@ -25,7 +34,7 @@ public: \
 	DECLARE_SERIALIZER(UCAnimInstance)
 
 
-#define UnrealCppProject2_Source_UnrealCppProject2_Characters_CAnimInstance_h_10_INCLASS \
+#define UnrealCppProject2_Source_UnrealCppProject2_Characters_CAnimInstance_h_11_INCLASS \
 private: \
 	static void StaticRegisterNativesUCAnimInstance(); \
 	friend struct Z_Construct_UClass_UCAnimInstance_Statics; \
@@ -34,7 +43,7 @@ public: \
 	DECLARE_SERIALIZER(UCAnimInstance)
 
 
-#define UnrealCppProject2_Source_UnrealCppProject2_Characters_CAnimInstance_h_10_STANDARD_CONSTRUCTORS \
+#define UnrealCppProject2_Source_UnrealCppProject2_Characters_CAnimInstance_h_11_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UCAnimInstance(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UCAnimInstance) \
@@ -47,7 +56,7 @@ private: \
 public:
 
 
-#define UnrealCppProject2_Source_UnrealCppProject2_Characters_CAnimInstance_h_10_ENHANCED_CONSTRUCTORS \
+#define UnrealCppProject2_Source_UnrealCppProject2_Characters_CAnimInstance_h_11_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UCAnimInstance(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
@@ -60,32 +69,33 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UCAnimInstance); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UCAnimInstance)
 
 
-#define UnrealCppProject2_Source_UnrealCppProject2_Characters_CAnimInstance_h_10_PRIVATE_PROPERTY_OFFSET \
+#define UnrealCppProject2_Source_UnrealCppProject2_Characters_CAnimInstance_h_11_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__Speed() { return STRUCT_OFFSET(UCAnimInstance, Speed); } \
-	FORCEINLINE static uint32 __PPO__Direction() { return STRUCT_OFFSET(UCAnimInstance, Direction); }
+	FORCEINLINE static uint32 __PPO__Direction() { return STRUCT_OFFSET(UCAnimInstance, Direction); } \
+	FORCEINLINE static uint32 __PPO__ActionType() { return STRUCT_OFFSET(UCAnimInstance, ActionType); }
 
 
-#define UnrealCppProject2_Source_UnrealCppProject2_Characters_CAnimInstance_h_7_PROLOG
-#define UnrealCppProject2_Source_UnrealCppProject2_Characters_CAnimInstance_h_10_GENERATED_BODY_LEGACY \
+#define UnrealCppProject2_Source_UnrealCppProject2_Characters_CAnimInstance_h_8_PROLOG
+#define UnrealCppProject2_Source_UnrealCppProject2_Characters_CAnimInstance_h_11_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	UnrealCppProject2_Source_UnrealCppProject2_Characters_CAnimInstance_h_10_PRIVATE_PROPERTY_OFFSET \
-	UnrealCppProject2_Source_UnrealCppProject2_Characters_CAnimInstance_h_10_SPARSE_DATA \
-	UnrealCppProject2_Source_UnrealCppProject2_Characters_CAnimInstance_h_10_RPC_WRAPPERS \
-	UnrealCppProject2_Source_UnrealCppProject2_Characters_CAnimInstance_h_10_INCLASS \
-	UnrealCppProject2_Source_UnrealCppProject2_Characters_CAnimInstance_h_10_STANDARD_CONSTRUCTORS \
+	UnrealCppProject2_Source_UnrealCppProject2_Characters_CAnimInstance_h_11_PRIVATE_PROPERTY_OFFSET \
+	UnrealCppProject2_Source_UnrealCppProject2_Characters_CAnimInstance_h_11_SPARSE_DATA \
+	UnrealCppProject2_Source_UnrealCppProject2_Characters_CAnimInstance_h_11_RPC_WRAPPERS \
+	UnrealCppProject2_Source_UnrealCppProject2_Characters_CAnimInstance_h_11_INCLASS \
+	UnrealCppProject2_Source_UnrealCppProject2_Characters_CAnimInstance_h_11_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define UnrealCppProject2_Source_UnrealCppProject2_Characters_CAnimInstance_h_10_GENERATED_BODY \
+#define UnrealCppProject2_Source_UnrealCppProject2_Characters_CAnimInstance_h_11_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	UnrealCppProject2_Source_UnrealCppProject2_Characters_CAnimInstance_h_10_PRIVATE_PROPERTY_OFFSET \
-	UnrealCppProject2_Source_UnrealCppProject2_Characters_CAnimInstance_h_10_SPARSE_DATA \
-	UnrealCppProject2_Source_UnrealCppProject2_Characters_CAnimInstance_h_10_RPC_WRAPPERS_NO_PURE_DECLS \
-	UnrealCppProject2_Source_UnrealCppProject2_Characters_CAnimInstance_h_10_INCLASS_NO_PURE_DECLS \
-	UnrealCppProject2_Source_UnrealCppProject2_Characters_CAnimInstance_h_10_ENHANCED_CONSTRUCTORS \
+	UnrealCppProject2_Source_UnrealCppProject2_Characters_CAnimInstance_h_11_PRIVATE_PROPERTY_OFFSET \
+	UnrealCppProject2_Source_UnrealCppProject2_Characters_CAnimInstance_h_11_SPARSE_DATA \
+	UnrealCppProject2_Source_UnrealCppProject2_Characters_CAnimInstance_h_11_RPC_WRAPPERS_NO_PURE_DECLS \
+	UnrealCppProject2_Source_UnrealCppProject2_Characters_CAnimInstance_h_11_INCLASS_NO_PURE_DECLS \
+	UnrealCppProject2_Source_UnrealCppProject2_Characters_CAnimInstance_h_11_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

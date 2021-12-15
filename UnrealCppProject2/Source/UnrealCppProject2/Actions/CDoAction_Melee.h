@@ -13,4 +13,17 @@ public:
 	virtual void DoAction() override;
 	virtual void Begin_DoAction() override;
 	virtual void End_DoAction() override;
+
+	// #. Combo System
+private:
+	bool bExist; // Combo Exist
+	bool bEnable; // Combo Enable
+	bool bLast; // Last Combo
+	int32 Index;
+
+public:
+	FORCEINLINE void EnableCombo() { bEnable = true; }
+	FORCEINLINE void DisableCombo() { bEnable = false; }
+
+
 };

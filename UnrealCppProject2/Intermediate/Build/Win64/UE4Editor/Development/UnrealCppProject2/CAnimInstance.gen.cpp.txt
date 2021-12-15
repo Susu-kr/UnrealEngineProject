@@ -2,4 +2,6 @@ D:\Github\GitHub\UnrealEngineProject\UnrealCppProject2\Intermediate\Build\Win64\
 D:\Epic Games\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
 D:\Epic Games\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
 D:\Github\GitHub\UnrealEngineProject\UnrealCppProject2\Source\UnrealCppProject2/Characters/CAnimInstance.h
+D:\Github\GitHub\UnrealEngineProject\UnrealCppProject2\Source\UnrealCppProject2\Components/CActionComponent.h
+d:\github\github\unrealengineproject\unrealcppproject2\intermediate\build\win64\ue4editor\inc\unrealcppproject2\CActionComponent.generated.h
 d:\github\github\unrealengineproject\unrealcppproject2\intermediate\build\win64\ue4editor\inc\unrealcppproject2\CAnimInstance.generated.h
