@@ -3,10 +3,11 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "Components/CStateComponent.h"
+#include "Characters/ICharacter.h"
 #include "CPlayer.generated.h"
 
 UCLASS()
-class UNREALCPPPROJECT2_API ACPlayer : public ACharacter
+class UNREALCPPPROJECT2_API ACPlayer : public ACharacter, public IICharacter
 {
 	GENERATED_BODY()
 
@@ -53,6 +54,7 @@ private:
 	void OnVerticalLook(float InAxis);
 	void OnAvoid();
 	void OnOneHand();
+	void OnDoAction();
 
 	void Begin_Roll();
 	void Begin_Backstep();
@@ -62,5 +64,9 @@ public:
 	void End_Backstep();
 
 private:
-	void OnDoAction();
+	class UMaterialInstanceDynamic* BodyMaterial;
+	class UMaterialInstanceDynamic* LogoMaterial;
+
+public:
+	virtual void ChangeColor(FLinearColor InColor) override;
 };

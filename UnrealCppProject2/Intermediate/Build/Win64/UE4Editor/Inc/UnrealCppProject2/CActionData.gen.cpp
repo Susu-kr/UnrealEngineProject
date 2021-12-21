@@ -24,6 +24,7 @@ void EmptyLinkFunctionForGeneratedCodeCActionData() {}
 	UNREALCPPPROJECT2_API UClass* Z_Construct_UClass_UCActionData_NoRegister();
 	UNREALCPPPROJECT2_API UClass* Z_Construct_UClass_UCActionData();
 	ENGINE_API UClass* Z_Construct_UClass_UDataAsset();
+	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FLinearColor();
 	UNREALCPPPROJECT2_API UClass* Z_Construct_UClass_ACDoAction_NoRegister();
 	UNREALCPPPROJECT2_API UClass* Z_Construct_UClass_ACEquipment_NoRegister();
 	UNREALCPPPROJECT2_API UClass* Z_Construct_UClass_ACAttachment_NoRegister();
@@ -189,6 +190,11 @@ static struct FScriptStruct_UnrealCppProject2_StaticRegisterNativesFEquipmentDat
 #endif
 		static void* NewStructOps();
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bPawnControl_MetaData[];
+#endif
+		static void NewProp_bPawnControl_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bPawnControl;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bCanMove_MetaData[];
 #endif
 		static void NewProp_bCanMove_SetBit(void* Obj);
@@ -218,6 +224,17 @@ static struct FScriptStruct_UnrealCppProject2_StaticRegisterNativesFEquipmentDat
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FEquipmentData>();
 	}
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FEquipmentData_Statics::NewProp_bPawnControl_MetaData[] = {
+		{ "Category", "EquipmentData" },
+		{ "ModuleRelativePath", "Actions/CActionData.h" },
+	};
+#endif
+	void Z_Construct_UScriptStruct_FEquipmentData_Statics::NewProp_bPawnControl_SetBit(void* Obj)
+	{
+		((FEquipmentData*)Obj)->bPawnControl = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FEquipmentData_Statics::NewProp_bPawnControl = { "bPawnControl", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FEquipmentData), &Z_Construct_UScriptStruct_FEquipmentData_Statics::NewProp_bPawnControl_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FEquipmentData_Statics::NewProp_bPawnControl_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FEquipmentData_Statics::NewProp_bPawnControl_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FEquipmentData_Statics::NewProp_bCanMove_MetaData[] = {
 		{ "Category", "EquipmentData" },
@@ -251,6 +268,7 @@ static struct FScriptStruct_UnrealCppProject2_StaticRegisterNativesFEquipmentDat
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UScriptStruct_FEquipmentData_Statics::NewProp_AnimMontage = { "AnimMontage", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FEquipmentData, AnimMontage), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FEquipmentData_Statics::NewProp_AnimMontage_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FEquipmentData_Statics::NewProp_AnimMontage_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FEquipmentData_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FEquipmentData_Statics::NewProp_bPawnControl,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FEquipmentData_Statics::NewProp_bCanMove,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FEquipmentData_Statics::NewProp_StartSection,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FEquipmentData_Statics::NewProp_PlayRatio,
@@ -284,7 +302,7 @@ static struct FScriptStruct_UnrealCppProject2_StaticRegisterNativesFEquipmentDat
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FEquipmentData_Hash() { return 3990818687U; }
+	uint32 Get_Z_Construct_UScriptStruct_FEquipmentData_Hash() { return 1840915835U; }
 	void UCActionData::StaticRegisterNativesUCActionData()
 	{
 	}
@@ -298,6 +316,10 @@ static struct FScriptStruct_UnrealCppProject2_StaticRegisterNativesFEquipmentDat
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_EquipmentColor_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_EquipmentColor;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DoActionDatas_MetaData[];
 #endif
@@ -333,6 +355,13 @@ static struct FScriptStruct_UnrealCppProject2_StaticRegisterNativesFEquipmentDat
 		{ "ModuleRelativePath", "Actions/CActionData.h" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCActionData_Statics::NewProp_EquipmentColor_MetaData[] = {
+		{ "Category", "CActionData" },
+		{ "ModuleRelativePath", "Actions/CActionData.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UCActionData_Statics::NewProp_EquipmentColor = { "EquipmentColor", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UCActionData, EquipmentColor), Z_Construct_UScriptStruct_FLinearColor, METADATA_PARAMS(Z_Construct_UClass_UCActionData_Statics::NewProp_EquipmentColor_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UCActionData_Statics::NewProp_EquipmentColor_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCActionData_Statics::NewProp_DoActionDatas_MetaData[] = {
 		{ "Category", "CActionData" },
@@ -372,6 +401,7 @@ static struct FScriptStruct_UnrealCppProject2_StaticRegisterNativesFEquipmentDat
 #endif
 	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_UCActionData_Statics::NewProp_AttachmentClass = { "AttachmentClass", nullptr, (EPropertyFlags)0x0014000000000015, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UCActionData, AttachmentClass), Z_Construct_UClass_ACAttachment_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_UCActionData_Statics::NewProp_AttachmentClass_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UCActionData_Statics::NewProp_AttachmentClass_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UCActionData_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCActionData_Statics::NewProp_EquipmentColor,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCActionData_Statics::NewProp_DoActionDatas,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCActionData_Statics::NewProp_DoActionDatas_Inner,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCActionData_Statics::NewProp_DoActionClass,
@@ -406,7 +436,7 @@ static struct FScriptStruct_UnrealCppProject2_StaticRegisterNativesFEquipmentDat
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UCActionData, 1838878909);
+	IMPLEMENT_CLASS(UCActionData, 1666476143);
 	template<> UNREALCPPPROJECT2_API UClass* StaticClass<UCActionData>()
 	{
 		return UCActionData::StaticClass();

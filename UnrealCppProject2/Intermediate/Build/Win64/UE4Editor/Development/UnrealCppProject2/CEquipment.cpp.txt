@@ -22,6 +22,8 @@ D:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Gamep
 d:\github\github\unrealengineproject\unrealcppproject2\source\unrealcppproject2\Utilities/CHelpers.h
 d:\github\github\unrealengineproject\unrealcppproject2\source\unrealcppproject2\Utilities/CLog.h
 d:\github\github\unrealengineproject\unrealcppproject2\source\unrealcppproject2\Utilities/Defines.h
+D:\Github\GitHub\UnrealEngineProject\UnrealCppProject2\Source\UnrealCppProject2\Characters/ICharacter.h
+D:\Github\GitHub\UnrealEngineProject\UnrealCppProject2\Intermediate\Build\Win64\UE4Editor\Inc\UnrealCppProject2\ICharacter.generated.h
 D:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\GameFramework/Character.h
 D:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
 D:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h

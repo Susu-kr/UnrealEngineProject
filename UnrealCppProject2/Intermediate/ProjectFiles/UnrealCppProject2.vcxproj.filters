@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\UnrealCppProject2.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{1D3D0863-16CA-4ECA-80F5-C7EE73A30D30}</UniqueIdentifier>
+      <UniqueIdentifier>{EA295D32-752D-437C-BF96-C295F825C6F9}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\UnrealCppProject2.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{79239DE9-F5AC-46BA-B3FB-D040BF9C3A9D}</UniqueIdentifier>
+      <UniqueIdentifier>{5184444C-A12A-433A-9874-5E8E9010F209}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,7 +27,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\UnrealCppProject2">
-      <UniqueIdentifier>{A680D039-1921-49BB-A9E6-5010D0CBB067}</UniqueIdentifier>
+      <UniqueIdentifier>{E00101FB-55AE-47BD-B131-6C23AF6D073C}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\UnrealCppProject2\CGameMode.cpp">
       <Filter>Source\UnrealCppProject2</Filter>
@@ -48,7 +48,7 @@
       <Filter>Source\UnrealCppProject2</Filter>
     </ClInclude>
     <Filter Include="Source\UnrealCppProject2\Actions">
-      <UniqueIdentifier>{9C5899B5-25FF-4A41-8193-D60234BFD632}</UniqueIdentifier>
+      <UniqueIdentifier>{4B5DF774-6BE5-473F-8986-DDB7B927E212}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\UnrealCppProject2\Actions\CActionData.cpp">
       <Filter>Source\UnrealCppProject2\Actions</Filter>
@@ -81,12 +81,24 @@
       <Filter>Source\UnrealCppProject2\Actions</Filter>
     </ClInclude>
     <Filter Include="Source\UnrealCppProject2\Characters">
-      <UniqueIdentifier>{D0EE53F3-BFDA-4BA0-8CA4-6570A8327E51}</UniqueIdentifier>
+      <UniqueIdentifier>{CB414FFB-D5B6-49FA-9164-BB6548E2400A}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\UnrealCppProject2\Characters\CAnimInstance.cpp">
       <Filter>Source\UnrealCppProject2\Characters</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\UnrealCppProject2\Characters\CAnimInstance.h">
+      <Filter>Source\UnrealCppProject2\Characters</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\UnrealCppProject2\Characters\CEnemy.cpp">
+      <Filter>Source\UnrealCppProject2\Characters</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\UnrealCppProject2\Characters\CEnemy.h">
+      <Filter>Source\UnrealCppProject2\Characters</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\UnrealCppProject2\Characters\CEnemy_Dummy.cpp">
+      <Filter>Source\UnrealCppProject2\Characters</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\UnrealCppProject2\Characters\CEnemy_Dummy.h">
       <Filter>Source\UnrealCppProject2\Characters</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\UnrealCppProject2\Characters\CPlayer.cpp">
@@ -95,8 +107,14 @@
     <ClInclude Include="..\..\Source\UnrealCppProject2\Characters\CPlayer.h">
       <Filter>Source\UnrealCppProject2\Characters</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\UnrealCppProject2\Characters\ICharacter.cpp">
+      <Filter>Source\UnrealCppProject2\Characters</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\UnrealCppProject2\Characters\ICharacter.h">
+      <Filter>Source\UnrealCppProject2\Characters</Filter>
+    </ClInclude>
     <Filter Include="Source\UnrealCppProject2\Components">
-      <UniqueIdentifier>{814696CA-57EA-4727-AFDE-859DE1D1E4DD}</UniqueIdentifier>
+      <UniqueIdentifier>{FCD4BFEC-9C21-4B1C-BF35-4CE43159DE14}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\UnrealCppProject2\Components\CActionComponent.cpp">
       <Filter>Source\UnrealCppProject2\Components</Filter>
@@ -129,7 +147,7 @@
       <Filter>Source\UnrealCppProject2\Components</Filter>
     </ClInclude>
     <Filter Include="Source\UnrealCppProject2\Notifies">
-      <UniqueIdentifier>{1E5BDD6A-87F0-409D-BC1B-4ED096328245}</UniqueIdentifier>
+      <UniqueIdentifier>{DBAFE876-D941-4378-8530-0065D7096A01}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\UnrealCppProject2\Notifies\CAnimNotifyState_EnableCombo.cpp">
       <Filter>Source\UnrealCppProject2\Notifies</Filter>
@@ -168,7 +186,7 @@
       <Filter>Source\UnrealCppProject2\Notifies</Filter>
     </ClInclude>
     <Filter Include="Source\UnrealCppProject2\Utilities">
-      <UniqueIdentifier>{EF980782-3741-4CF8-A8B4-04DF7EA6A563}</UniqueIdentifier>
+      <UniqueIdentifier>{DFEBE8FC-AA7F-420D-A73F-6337625E0ED1}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\UnrealCppProject2\Utilities\CHelpers.h">
       <Filter>Source\UnrealCppProject2\Utilities</Filter>

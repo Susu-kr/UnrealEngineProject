@@ -25,6 +25,7 @@ void EmptyLinkFunctionForGeneratedCodeCPlayer() {}
 	UNREALCPPPROJECT2_API UClass* Z_Construct_UClass_UCOptionComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
+	UNREALCPPPROJECT2_API UClass* Z_Construct_UClass_UICharacter_NoRegister();
 // End Cross Module References
 	DEFINE_FUNCTION(ACPlayer::execOnStateTypeChanged)
 	{
@@ -125,6 +126,7 @@ void EmptyLinkFunctionForGeneratedCodeCPlayer() {}
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_SpringArm;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+		static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
@@ -207,6 +209,9 @@ void EmptyLinkFunctionForGeneratedCodeCPlayer() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACPlayer_Statics::NewProp_Camera,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACPlayer_Statics::NewProp_SpringArm,
 	};
+		const UE4CodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_ACPlayer_Statics::InterfaceParams[] = {
+			{ Z_Construct_UClass_UICharacter_NoRegister, (int32)VTABLE_OFFSET(ACPlayer, IICharacter), false },
+		};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ACPlayer_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ACPlayer>::IsAbstract,
 	};
@@ -217,11 +222,11 @@ void EmptyLinkFunctionForGeneratedCodeCPlayer() {}
 		DependentSingletons,
 		FuncInfo,
 		Z_Construct_UClass_ACPlayer_Statics::PropPointers,
-		nullptr,
+		InterfaceParams,
 		UE_ARRAY_COUNT(DependentSingletons),
 		UE_ARRAY_COUNT(FuncInfo),
 		UE_ARRAY_COUNT(Z_Construct_UClass_ACPlayer_Statics::PropPointers),
-		0,
+		UE_ARRAY_COUNT(InterfaceParams),
 		0x009000A4u,
 		METADATA_PARAMS(Z_Construct_UClass_ACPlayer_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_ACPlayer_Statics::Class_MetaDataParams))
 	};
@@ -234,7 +239,7 @@ void EmptyLinkFunctionForGeneratedCodeCPlayer() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ACPlayer, 2935364495);
+	IMPLEMENT_CLASS(ACPlayer, 274072488);
 	template<> UNREALCPPPROJECT2_API UClass* StaticClass<ACPlayer>()
 	{
 		return ACPlayer::StaticClass();
