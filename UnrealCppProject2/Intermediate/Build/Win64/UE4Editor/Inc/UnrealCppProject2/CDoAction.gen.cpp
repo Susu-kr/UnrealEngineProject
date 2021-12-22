@@ -17,12 +17,119 @@ void EmptyLinkFunctionForGeneratedCodeCDoAction() {}
 	UNREALCPPPROJECT2_API UClass* Z_Construct_UClass_ACDoAction();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	UPackage* Z_Construct_UPackage__Script_UnrealCppProject2();
+	ENGINE_API UClass* Z_Construct_UClass_ACharacter_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 	UNREALCPPPROJECT2_API UClass* Z_Construct_UClass_UCStatusComponent_NoRegister();
 	UNREALCPPPROJECT2_API UClass* Z_Construct_UClass_UCStateComponent_NoRegister();
-	ENGINE_API UClass* Z_Construct_UClass_ACharacter_NoRegister();
 // End Cross Module References
+	DEFINE_FUNCTION(ACDoAction::execOnAttachmentEndOverlap)
+	{
+		P_GET_OBJECT(ACharacter,Z_Param_InAttacker);
+		P_GET_OBJECT(AActor,Z_Param_InAttackCauser);
+		P_GET_OBJECT(ACharacter,Z_Param_InOtherCharacter);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnAttachmentEndOverlap(Z_Param_InAttacker,Z_Param_InAttackCauser,Z_Param_InOtherCharacter);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(ACDoAction::execOnAttachmentBeginOverlap)
+	{
+		P_GET_OBJECT(ACharacter,Z_Param_InAttacker);
+		P_GET_OBJECT(AActor,Z_Param_InAttackCauser);
+		P_GET_OBJECT(ACharacter,Z_Param_InOtherCharacter);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnAttachmentBeginOverlap(Z_Param_InAttacker,Z_Param_InAttackCauser,Z_Param_InOtherCharacter);
+		P_NATIVE_END;
+	}
 	void ACDoAction::StaticRegisterNativesACDoAction()
 	{
+		UClass* Class = ACDoAction::StaticClass();
+		static const FNameNativePtrPair Funcs[] = {
+			{ "OnAttachmentBeginOverlap", &ACDoAction::execOnAttachmentBeginOverlap },
+			{ "OnAttachmentEndOverlap", &ACDoAction::execOnAttachmentEndOverlap },
+		};
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_ACDoAction_OnAttachmentBeginOverlap_Statics
+	{
+		struct CDoAction_eventOnAttachmentBeginOverlap_Parms
+		{
+			ACharacter* InAttacker;
+			AActor* InAttackCauser;
+			ACharacter* InOtherCharacter;
+		};
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_InOtherCharacter;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_InAttackCauser;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_InAttacker;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ACDoAction_OnAttachmentBeginOverlap_Statics::NewProp_InOtherCharacter = { "InOtherCharacter", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(CDoAction_eventOnAttachmentBeginOverlap_Parms, InOtherCharacter), Z_Construct_UClass_ACharacter_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ACDoAction_OnAttachmentBeginOverlap_Statics::NewProp_InAttackCauser = { "InAttackCauser", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(CDoAction_eventOnAttachmentBeginOverlap_Parms, InAttackCauser), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ACDoAction_OnAttachmentBeginOverlap_Statics::NewProp_InAttacker = { "InAttacker", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(CDoAction_eventOnAttachmentBeginOverlap_Parms, InAttacker), Z_Construct_UClass_ACharacter_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ACDoAction_OnAttachmentBeginOverlap_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACDoAction_OnAttachmentBeginOverlap_Statics::NewProp_InOtherCharacter,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACDoAction_OnAttachmentBeginOverlap_Statics::NewProp_InAttackCauser,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACDoAction_OnAttachmentBeginOverlap_Statics::NewProp_InAttacker,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACDoAction_OnAttachmentBeginOverlap_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Actions/CDoAction.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ACDoAction_OnAttachmentBeginOverlap_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACDoAction, nullptr, "OnAttachmentBeginOverlap", nullptr, nullptr, sizeof(CDoAction_eventOnAttachmentBeginOverlap_Parms), Z_Construct_UFunction_ACDoAction_OnAttachmentBeginOverlap_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ACDoAction_OnAttachmentBeginOverlap_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020400, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ACDoAction_OnAttachmentBeginOverlap_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ACDoAction_OnAttachmentBeginOverlap_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ACDoAction_OnAttachmentBeginOverlap()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ACDoAction_OnAttachmentBeginOverlap_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_ACDoAction_OnAttachmentEndOverlap_Statics
+	{
+		struct CDoAction_eventOnAttachmentEndOverlap_Parms
+		{
+			ACharacter* InAttacker;
+			AActor* InAttackCauser;
+			ACharacter* InOtherCharacter;
+		};
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_InOtherCharacter;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_InAttackCauser;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_InAttacker;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ACDoAction_OnAttachmentEndOverlap_Statics::NewProp_InOtherCharacter = { "InOtherCharacter", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(CDoAction_eventOnAttachmentEndOverlap_Parms, InOtherCharacter), Z_Construct_UClass_ACharacter_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ACDoAction_OnAttachmentEndOverlap_Statics::NewProp_InAttackCauser = { "InAttackCauser", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(CDoAction_eventOnAttachmentEndOverlap_Parms, InAttackCauser), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ACDoAction_OnAttachmentEndOverlap_Statics::NewProp_InAttacker = { "InAttacker", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(CDoAction_eventOnAttachmentEndOverlap_Parms, InAttacker), Z_Construct_UClass_ACharacter_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ACDoAction_OnAttachmentEndOverlap_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACDoAction_OnAttachmentEndOverlap_Statics::NewProp_InOtherCharacter,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACDoAction_OnAttachmentEndOverlap_Statics::NewProp_InAttackCauser,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACDoAction_OnAttachmentEndOverlap_Statics::NewProp_InAttacker,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACDoAction_OnAttachmentEndOverlap_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Actions/CDoAction.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ACDoAction_OnAttachmentEndOverlap_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACDoAction, nullptr, "OnAttachmentEndOverlap", nullptr, nullptr, sizeof(CDoAction_eventOnAttachmentEndOverlap_Parms), Z_Construct_UFunction_ACDoAction_OnAttachmentEndOverlap_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ACDoAction_OnAttachmentEndOverlap_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020400, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ACDoAction_OnAttachmentEndOverlap_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ACDoAction_OnAttachmentEndOverlap_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ACDoAction_OnAttachmentEndOverlap()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ACDoAction_OnAttachmentEndOverlap_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	UClass* Z_Construct_UClass_ACDoAction_NoRegister()
 	{
@@ -31,6 +138,7 @@ void EmptyLinkFunctionForGeneratedCodeCDoAction() {}
 	struct Z_Construct_UClass_ACDoAction_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
+		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
@@ -53,6 +161,10 @@ void EmptyLinkFunctionForGeneratedCodeCDoAction() {}
 	UObject* (*const Z_Construct_UClass_ACDoAction_Statics::DependentSingletons[])() = {
 		(UObject* (*)())Z_Construct_UClass_AActor,
 		(UObject* (*)())Z_Construct_UPackage__Script_UnrealCppProject2,
+	};
+	const FClassFunctionLinkInfo Z_Construct_UClass_ACDoAction_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_ACDoAction_OnAttachmentBeginOverlap, "OnAttachmentBeginOverlap" }, // 902932146
+		{ &Z_Construct_UFunction_ACDoAction_OnAttachmentEndOverlap, "OnAttachmentEndOverlap" }, // 646307952
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACDoAction_Statics::Class_MetaDataParams[] = {
@@ -96,11 +208,11 @@ void EmptyLinkFunctionForGeneratedCodeCDoAction() {}
 		"Engine",
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
-		nullptr,
+		FuncInfo,
 		Z_Construct_UClass_ACDoAction_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
-		0,
+		UE_ARRAY_COUNT(FuncInfo),
 		UE_ARRAY_COUNT(Z_Construct_UClass_ACDoAction_Statics::PropPointers),
 		0,
 		0x009000A4u,
@@ -115,7 +227,7 @@ void EmptyLinkFunctionForGeneratedCodeCDoAction() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ACDoAction, 2824295876);
+	IMPLEMENT_CLASS(ACDoAction, 3009830180);
 	template<> UNREALCPPPROJECT2_API UClass* StaticClass<ACDoAction>()
 	{
 		return ACDoAction::StaticClass();

@@ -8,14 +8,26 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class ACharacter;
+class AActor;
 #ifdef UNREALCPPPROJECT2_CDoAction_generated_h
 #error "CDoAction.generated.h already included, missing '#pragma once' in CDoAction.h"
 #endif
 #define UNREALCPPPROJECT2_CDoAction_generated_h
 
 #define UnrealCppProject2_Source_UnrealCppProject2_Actions_CDoAction_h_11_SPARSE_DATA
-#define UnrealCppProject2_Source_UnrealCppProject2_Actions_CDoAction_h_11_RPC_WRAPPERS
-#define UnrealCppProject2_Source_UnrealCppProject2_Actions_CDoAction_h_11_RPC_WRAPPERS_NO_PURE_DECLS
+#define UnrealCppProject2_Source_UnrealCppProject2_Actions_CDoAction_h_11_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execOnAttachmentEndOverlap); \
+	DECLARE_FUNCTION(execOnAttachmentBeginOverlap);
+
+
+#define UnrealCppProject2_Source_UnrealCppProject2_Actions_CDoAction_h_11_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execOnAttachmentEndOverlap); \
+	DECLARE_FUNCTION(execOnAttachmentBeginOverlap);
+
+
 #define UnrealCppProject2_Source_UnrealCppProject2_Actions_CDoAction_h_11_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesACDoAction(); \

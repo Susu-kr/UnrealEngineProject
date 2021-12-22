@@ -55,8 +55,6 @@ void ACPlayer::BeginPlay()
 	
 	State->OnStateTypeChanged.AddDynamic(this, &ACPlayer::OnStateTypeChanged);
 
-	//
-
 	UMaterialInstanceConstant* body;
 	UMaterialInstanceConstant* logo;
 

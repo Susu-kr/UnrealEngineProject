@@ -25,5 +25,10 @@ public:
 	FORCEINLINE void EnableCombo() { bEnable = true; }
 	FORCEINLINE void DisableCombo() { bEnable = false; }
 
-
+	virtual void OnAttachmentBeginOverlap(class ACharacter* InAttacker,
+										class AActor* InAttackCauser,
+										class ACharacter* InOtherCharacter) override;
+	virtual void OnAttachmentEndOverlap(class ACharacter* InAttacker,
+										class AActor* InAttackCauser,
+										class ACharacter* InOtherCharacter) override;
 };

@@ -2,6 +2,7 @@
 
 #include "CoreMinimal.h"
 #include "Characters/ICharacter.h"
+#include "Components/CStateComponent.h"
 #include "GameFramework/Character.h"
 #include "CEnemy.generated.h"
 
@@ -24,5 +25,30 @@ private:
 	class UMaterialInstanceDynamic* LogoMaterial;
 
 public:
-	virtual void ChangeColor(FLinearColor InColor) override;;
+	virtual void ChangeColor(FLinearColor InColor) override;
+
+	float TakeDamage(float Damage, struct FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) override;
+
+private:
+	UPROPERTY(VisibleDefaultsOnly)
+		class UCStatusComponent* Status;
+
+	UPROPERTY(VisibleDefaultsOnly)
+		class UCStateComponent* State;
+
+	UPROPERTY(VisibleDefaultsOnly)
+		class UCActionComponent* Action;
+
+	UPROPERTY(VisibleDefaultsOnly)
+		class UCMontagesComponent* Montages;
+
+protected:
+	UPROPERTY(VisibleDefaultsOnly)
+		class UWidgetComponent* NameWidget;
+	UPROPERTY(VisibleDefaultsOnly)
+		class UWidgetComponent* HealthWidget;
+
+private:
+	UFUNCTION()
+		void OnStateTypeChanged(EStateType InPrevType, EStateType InNewType);
 };

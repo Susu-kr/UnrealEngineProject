@@ -5,6 +5,8 @@ D:\Github\GitHub\UnrealEngineProject\UnrealCppProject2\Source\UnrealCppProject2/
 D:\Github\GitHub\UnrealEngineProject\UnrealCppProject2\Source\UnrealCppProject2\Characters/CEnemy.h
 D:\Github\GitHub\UnrealEngineProject\UnrealCppProject2\Source\UnrealCppProject2\Characters/ICharacter.h
 d:\github\github\unrealengineproject\unrealcppproject2\intermediate\build\win64\ue4editor\inc\unrealcppproject2\ICharacter.generated.h
+D:\Github\GitHub\UnrealEngineProject\UnrealCppProject2\Source\UnrealCppProject2\Components/CStateComponent.h
+d:\github\github\unrealengineproject\unrealcppproject2\intermediate\build\win64\ue4editor\inc\unrealcppproject2\CStateComponent.generated.h
 D:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\GameFramework/Character.h
 D:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
 D:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h

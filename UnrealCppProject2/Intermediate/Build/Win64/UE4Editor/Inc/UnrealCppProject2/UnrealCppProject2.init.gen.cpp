@@ -11,6 +11,8 @@
 #endif
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeUnrealCppProject2_init() {}
+	UNREALCPPPROJECT2_API UFunction* Z_Construct_UDelegateFunction_UnrealCppProject2_AttachmentBeginOverlap__DelegateSignature();
+	UNREALCPPPROJECT2_API UFunction* Z_Construct_UDelegateFunction_UnrealCppProject2_AttachmentEndOverlap__DelegateSignature();
 	UNREALCPPPROJECT2_API UFunction* Z_Construct_UDelegateFunction_UnrealCppProject2_EquipmentDelegate__DelegateSignature();
 	UNREALCPPPROJECT2_API UFunction* Z_Construct_UDelegateFunction_UnrealCppProject2_UnequipmentDelegate__DelegateSignature();
 	UNREALCPPPROJECT2_API UFunction* Z_Construct_UDelegateFunction_UnrealCppProject2_ActionTypeChanged__DelegateSignature();
@@ -21,6 +23,8 @@ void EmptyLinkFunctionForGeneratedCodeUnrealCppProject2_init() {}
 		if (!ReturnPackage)
 		{
 			static UObject* (*const SingletonFuncArray[])() = {
+				(UObject* (*)())Z_Construct_UDelegateFunction_UnrealCppProject2_AttachmentBeginOverlap__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_UnrealCppProject2_AttachmentEndOverlap__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_UnrealCppProject2_EquipmentDelegate__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_UnrealCppProject2_UnequipmentDelegate__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_UnrealCppProject2_ActionTypeChanged__DelegateSignature,
@@ -31,8 +35,8 @@ void EmptyLinkFunctionForGeneratedCodeUnrealCppProject2_init() {}
 				SingletonFuncArray,
 				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0x5AFEC520,
-				0xCF19B477,
+				0xA130866F,
+				0x3E70870C,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);

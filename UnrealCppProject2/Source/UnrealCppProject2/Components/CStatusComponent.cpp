@@ -10,6 +10,7 @@ void UCStatusComponent::BeginPlay()
 {
 	Super::BeginPlay();
 
+	Health = MaxHealth;
 }
 
 void UCStatusComponent::SetMove()
