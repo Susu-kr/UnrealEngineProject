@@ -18,12 +18,16 @@ class AActor;
 #define UnrealCppProject2_Source_UnrealCppProject2_Actions_CDoAction_h_11_SPARSE_DATA
 #define UnrealCppProject2_Source_UnrealCppProject2_Actions_CDoAction_h_11_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execOffAttachmentCollision); \
+	DECLARE_FUNCTION(execOnAttachmentCollision); \
 	DECLARE_FUNCTION(execOnAttachmentEndOverlap); \
 	DECLARE_FUNCTION(execOnAttachmentBeginOverlap);
 
 
 #define UnrealCppProject2_Source_UnrealCppProject2_Actions_CDoAction_h_11_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execOffAttachmentCollision); \
+	DECLARE_FUNCTION(execOnAttachmentCollision); \
 	DECLARE_FUNCTION(execOnAttachmentEndOverlap); \
 	DECLARE_FUNCTION(execOnAttachmentBeginOverlap);
 

@@ -17,11 +17,13 @@ enum class EStateType : uint8;
 #define UnrealCppProject2_Source_UnrealCppProject2_Characters_CEnemy_h_12_SPARSE_DATA
 #define UnrealCppProject2_Source_UnrealCppProject2_Characters_CEnemy_h_12_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execRestoreColor); \
 	DECLARE_FUNCTION(execOnStateTypeChanged);
 
 
 #define UnrealCppProject2_Source_UnrealCppProject2_Characters_CEnemy_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execRestoreColor); \
 	DECLARE_FUNCTION(execOnStateTypeChanged);
 
 
@@ -74,6 +76,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ACEnemy); \
 	FORCEINLINE static uint32 __PPO__State() { return STRUCT_OFFSET(ACEnemy, State); } \
 	FORCEINLINE static uint32 __PPO__Action() { return STRUCT_OFFSET(ACEnemy, Action); } \
 	FORCEINLINE static uint32 __PPO__Montages() { return STRUCT_OFFSET(ACEnemy, Montages); } \
+	FORCEINLINE static uint32 __PPO__LaunchAmount() { return STRUCT_OFFSET(ACEnemy, LaunchAmount); } \
 	FORCEINLINE static uint32 __PPO__NameWidget() { return STRUCT_OFFSET(ACEnemy, NameWidget); } \
 	FORCEINLINE static uint32 __PPO__HealthWidget() { return STRUCT_OFFSET(ACEnemy, HealthWidget); }
 

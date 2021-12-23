@@ -16,6 +16,7 @@
 #include "Widgets/CUserWidget_Name.h"
 #include "Widgets/CUserWidget_Health.h"
 
+#include "Actions/CActionData.h"
 
 ACEnemy::ACEnemy()
 {
@@ -98,12 +99,55 @@ void ACEnemy::ChangeColor(FLinearColor InColor)
 
 float ACEnemy::TakeDamage(float Damage, FDamageEvent const & DamageEvent, AController * EventInstigator, AActor * DamageCauser)
 {
-	Super::TakeDamage(Damage, DamageEvent, EventInstigator, DamageCauser);
-	CLog::Log(Damage);
-	return 0.0f;
+	//Super::TakeDamage(Damage, DamageEvent, EventInstigator, DamageCauser);
+	//CLog::Log(Damage);
+
+	DamageInstigator = EventInstigator;
+	DamageValue = Super::TakeDamage(Damage, DamageEvent, EventInstigator, DamageCauser);
+
+	State->SetHittedMode();
+
+	return Status->GetHealth();
 }
 
 void ACEnemy::OnStateTypeChanged(EStateType InPrevType, EStateType InNewType)
 {
+	switch (InNewType)
+	{
+	case EStateType::Hitted: Hitted(); break;
+	}
+}
 
+void ACEnemy::RestoreColor()
+{
+	FLinearColor color = Action->GetCurrent()->GetEquipmentColor();
+	ChangeColor(color);
+}
+
+void ACEnemy::Hitted()
+{
+	Status->SubHealth(DamageValue);
+	Cast<UCUserWidget_Health>(HealthWidget->GetUserWidgetObject())->Update(Status->GetHealth(), Status->GetMaxHealth());
+	DamageValue = 0.0f;
+
+	// #. Play Animation
+	Status->SetStop();
+	Montages->PlayHitted();
+
+	// #. hitted nuck back
+
+	FVector start = GetActorLocation();
+	FVector target = DamageInstigator->GetPawn()->GetActorLocation();
+
+	SetActorRotation(UKismetMathLibrary::FindLookAtRotation(start, target));
+	DamageInstigator = NULL;
+
+	FVector direction = target - start;
+	direction.Normalize();
+
+	LaunchCharacter(-direction * LaunchAmount, true, false);
+
+	// #. Change Hitted Color
+	ChangeColor(FLinearColor(1, 0, 0, 1));
+	UKismetSystemLibrary::K2_SetTimer(this, "RestoreColor", 0.1f, false);
 }

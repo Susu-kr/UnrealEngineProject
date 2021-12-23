@@ -25,6 +25,13 @@ void EmptyLinkFunctionForGeneratedCodeCEnemy() {}
 	UNREALCPPPROJECT2_API UClass* Z_Construct_UClass_UCStatusComponent_NoRegister();
 	UNREALCPPPROJECT2_API UClass* Z_Construct_UClass_UICharacter_NoRegister();
 // End Cross Module References
+	DEFINE_FUNCTION(ACEnemy::execRestoreColor)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->RestoreColor();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(ACEnemy::execOnStateTypeChanged)
 	{
 		P_GET_ENUM(EStateType,Z_Param_InPrevType);
@@ -39,6 +46,7 @@ void EmptyLinkFunctionForGeneratedCodeCEnemy() {}
 		UClass* Class = ACEnemy::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
 			{ "OnStateTypeChanged", &ACEnemy::execOnStateTypeChanged },
+			{ "RestoreColor", &ACEnemy::execRestoreColor },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
@@ -84,6 +92,28 @@ void EmptyLinkFunctionForGeneratedCodeCEnemy() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_ACEnemy_RestoreColor_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACEnemy_RestoreColor_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Characters/CEnemy.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ACEnemy_RestoreColor_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACEnemy, nullptr, "RestoreColor", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ACEnemy_RestoreColor_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ACEnemy_RestoreColor_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ACEnemy_RestoreColor()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ACEnemy_RestoreColor_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	UClass* Z_Construct_UClass_ACEnemy_NoRegister()
 	{
 		return ACEnemy::StaticClass();
@@ -103,6 +133,10 @@ void EmptyLinkFunctionForGeneratedCodeCEnemy() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_NameWidget_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_NameWidget;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_LaunchAmount_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_LaunchAmount;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Montages_MetaData[];
 #endif
@@ -130,6 +164,7 @@ void EmptyLinkFunctionForGeneratedCodeCEnemy() {}
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_ACEnemy_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_ACEnemy_OnStateTypeChanged, "OnStateTypeChanged" }, // 999288174
+		{ &Z_Construct_UFunction_ACEnemy_RestoreColor, "RestoreColor" }, // 3589515602
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACEnemy_Statics::Class_MetaDataParams[] = {
@@ -154,6 +189,13 @@ void EmptyLinkFunctionForGeneratedCodeCEnemy() {}
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACEnemy_Statics::NewProp_NameWidget = { "NameWidget", nullptr, (EPropertyFlags)0x00200800000b0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACEnemy, NameWidget), Z_Construct_UClass_UWidgetComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ACEnemy_Statics::NewProp_NameWidget_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACEnemy_Statics::NewProp_NameWidget_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACEnemy_Statics::NewProp_LaunchAmount_MetaData[] = {
+		{ "Category", "Hitted" },
+		{ "ModuleRelativePath", "Characters/CEnemy.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ACEnemy_Statics::NewProp_LaunchAmount = { "LaunchAmount", nullptr, (EPropertyFlags)0x0040000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACEnemy, LaunchAmount), METADATA_PARAMS(Z_Construct_UClass_ACEnemy_Statics::NewProp_LaunchAmount_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACEnemy_Statics::NewProp_LaunchAmount_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACEnemy_Statics::NewProp_Montages_MetaData[] = {
 		{ "Category", "CEnemy" },
@@ -189,6 +231,7 @@ void EmptyLinkFunctionForGeneratedCodeCEnemy() {}
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ACEnemy_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACEnemy_Statics::NewProp_HealthWidget,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACEnemy_Statics::NewProp_NameWidget,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACEnemy_Statics::NewProp_LaunchAmount,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACEnemy_Statics::NewProp_Montages,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACEnemy_Statics::NewProp_Action,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACEnemy_Statics::NewProp_State,
@@ -224,7 +267,7 @@ void EmptyLinkFunctionForGeneratedCodeCEnemy() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ACEnemy, 3807239171);
+	IMPLEMENT_CLASS(ACEnemy, 1871998540);
 	template<> UNREALCPPPROJECT2_API UClass* StaticClass<ACEnemy>()
 	{
 		return ACEnemy::StaticClass();

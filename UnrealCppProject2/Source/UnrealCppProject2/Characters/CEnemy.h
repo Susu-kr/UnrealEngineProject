@@ -24,12 +24,6 @@ private:
 	class UMaterialInstanceDynamic* BodyMaterial;
 	class UMaterialInstanceDynamic* LogoMaterial;
 
-public:
-	virtual void ChangeColor(FLinearColor InColor) override;
-
-	float TakeDamage(float Damage, struct FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) override;
-
-private:
 	UPROPERTY(VisibleDefaultsOnly)
 		class UCStatusComponent* Status;
 
@@ -42,13 +36,30 @@ private:
 	UPROPERTY(VisibleDefaultsOnly)
 		class UCMontagesComponent* Montages;
 
+	UPROPERTY(EditAnywhere, Category = "Hitted")
+		float LaunchAmount = 100.0f;
+
+	class AController* DamageInstigator;
+	float DamageValue;
+
 protected:
 	UPROPERTY(VisibleDefaultsOnly)
 		class UWidgetComponent* NameWidget;
+
 	UPROPERTY(VisibleDefaultsOnly)
 		class UWidgetComponent* HealthWidget;
+
+public:
+	virtual void ChangeColor(FLinearColor InColor) override;
+
+	float TakeDamage(float Damage, struct FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) override;
 
 private:
 	UFUNCTION()
 		void OnStateTypeChanged(EStateType InPrevType, EStateType InNewType);
+
+	UFUNCTION()
+		void RestoreColor();
+
+	void Hitted();
 };

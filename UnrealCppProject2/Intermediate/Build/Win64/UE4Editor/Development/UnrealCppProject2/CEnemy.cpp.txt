@@ -178,3 +178,5 @@ D:\Github\GitHub\UnrealEngineProject\UnrealCppProject2\Source\UnrealCppProject2\
 D:\Github\GitHub\UnrealEngineProject\UnrealCppProject2\Intermediate\Build\Win64\UE4Editor\Inc\UnrealCppProject2\CUserWidget_Name.generated.h
 D:\Github\GitHub\UnrealEngineProject\UnrealCppProject2\Source\UnrealCppProject2\Widgets/CUserWidget_Health.h
 D:\Github\GitHub\UnrealEngineProject\UnrealCppProject2\Intermediate\Build\Win64\UE4Editor\Inc\UnrealCppProject2\CUserWidget_Health.generated.h
+D:\Github\GitHub\UnrealEngineProject\UnrealCppProject2\Source\UnrealCppProject2\Actions/CActionData.h
+D:\Github\GitHub\UnrealEngineProject\UnrealCppProject2\Intermediate\Build\Win64\UE4Editor\Inc\UnrealCppProject2\CActionData.generated.h

@@ -71,7 +71,7 @@ void EmptyLinkFunctionForGeneratedCodeCDoAction_Melee() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ACDoAction_Melee, 1287286326);
+	IMPLEMENT_CLASS(ACDoAction_Melee, 3144103052);
 	template<> UNREALCPPPROJECT2_API UClass* StaticClass<ACDoAction_Melee>()
 	{
 		return ACDoAction_Melee::StaticClass();

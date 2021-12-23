@@ -72,7 +72,7 @@ void EmptyLinkFunctionForGeneratedCodeCEnemy_Dummy() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ACEnemy_Dummy, 1811828873);
+	IMPLEMENT_CLASS(ACEnemy_Dummy, 2524085262);
 	template<> UNREALCPPPROJECT2_API UClass* StaticClass<ACEnemy_Dummy>()
 	{
 		return ACEnemy_Dummy::StaticClass();
