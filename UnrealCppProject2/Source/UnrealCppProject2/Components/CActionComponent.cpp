@@ -40,7 +40,7 @@ void UCActionComponent::SetMode(EActionType InType)
 	else if (IsUnarmedMode() == false)
 	{
 		// #. Unequip Weapon
-		ACEquipment* equipment = Datas[(int32)InType]->GetEquipment();
+		ACEquipment* equipment = Datas[(int32)Type]->GetEquipment();
 		CheckNull(equipment);
 		equipment->Unequip();
 	}
@@ -68,6 +68,11 @@ void UCActionComponent::SetUnarmedMode()
 	equipment->Equip();
 
 	ChangeType(EActionType::Unarmed);
+}
+
+void UCActionComponent::SetFistMode()
+{
+	SetMode(EActionType::Fist);
 }
 
 void UCActionComponent::SetOneHandMode()

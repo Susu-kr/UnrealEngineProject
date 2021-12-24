@@ -77,9 +77,36 @@ void ACDoAction_Melee::OnAttachmentBeginOverlap(ACharacter * InAttacker, AActor 
 
 	HittedCharacters.Add(InOtherCharacter);
 
+	// #. Hit Effect Particle
+	UParticleSystem* hitEffect = Datas[Index].Effect;
+	if (!!hitEffect)
+	{
+		FTransform transform = Datas[Index].EffectTransform;
+		transform.AddToTranslation(InOtherCharacter->GetActorLocation());
+
+		UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), hitEffect, transform);
+	}
+
+	// #. Slow Motion
+	// UGameplayStatics::SetGlobalTimeDilation(GetWorld(), 0.1f);
+	float hitStop = Datas[Index].HitStop;
+	if (FMath::IsNearlyZero(hitStop) == false)
+	{
+		UGameplayStatics::SetGlobalTimeDilation(GetWorld(), 1e-3f);
+		UKismetSystemLibrary::K2_SetTimer(this, "RestoreDilation", hitStop * 1e-3f, false);
+	}
+
+	// #. Shake Camera
+	TSubclassOf<UCameraShake> shake = Datas[Index].ShakeClass;
+	if (shake != NULL)
+	{
+		UGameplayStatics::GetPlayerController(GetWorld(), 0)
+						->PlayerCameraManager
+						->PlayCameraShake(shake);
+	}
+
 	FDamageEvent e;
 	InOtherCharacter->TakeDamage(Datas[Index].Power, e, OwnerCharacter->GetController(), this);
-	
 }
 
 void ACDoAction_Melee::OnAttachmentEndOverlap(ACharacter * InAttacker, AActor * InAttackCauser, ACharacter * InOtherCharacter)
@@ -93,4 +120,9 @@ void ACDoAction_Melee::OnAttachmentCollision()
 void ACDoAction_Melee::OffAttachmentCollision()
 {
 	HittedCharacters.Empty();
+}
+
+void ACDoAction_Melee::RestoreDilation()
+{
+	UGameplayStatics::SetGlobalTimeDilation(GetWorld(), 1.0f);
 }

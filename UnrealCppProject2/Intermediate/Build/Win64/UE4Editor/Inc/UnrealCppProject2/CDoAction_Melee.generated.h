@@ -14,8 +14,16 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define UNREALCPPPROJECT2_CDoAction_Melee_generated_h
 
 #define UnrealCppProject2_Source_UnrealCppProject2_Actions_CDoAction_Melee_h_11_SPARSE_DATA
-#define UnrealCppProject2_Source_UnrealCppProject2_Actions_CDoAction_Melee_h_11_RPC_WRAPPERS
-#define UnrealCppProject2_Source_UnrealCppProject2_Actions_CDoAction_Melee_h_11_RPC_WRAPPERS_NO_PURE_DECLS
+#define UnrealCppProject2_Source_UnrealCppProject2_Actions_CDoAction_Melee_h_11_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execRestoreDilation);
+
+
+#define UnrealCppProject2_Source_UnrealCppProject2_Actions_CDoAction_Melee_h_11_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execRestoreDilation);
+
+
 #define UnrealCppProject2_Source_UnrealCppProject2_Actions_CDoAction_Melee_h_11_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesACDoAction_Melee(); \

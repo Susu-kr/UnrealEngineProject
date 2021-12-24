@@ -15,7 +15,7 @@ class UCActionData;
 #endif
 #define UNREALCPPPROJECT2_CActionComponent_generated_h
 
-#define UnrealCppProject2_Source_UnrealCppProject2_Components_CActionComponent_h_16_DELEGATE \
+#define UnrealCppProject2_Source_UnrealCppProject2_Components_CActionComponent_h_17_DELEGATE \
 struct _Script_UnrealCppProject2_eventActionTypeChanged_Parms \
 { \
 	EActionType InPrevType; \
@@ -30,24 +30,26 @@ static inline void FActionTypeChanged_DelegateWrapper(const FMulticastScriptDele
 }
 
 
-#define UnrealCppProject2_Source_UnrealCppProject2_Components_CActionComponent_h_21_SPARSE_DATA
-#define UnrealCppProject2_Source_UnrealCppProject2_Components_CActionComponent_h_21_RPC_WRAPPERS \
+#define UnrealCppProject2_Source_UnrealCppProject2_Components_CActionComponent_h_22_SPARSE_DATA
+#define UnrealCppProject2_Source_UnrealCppProject2_Components_CActionComponent_h_22_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execGetCurrent); \
 	DECLARE_FUNCTION(execIsTwoHandMode); \
 	DECLARE_FUNCTION(execIsOneHandMode); \
+	DECLARE_FUNCTION(execIsFistMode); \
 	DECLARE_FUNCTION(execIsUnarmedMode);
 
 
-#define UnrealCppProject2_Source_UnrealCppProject2_Components_CActionComponent_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
+#define UnrealCppProject2_Source_UnrealCppProject2_Components_CActionComponent_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execGetCurrent); \
 	DECLARE_FUNCTION(execIsTwoHandMode); \
 	DECLARE_FUNCTION(execIsOneHandMode); \
+	DECLARE_FUNCTION(execIsFistMode); \
 	DECLARE_FUNCTION(execIsUnarmedMode);
 
 
-#define UnrealCppProject2_Source_UnrealCppProject2_Components_CActionComponent_h_21_INCLASS_NO_PURE_DECLS \
+#define UnrealCppProject2_Source_UnrealCppProject2_Components_CActionComponent_h_22_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUCActionComponent(); \
 	friend struct Z_Construct_UClass_UCActionComponent_Statics; \
@@ -56,7 +58,7 @@ public: \
 	DECLARE_SERIALIZER(UCActionComponent)
 
 
-#define UnrealCppProject2_Source_UnrealCppProject2_Components_CActionComponent_h_21_INCLASS \
+#define UnrealCppProject2_Source_UnrealCppProject2_Components_CActionComponent_h_22_INCLASS \
 private: \
 	static void StaticRegisterNativesUCActionComponent(); \
 	friend struct Z_Construct_UClass_UCActionComponent_Statics; \
@@ -65,7 +67,7 @@ public: \
 	DECLARE_SERIALIZER(UCActionComponent)
 
 
-#define UnrealCppProject2_Source_UnrealCppProject2_Components_CActionComponent_h_21_STANDARD_CONSTRUCTORS \
+#define UnrealCppProject2_Source_UnrealCppProject2_Components_CActionComponent_h_22_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UCActionComponent(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UCActionComponent) \
@@ -78,7 +80,7 @@ private: \
 public:
 
 
-#define UnrealCppProject2_Source_UnrealCppProject2_Components_CActionComponent_h_21_ENHANCED_CONSTRUCTORS \
+#define UnrealCppProject2_Source_UnrealCppProject2_Components_CActionComponent_h_22_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API UCActionComponent(UCActionComponent&&); \
@@ -89,31 +91,31 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UCActionComponent); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(UCActionComponent)
 
 
-#define UnrealCppProject2_Source_UnrealCppProject2_Components_CActionComponent_h_21_PRIVATE_PROPERTY_OFFSET \
+#define UnrealCppProject2_Source_UnrealCppProject2_Components_CActionComponent_h_22_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__Datas() { return STRUCT_OFFSET(UCActionComponent, Datas); }
 
 
-#define UnrealCppProject2_Source_UnrealCppProject2_Components_CActionComponent_h_18_PROLOG
-#define UnrealCppProject2_Source_UnrealCppProject2_Components_CActionComponent_h_21_GENERATED_BODY_LEGACY \
+#define UnrealCppProject2_Source_UnrealCppProject2_Components_CActionComponent_h_19_PROLOG
+#define UnrealCppProject2_Source_UnrealCppProject2_Components_CActionComponent_h_22_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	UnrealCppProject2_Source_UnrealCppProject2_Components_CActionComponent_h_21_PRIVATE_PROPERTY_OFFSET \
-	UnrealCppProject2_Source_UnrealCppProject2_Components_CActionComponent_h_21_SPARSE_DATA \
-	UnrealCppProject2_Source_UnrealCppProject2_Components_CActionComponent_h_21_RPC_WRAPPERS \
-	UnrealCppProject2_Source_UnrealCppProject2_Components_CActionComponent_h_21_INCLASS \
-	UnrealCppProject2_Source_UnrealCppProject2_Components_CActionComponent_h_21_STANDARD_CONSTRUCTORS \
+	UnrealCppProject2_Source_UnrealCppProject2_Components_CActionComponent_h_22_PRIVATE_PROPERTY_OFFSET \
+	UnrealCppProject2_Source_UnrealCppProject2_Components_CActionComponent_h_22_SPARSE_DATA \
+	UnrealCppProject2_Source_UnrealCppProject2_Components_CActionComponent_h_22_RPC_WRAPPERS \
+	UnrealCppProject2_Source_UnrealCppProject2_Components_CActionComponent_h_22_INCLASS \
+	UnrealCppProject2_Source_UnrealCppProject2_Components_CActionComponent_h_22_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define UnrealCppProject2_Source_UnrealCppProject2_Components_CActionComponent_h_21_GENERATED_BODY \
+#define UnrealCppProject2_Source_UnrealCppProject2_Components_CActionComponent_h_22_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	UnrealCppProject2_Source_UnrealCppProject2_Components_CActionComponent_h_21_PRIVATE_PROPERTY_OFFSET \
-	UnrealCppProject2_Source_UnrealCppProject2_Components_CActionComponent_h_21_SPARSE_DATA \
-	UnrealCppProject2_Source_UnrealCppProject2_Components_CActionComponent_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
-	UnrealCppProject2_Source_UnrealCppProject2_Components_CActionComponent_h_21_INCLASS_NO_PURE_DECLS \
-	UnrealCppProject2_Source_UnrealCppProject2_Components_CActionComponent_h_21_ENHANCED_CONSTRUCTORS \
+	UnrealCppProject2_Source_UnrealCppProject2_Components_CActionComponent_h_22_PRIVATE_PROPERTY_OFFSET \
+	UnrealCppProject2_Source_UnrealCppProject2_Components_CActionComponent_h_22_SPARSE_DATA \
+	UnrealCppProject2_Source_UnrealCppProject2_Components_CActionComponent_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
+	UnrealCppProject2_Source_UnrealCppProject2_Components_CActionComponent_h_22_INCLASS_NO_PURE_DECLS \
+	UnrealCppProject2_Source_UnrealCppProject2_Components_CActionComponent_h_22_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -126,6 +128,7 @@ template<> UNREALCPPPROJECT2_API UClass* StaticClass<class UCActionComponent>();
 
 #define FOREACH_ENUM_EACTIONTYPE(op) \
 	op(EActionType::Unarmed) \
+	op(EActionType::Fist) \
 	op(EActionType::OneHand) \
 	op(EActionType::TwoHand) \
 	op(EActionType::Max) 

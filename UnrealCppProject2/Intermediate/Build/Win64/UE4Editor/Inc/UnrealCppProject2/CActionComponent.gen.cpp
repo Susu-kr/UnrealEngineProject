@@ -77,7 +77,7 @@ void EmptyLinkFunctionForGeneratedCodeCActionComponent() {}
 		return EActionType_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EActionType(EActionType_StaticEnum, TEXT("/Script/UnrealCppProject2"), TEXT("EActionType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_UnrealCppProject2_EActionType_Hash() { return 514115955U; }
+	uint32 Get_Z_Construct_UEnum_UnrealCppProject2_EActionType_Hash() { return 3309403048U; }
 	UEnum* Z_Construct_UEnum_UnrealCppProject2_EActionType()
 	{
 #if WITH_HOT_RELOAD
@@ -90,6 +90,7 @@ void EmptyLinkFunctionForGeneratedCodeCActionComponent() {}
 		{
 			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
 				{ "EActionType::Unarmed", (int64)EActionType::Unarmed },
+				{ "EActionType::Fist", (int64)EActionType::Fist },
 				{ "EActionType::OneHand", (int64)EActionType::OneHand },
 				{ "EActionType::TwoHand", (int64)EActionType::TwoHand },
 				{ "EActionType::Max", (int64)EActionType::Max },
@@ -97,6 +98,7 @@ void EmptyLinkFunctionForGeneratedCodeCActionComponent() {}
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
 				{ "BlueprintType", "true" },
+				{ "Fist.Name", "EActionType::Fist" },
 				{ "Max.Name", "EActionType::Max" },
 				{ "ModuleRelativePath", "Components/CActionComponent.h" },
 				{ "OneHand.Name", "EActionType::OneHand" },
@@ -141,6 +143,13 @@ void EmptyLinkFunctionForGeneratedCodeCActionComponent() {}
 		*(bool*)Z_Param__Result=P_THIS->IsOneHandMode();
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(UCActionComponent::execIsFistMode)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->IsFistMode();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(UCActionComponent::execIsUnarmedMode)
 	{
 		P_FINISH;
@@ -153,6 +162,7 @@ void EmptyLinkFunctionForGeneratedCodeCActionComponent() {}
 		UClass* Class = UCActionComponent::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
 			{ "GetCurrent", &UCActionComponent::execGetCurrent },
+			{ "IsFistMode", &UCActionComponent::execIsFistMode },
 			{ "IsOneHandMode", &UCActionComponent::execIsOneHandMode },
 			{ "IsTwoHandMode", &UCActionComponent::execIsTwoHandMode },
 			{ "IsUnarmedMode", &UCActionComponent::execIsUnarmedMode },
@@ -188,6 +198,43 @@ void EmptyLinkFunctionForGeneratedCodeCActionComponent() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCActionComponent_GetCurrent_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UCActionComponent_IsFistMode_Statics
+	{
+		struct CActionComponent_eventIsFistMode_Parms
+		{
+			bool ReturnValue;
+		};
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_UCActionComponent_IsFistMode_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((CActionComponent_eventIsFistMode_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UCActionComponent_IsFistMode_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(CActionComponent_eventIsFistMode_Parms), &Z_Construct_UFunction_UCActionComponent_IsFistMode_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UCActionComponent_IsFistMode_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UCActionComponent_IsFistMode_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UCActionComponent_IsFistMode_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Components/CActionComponent.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCActionComponent_IsFistMode_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCActionComponent, nullptr, "IsFistMode", nullptr, nullptr, sizeof(CActionComponent_eventIsFistMode_Parms), Z_Construct_UFunction_UCActionComponent_IsFistMode_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UCActionComponent_IsFistMode_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UCActionComponent_IsFistMode_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UCActionComponent_IsFistMode_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UCActionComponent_IsFistMode()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCActionComponent_IsFistMode_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -331,6 +378,7 @@ void EmptyLinkFunctionForGeneratedCodeCActionComponent() {}
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_UCActionComponent_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_UCActionComponent_GetCurrent, "GetCurrent" }, // 1796094475
+		{ &Z_Construct_UFunction_UCActionComponent_IsFistMode, "IsFistMode" }, // 1251719032
 		{ &Z_Construct_UFunction_UCActionComponent_IsOneHandMode, "IsOneHandMode" }, // 672399581
 		{ &Z_Construct_UFunction_UCActionComponent_IsTwoHandMode, "IsTwoHandMode" }, // 1373337640
 		{ &Z_Construct_UFunction_UCActionComponent_IsUnarmedMode, "IsUnarmedMode" }, // 2821889002
@@ -388,7 +436,7 @@ void EmptyLinkFunctionForGeneratedCodeCActionComponent() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UCActionComponent, 3924801619);
+	IMPLEMENT_CLASS(UCActionComponent, 1965047987);
 	template<> UNREALCPPPROJECT2_API UClass* StaticClass<UCActionComponent>()
 	{
 		return UCActionComponent::StaticClass();

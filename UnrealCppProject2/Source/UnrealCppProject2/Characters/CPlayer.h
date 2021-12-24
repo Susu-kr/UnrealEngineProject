@@ -53,7 +53,9 @@ private:
 	void OnHorizontalLook(float InAxis);
 	void OnVerticalLook(float InAxis);
 	void OnAvoid();
+	void OnFist();
 	void OnOneHand();
+	void OnTwoHand();
 	void OnDoAction();
 
 	void Begin_Roll();
