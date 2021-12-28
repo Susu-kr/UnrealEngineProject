@@ -77,7 +77,7 @@ void EmptyLinkFunctionForGeneratedCodeCActionComponent() {}
 		return EActionType_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EActionType(EActionType_StaticEnum, TEXT("/Script/UnrealCppProject2"), TEXT("EActionType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_UnrealCppProject2_EActionType_Hash() { return 3309403048U; }
+	uint32 Get_Z_Construct_UEnum_UnrealCppProject2_EActionType_Hash() { return 352501259U; }
 	UEnum* Z_Construct_UEnum_UnrealCppProject2_EActionType()
 	{
 #if WITH_HOT_RELOAD
@@ -93,6 +93,7 @@ void EmptyLinkFunctionForGeneratedCodeCActionComponent() {}
 				{ "EActionType::Fist", (int64)EActionType::Fist },
 				{ "EActionType::OneHand", (int64)EActionType::OneHand },
 				{ "EActionType::TwoHand", (int64)EActionType::TwoHand },
+				{ "EActionType::Warp", (int64)EActionType::Warp },
 				{ "EActionType::Max", (int64)EActionType::Max },
 			};
 #if WITH_METADATA
@@ -104,6 +105,7 @@ void EmptyLinkFunctionForGeneratedCodeCActionComponent() {}
 				{ "OneHand.Name", "EActionType::OneHand" },
 				{ "TwoHand.Name", "EActionType::TwoHand" },
 				{ "Unarmed.Name", "EActionType::Unarmed" },
+				{ "Warp.Name", "EActionType::Warp" },
 			};
 #endif
 			static const UE4CodeGen_Private::FEnumParams EnumParams = {
@@ -127,6 +129,13 @@ void EmptyLinkFunctionForGeneratedCodeCActionComponent() {}
 		P_FINISH;
 		P_NATIVE_BEGIN;
 		*(UCActionData**)Z_Param__Result=P_THIS->GetCurrent();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UCActionComponent::execIsWarpMode)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->IsWarpMode();
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(UCActionComponent::execIsTwoHandMode)
@@ -166,6 +175,7 @@ void EmptyLinkFunctionForGeneratedCodeCActionComponent() {}
 			{ "IsOneHandMode", &UCActionComponent::execIsOneHandMode },
 			{ "IsTwoHandMode", &UCActionComponent::execIsTwoHandMode },
 			{ "IsUnarmedMode", &UCActionComponent::execIsUnarmedMode },
+			{ "IsWarpMode", &UCActionComponent::execIsWarpMode },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
@@ -349,6 +359,43 @@ void EmptyLinkFunctionForGeneratedCodeCActionComponent() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_UCActionComponent_IsWarpMode_Statics
+	{
+		struct CActionComponent_eventIsWarpMode_Parms
+		{
+			bool ReturnValue;
+		};
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_UCActionComponent_IsWarpMode_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((CActionComponent_eventIsWarpMode_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UCActionComponent_IsWarpMode_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(CActionComponent_eventIsWarpMode_Parms), &Z_Construct_UFunction_UCActionComponent_IsWarpMode_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UCActionComponent_IsWarpMode_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UCActionComponent_IsWarpMode_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UCActionComponent_IsWarpMode_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Components/CActionComponent.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCActionComponent_IsWarpMode_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCActionComponent, nullptr, "IsWarpMode", nullptr, nullptr, sizeof(CActionComponent_eventIsWarpMode_Parms), Z_Construct_UFunction_UCActionComponent_IsWarpMode_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UCActionComponent_IsWarpMode_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UCActionComponent_IsWarpMode_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UCActionComponent_IsWarpMode_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UCActionComponent_IsWarpMode()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCActionComponent_IsWarpMode_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	UClass* Z_Construct_UClass_UCActionComponent_NoRegister()
 	{
 		return UCActionComponent::StaticClass();
@@ -382,6 +429,7 @@ void EmptyLinkFunctionForGeneratedCodeCActionComponent() {}
 		{ &Z_Construct_UFunction_UCActionComponent_IsOneHandMode, "IsOneHandMode" }, // 672399581
 		{ &Z_Construct_UFunction_UCActionComponent_IsTwoHandMode, "IsTwoHandMode" }, // 1373337640
 		{ &Z_Construct_UFunction_UCActionComponent_IsUnarmedMode, "IsUnarmedMode" }, // 2821889002
+		{ &Z_Construct_UFunction_UCActionComponent_IsWarpMode, "IsWarpMode" }, // 716935244
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCActionComponent_Statics::Class_MetaDataParams[] = {
@@ -436,7 +484,7 @@ void EmptyLinkFunctionForGeneratedCodeCActionComponent() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UCActionComponent, 1965047987);
+	IMPLEMENT_CLASS(UCActionComponent, 3590552147);
 	template<> UNREALCPPPROJECT2_API UClass* StaticClass<UCActionComponent>()
 	{
 		return UCActionComponent::StaticClass();

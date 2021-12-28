@@ -23,6 +23,9 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 private:
+	class UMaterialInstanceDynamic* BodyMaterial;
+	class UMaterialInstanceDynamic* LogoMaterial;
+
 	UPROPERTY(VisibleDefaultsOnly)
 		class USpringArmComponent* SpringArm;
 
@@ -44,10 +47,12 @@ private:
 	UPROPERTY(VisibleDefaultsOnly)
 		class UCMontagesComponent* Montages;
 
-private:
+	UPROPERTY(VisibleDefaultsOnly)
+		class UCTargetComponent* Target;
+
 	UFUNCTION()
 		void OnStateTypeChanged(EStateType InPrevType, EStateType InNewType);
-private:
+
 	void OnMoveForward(float InAxis);
 	void OnMoveRight(float InAxis);
 	void OnHorizontalLook(float InAxis);
@@ -56,6 +61,8 @@ private:
 	void OnFist();
 	void OnOneHand();
 	void OnTwoHand();
+	void OnWarp();
+	void OnTarget();
 	void OnDoAction();
 
 	void Begin_Roll();
@@ -65,10 +72,7 @@ public:
 	void End_Roll();
 	void End_Backstep();
 
-private:
-	class UMaterialInstanceDynamic* BodyMaterial;
-	class UMaterialInstanceDynamic* LogoMaterial;
-
-public:
 	virtual void ChangeColor(FLinearColor InColor) override;
+
+
 };

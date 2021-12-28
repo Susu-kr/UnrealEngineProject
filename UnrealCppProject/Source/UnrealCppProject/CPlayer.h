@@ -3,7 +3,6 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "IRifle.h"
-
 #include "CPlayer.generated.h"
 
 UCLASS()

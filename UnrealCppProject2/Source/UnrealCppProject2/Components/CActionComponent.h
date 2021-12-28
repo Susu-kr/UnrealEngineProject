@@ -11,6 +11,7 @@ enum class EActionType : uint8
 	Fist,
 	OneHand,
 	TwoHand,
+	Warp,
 	Max
 };
 
@@ -39,6 +40,8 @@ public:
 		FORCEINLINE bool IsOneHandMode() { return Type == EActionType::OneHand; }
 	UFUNCTION(BlueprintPure)
 		FORCEINLINE bool IsTwoHandMode() { return Type == EActionType::TwoHand; }
+	UFUNCTION(BlueprintPure)
+		FORCEINLINE bool IsWarpMode() { return Type == EActionType::Warp; }
 
 public:
 	UPROPERTY(BlueprintAssignable)
@@ -53,6 +56,7 @@ public:
 	void SetFistMode();
 	void SetOneHandMode();
 	void SetTwoHandMode();
+	void SetWarpMode();
 
 	void DoAction();
 
