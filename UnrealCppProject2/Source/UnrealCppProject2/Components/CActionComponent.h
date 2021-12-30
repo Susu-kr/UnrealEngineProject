@@ -12,6 +12,8 @@ enum class EActionType : uint8
 	OneHand,
 	TwoHand,
 	Warp,
+	FireStorm,
+	IceBall,
 	Max
 };
 
@@ -42,7 +44,10 @@ public:
 		FORCEINLINE bool IsTwoHandMode() { return Type == EActionType::TwoHand; }
 	UFUNCTION(BlueprintPure)
 		FORCEINLINE bool IsWarpMode() { return Type == EActionType::Warp; }
-
+	UFUNCTION(BlueprintPure)
+		FORCEINLINE bool IsFireStormMode() { return Type == EActionType::FireStorm; }
+	UFUNCTION(BlueprintPure)
+		FORCEINLINE bool IsIceBallMode() { return Type == EActionType::IceBall; }
 public:
 	UPROPERTY(BlueprintAssignable)
 		FActionTypeChanged OnActionTypeChanged;
@@ -57,9 +62,12 @@ public:
 	void SetOneHandMode();
 	void SetTwoHandMode();
 	void SetWarpMode();
+	void SetFireStormMode();
+	void SetIceBallMode();
 
 	void DoAction();
-
+	void OffAllCollision();
+	void DoAim(bool InAim);
 private:
 	UPROPERTY(EditDefaultsOnly, Category = "Weapons")
 		class UCActionData* Datas[(int32)EActionType::Max];

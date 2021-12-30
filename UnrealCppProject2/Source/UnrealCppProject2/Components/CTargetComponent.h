@@ -23,19 +23,30 @@ public:
 private:
 	class ACharacter* OwnerCharacter;
 	class ACharacter* Target;
+	class UParticleSystemComponent* Attached;
 
 	void StartTargeting();
 	void EndTargeting();
 	void SetTraceTargets();
 	void SetTarget();
-	
+	void ChangeCursor(class ACharacter* InTarget);
+	void ChangeTarget(bool InRight);
+
 	UPROPERTY(EditAnywhere)
 		float TraceRadius = 1000.0f;
+
 	UPROPERTY(EditAnywhere)
 		TEnumAsByte<EDrawDebugTrace::Type> Debug;
+
+	UPROPERTY(EditAnywhere)
+		class UParticleSystem* Particle;
+
+	UPROPERTY(EditAnywhere)
+		float InteropSpeed = 2.5f;
 
 	TArray<class ACharacter*> TraceTargets;
 public:
 	void ToggleTarget();
-
+	void ChangeTargetLeft();
+	void ChangeTargetRight();
 };

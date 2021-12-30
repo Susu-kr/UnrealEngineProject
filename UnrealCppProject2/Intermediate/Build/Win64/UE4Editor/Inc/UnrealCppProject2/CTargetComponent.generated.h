@@ -60,7 +60,9 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UCTargetComponent); \
 
 #define UnrealCppProject2_Source_UnrealCppProject2_Components_CTargetComponent_h_12_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__TraceRadius() { return STRUCT_OFFSET(UCTargetComponent, TraceRadius); } \
-	FORCEINLINE static uint32 __PPO__Debug() { return STRUCT_OFFSET(UCTargetComponent, Debug); }
+	FORCEINLINE static uint32 __PPO__Debug() { return STRUCT_OFFSET(UCTargetComponent, Debug); } \
+	FORCEINLINE static uint32 __PPO__Particle() { return STRUCT_OFFSET(UCTargetComponent, Particle); } \
+	FORCEINLINE static uint32 __PPO__InteropSpeed() { return STRUCT_OFFSET(UCTargetComponent, InteropSpeed); }
 
 
 #define UnrealCppProject2_Source_UnrealCppProject2_Components_CTargetComponent_h_9_PROLOG

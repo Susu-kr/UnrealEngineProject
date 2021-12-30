@@ -35,6 +35,10 @@ public:
 	virtual void Begin_DoAction() {}
 	virtual void End_DoAction() {}
 
+	// #. Aim
+	virtual void OnAim() {}
+	virtual void OffAim() {}
+
 protected:
 	TArray<FDoActionData> Datas;
 	

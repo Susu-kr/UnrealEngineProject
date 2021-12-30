@@ -4,6 +4,7 @@
 #include "Actions/CActionData.h"
 #include "Actions/CEquipment.h"
 #include "Actions/CDoAction.h"
+#include "Actions/CAttachment.h"
 
 UCActionComponent::UCActionComponent()
 {
@@ -90,6 +91,16 @@ void UCActionComponent::SetWarpMode()
 	SetMode(EActionType::Warp);
 }
 
+void UCActionComponent::SetFireStormMode()
+{
+	SetMode(EActionType::FireStorm);
+}
+
+void UCActionComponent::SetIceBallMode()
+{
+	SetMode(EActionType::IceBall);
+}
+
 void UCActionComponent::DoAction()
 {
 	CheckTrue(IsUnarmedMode());
@@ -100,5 +111,29 @@ void UCActionComponent::DoAction()
 
 		if (!!action)
 			action->DoAction();
+	}
+}
+
+void UCActionComponent::OffAllCollision()
+{
+	for (UCActionData* data : Datas)
+	{
+		if (!!data == false)
+			continue;
+		if (!!data->GetAttachment() == false)
+			continue;
+
+		data->GetAttachment()->OffCollision();
+	}
+}
+
+void UCActionComponent::DoAim(bool InAim)
+{
+	CheckTrue(IsUnarmedMode());
+	if (!!Datas[(int32)Type])
+	{
+		ACDoAction* action = Datas[(int32)Type]->GetDoAction();
+		if (!!action)
+			InAim ? action->OnAim() : action->OffAim();
 	}
 }

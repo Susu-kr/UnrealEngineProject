@@ -51,7 +51,6 @@ protected:
 
 public:
 	virtual void ChangeColor(FLinearColor InColor) override;
-
 	float TakeDamage(float Damage, struct FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) override;
 
 private:
@@ -62,4 +61,9 @@ private:
 		void RestoreColor();
 
 	void Hitted();
+	void Dead();
+
+public:
+	virtual void Begin_Dead() override;
+	virtual void End_Dead() override;
 };

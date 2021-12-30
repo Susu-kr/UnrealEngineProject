@@ -62,7 +62,13 @@ private:
 	void OnOneHand();
 	void OnTwoHand();
 	void OnWarp();
+	void OnFireStorm();
+	void OnIceBall();
 	void OnTarget();
+	void OnTargetLeft();
+	void OnTargetRight();
+	void OnAim();
+	void OffAim();
 	void OnDoAction();
 
 	void Begin_Roll();
@@ -73,6 +79,5 @@ public:
 	void End_Backstep();
 
 	virtual void ChangeColor(FLinearColor InColor) override;
-
 
 };

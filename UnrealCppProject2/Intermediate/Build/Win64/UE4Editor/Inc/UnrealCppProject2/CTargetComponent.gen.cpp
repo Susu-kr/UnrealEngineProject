@@ -17,6 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeCTargetComponent() {}
 	UNREALCPPPROJECT2_API UClass* Z_Construct_UClass_UCTargetComponent();
 	ENGINE_API UClass* Z_Construct_UClass_UActorComponent();
 	UPackage* Z_Construct_UPackage__Script_UnrealCppProject2();
+	ENGINE_API UClass* Z_Construct_UClass_UParticleSystem_NoRegister();
 	ENGINE_API UEnum* Z_Construct_UEnum_Engine_EDrawDebugTrace();
 // End Cross Module References
 	void UCTargetComponent::StaticRegisterNativesUCTargetComponent()
@@ -32,6 +33,14 @@ void EmptyLinkFunctionForGeneratedCodeCTargetComponent() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_InteropSpeed_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_InteropSpeed;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Particle_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Particle;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Debug_MetaData[];
 #endif
@@ -57,6 +66,20 @@ void EmptyLinkFunctionForGeneratedCodeCTargetComponent() {}
 	};
 #endif
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCTargetComponent_Statics::NewProp_InteropSpeed_MetaData[] = {
+		{ "Category", "CTargetComponent" },
+		{ "ModuleRelativePath", "Components/CTargetComponent.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UCTargetComponent_Statics::NewProp_InteropSpeed = { "InteropSpeed", nullptr, (EPropertyFlags)0x0040000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UCTargetComponent, InteropSpeed), METADATA_PARAMS(Z_Construct_UClass_UCTargetComponent_Statics::NewProp_InteropSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UCTargetComponent_Statics::NewProp_InteropSpeed_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCTargetComponent_Statics::NewProp_Particle_MetaData[] = {
+		{ "Category", "CTargetComponent" },
+		{ "ModuleRelativePath", "Components/CTargetComponent.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UCTargetComponent_Statics::NewProp_Particle = { "Particle", nullptr, (EPropertyFlags)0x0040000000000001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UCTargetComponent, Particle), Z_Construct_UClass_UParticleSystem_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UCTargetComponent_Statics::NewProp_Particle_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UCTargetComponent_Statics::NewProp_Particle_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCTargetComponent_Statics::NewProp_Debug_MetaData[] = {
 		{ "Category", "CTargetComponent" },
 		{ "ModuleRelativePath", "Components/CTargetComponent.h" },
@@ -71,6 +94,8 @@ void EmptyLinkFunctionForGeneratedCodeCTargetComponent() {}
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UCTargetComponent_Statics::NewProp_TraceRadius = { "TraceRadius", nullptr, (EPropertyFlags)0x0040000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UCTargetComponent, TraceRadius), METADATA_PARAMS(Z_Construct_UClass_UCTargetComponent_Statics::NewProp_TraceRadius_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UCTargetComponent_Statics::NewProp_TraceRadius_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UCTargetComponent_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCTargetComponent_Statics::NewProp_InteropSpeed,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCTargetComponent_Statics::NewProp_Particle,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCTargetComponent_Statics::NewProp_Debug,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCTargetComponent_Statics::NewProp_TraceRadius,
 	};
@@ -101,7 +126,7 @@ void EmptyLinkFunctionForGeneratedCodeCTargetComponent() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UCTargetComponent, 2574014707);
+	IMPLEMENT_CLASS(UCTargetComponent, 4003525806);
 	template<> UNREALCPPPROJECT2_API UClass* StaticClass<UCTargetComponent>()
 	{
 		return UCTargetComponent::StaticClass();
