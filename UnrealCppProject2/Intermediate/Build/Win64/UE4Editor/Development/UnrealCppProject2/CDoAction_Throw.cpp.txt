@@ -39,7 +39,7 @@ D:\Github\GitHub\UnrealEngineProject\UnrealCppProject2\Source\UnrealCppProject2\
 D:\Github\GitHub\UnrealEngineProject\UnrealCppProject2\Intermediate\Build\Win64\UE4Editor\Inc\UnrealCppProject2\CStateComponent.generated.h
 D:\Github\GitHub\UnrealEngineProject\UnrealCppProject2\Source\UnrealCppProject2\Components/CStatusComponent.h
 D:\Github\GitHub\UnrealEngineProject\UnrealCppProject2\Intermediate\Build\Win64\UE4Editor\Inc\UnrealCppProject2\CStatusComponent.generated.h
-D:\Github\GitHub\UnrealEngineProject\UnrealCppProject2\Source\UnrealCppProject2\Actions/CAim.h
+d:\github\github\unrealengineproject\unrealcppproject2\source\unrealcppproject2\actions\CAim.h
 D:\Epic Games\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/NoExportTypes.h
 D:\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Math/UnitConversion.h
 D:\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Math/UnitConversion.inl
@@ -47,3 +47,5 @@ D:\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Internationalization/Pol
 D:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Components/TimelineComponent.h
 D:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\TimelineComponent.generated.h
 D:\Github\GitHub\UnrealEngineProject\UnrealCppProject2\Intermediate\Build\Win64\UE4Editor\Inc\UnrealCppProject2\CAim.generated.h
+d:\github\github\unrealengineproject\unrealcppproject2\source\unrealcppproject2\actions\CThrow.h
+D:\Github\GitHub\UnrealEngineProject\UnrealCppProject2\Intermediate\Build\Win64\UE4Editor\Inc\UnrealCppProject2\CThrow.generated.h

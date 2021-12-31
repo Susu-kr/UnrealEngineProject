@@ -8,14 +8,23 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+struct FHitResult;
 #ifdef UNREALCPPPROJECT2_CDoAction_Throw_generated_h
 #error "CDoAction_Throw.generated.h already included, missing '#pragma once' in CDoAction_Throw.h"
 #endif
 #define UNREALCPPPROJECT2_CDoAction_Throw_generated_h
 
 #define UnrealCppProject2_Source_UnrealCppProject2_Actions_CDoAction_Throw_h_10_SPARSE_DATA
-#define UnrealCppProject2_Source_UnrealCppProject2_Actions_CDoAction_Throw_h_10_RPC_WRAPPERS
-#define UnrealCppProject2_Source_UnrealCppProject2_Actions_CDoAction_Throw_h_10_RPC_WRAPPERS_NO_PURE_DECLS
+#define UnrealCppProject2_Source_UnrealCppProject2_Actions_CDoAction_Throw_h_10_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execOnThrowBeginOverlap);
+
+
+#define UnrealCppProject2_Source_UnrealCppProject2_Actions_CDoAction_Throw_h_10_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execOnThrowBeginOverlap);
+
+
 #define UnrealCppProject2_Source_UnrealCppProject2_Actions_CDoAction_Throw_h_10_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesACDoAction_Throw(); \

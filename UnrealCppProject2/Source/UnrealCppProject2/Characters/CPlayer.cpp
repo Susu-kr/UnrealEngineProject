@@ -13,6 +13,7 @@
 #include "Components/CActionComponent.h"
 #include "Materials/MaterialInstanceConstant.h"
 #include "Materials/MaterialInstanceDynamic.h"
+#include "Widgets/CUserWidget_ACtionList.h"
 
 ACPlayer::ACPlayer()
 {
@@ -26,6 +27,7 @@ ACPlayer::ACPlayer()
 	CHelpers::CreateActorComponent<UCMontagesComponent>(this, &Montages, "Montages");
 	CHelpers::CreateActorComponent<UCTargetComponent>(this, &Target, "Target");
 	CHelpers::CreateActorComponent<UCActionComponent>(this, &Action, "Action");
+	CHelpers::GetClass<UCUserWidget_ActionList>(&ActionListClass, "WidgetBlueprint'/Game/Widgets/WB_ActionList.WB_ActionList_C'");
 
 	bUseControllerRotationYaw = false;
 
@@ -69,6 +71,10 @@ void ACPlayer::BeginPlay()
 	GetMesh()->SetMaterial(1, LogoMaterial);
 
 	Action->SetUnarmedMode();
+
+	ActionList = CreateWidget< UCUserWidget_ActionList, APlayerController>(GetController< APlayerController>(), ActionListClass);
+	ActionList->AddToViewport();
+	ActionList->SetVisibility(ESlateVisibility::Hidden);
 }
 
 void ACPlayer::Tick(float DeltaTime)
@@ -99,6 +105,8 @@ void ACPlayer::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 	PlayerInputComponent->BindAction("Action", EInputEvent::IE_Pressed, this, &ACPlayer::OnDoAction);
 	PlayerInputComponent->BindAction("Aim", EInputEvent::IE_Pressed, this, &ACPlayer::OnAim);
 	PlayerInputComponent->BindAction("Aim", EInputEvent::IE_Released, this, &ACPlayer::OffAim);
+	PlayerInputComponent->BindAction("ViewActionList", EInputEvent::IE_Pressed, this, &ACPlayer::OnViewActionList);
+	PlayerInputComponent->BindAction("ViewActionList", EInputEvent::IE_Released, this, &ACPlayer::OffViewActionList);
 
 }
 
@@ -221,6 +229,23 @@ void ACPlayer::OffAim()
 void ACPlayer::OnDoAction()
 {
 	Action->DoAction();
+}
+
+void ACPlayer::OnViewActionList()
+{
+	CheckFalse(State->IsIdleMode());
+
+	ActionList->SetVisibility(ESlateVisibility::Visible);
+
+	GetController<APlayerController>()->bShowMouseCursor = true;
+	GetController<APlayerController>()->SetInputMode(FInputModeGameAndUI());
+
+	UGameplayStatics::SetGlobalTimeDilation(GetWorld(), 0.1f);
+}
+
+void ACPlayer::OffViewActionList()
+{
+
 }
 
 void ACPlayer::Begin_Roll()

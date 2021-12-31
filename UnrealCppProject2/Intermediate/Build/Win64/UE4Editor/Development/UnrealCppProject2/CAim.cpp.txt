@@ -34,5 +34,12 @@ D:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\GameFramework/SpringA
 D:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\SpringArmComponent.generated.h
 D:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Camera/CameraComponent.h
 D:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CameraComponent.generated.h
+D:\Github\GitHub\UnrealEngineProject\UnrealCppProject2\Source\UnrealCppProject2\CHUD.h
+D:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\GameFramework/HUD.h
+D:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\GameFramework/HUDHitBox.h
+D:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\GameFramework/DebugTextInfo.h
+D:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\DebugTextInfo.generated.h
+D:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\HUD.generated.h
+D:\Github\GitHub\UnrealEngineProject\UnrealCppProject2\Intermediate\Build\Win64\UE4Editor\Inc\UnrealCppProject2\CHUD.generated.h
 D:\Github\GitHub\UnrealEngineProject\UnrealCppProject2\Source\UnrealCppProject2\Components/CStateComponent.h
 D:\Github\GitHub\UnrealEngineProject\UnrealCppProject2\Intermediate\Build\Win64\UE4Editor\Inc\UnrealCppProject2\CStateComponent.generated.h

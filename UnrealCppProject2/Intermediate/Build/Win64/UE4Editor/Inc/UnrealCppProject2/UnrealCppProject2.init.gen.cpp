@@ -16,8 +16,10 @@ void EmptyLinkFunctionForGeneratedCodeUnrealCppProject2_init() {}
 	UNREALCPPPROJECT2_API UFunction* Z_Construct_UDelegateFunction_UnrealCppProject2_AttachmentCollision__DelegateSignature();
 	UNREALCPPPROJECT2_API UFunction* Z_Construct_UDelegateFunction_UnrealCppProject2_EquipmentDelegate__DelegateSignature();
 	UNREALCPPPROJECT2_API UFunction* Z_Construct_UDelegateFunction_UnrealCppProject2_UnequipmentDelegate__DelegateSignature();
+	UNREALCPPPROJECT2_API UFunction* Z_Construct_UDelegateFunction_UnrealCppProject2_ThrowBeginOverlap__DelegateSignature();
 	UNREALCPPPROJECT2_API UFunction* Z_Construct_UDelegateFunction_UnrealCppProject2_ActionTypeChanged__DelegateSignature();
 	UNREALCPPPROJECT2_API UFunction* Z_Construct_UDelegateFunction_UnrealCppProject2_StateTypeChanged__DelegateSignature();
+	UNREALCPPPROJECT2_API UFunction* Z_Construct_UDelegateFunction_UnrealCppProject2_UserWidget_ActionItem_Clicked__DelegateSignature();
 	UPackage* Z_Construct_UPackage__Script_UnrealCppProject2()
 	{
 		static UPackage* ReturnPackage = nullptr;
@@ -29,16 +31,18 @@ void EmptyLinkFunctionForGeneratedCodeUnrealCppProject2_init() {}
 				(UObject* (*)())Z_Construct_UDelegateFunction_UnrealCppProject2_AttachmentCollision__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_UnrealCppProject2_EquipmentDelegate__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_UnrealCppProject2_UnequipmentDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_UnrealCppProject2_ThrowBeginOverlap__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_UnrealCppProject2_ActionTypeChanged__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_UnrealCppProject2_StateTypeChanged__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_UnrealCppProject2_UserWidget_ActionItem_Clicked__DelegateSignature,
 			};
 			static const UE4CodeGen_Private::FPackageParams PackageParams = {
 				"/Script/UnrealCppProject2",
 				SingletonFuncArray,
 				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0x58F1AAAD,
-				0x6AEC94FD,
+				0xA88CBC41,
+				0x7D002507,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);

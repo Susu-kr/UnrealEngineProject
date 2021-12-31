@@ -25,6 +25,7 @@ public:
 private:
 	class UMaterialInstanceDynamic* BodyMaterial;
 	class UMaterialInstanceDynamic* LogoMaterial;
+	class UCUserWidget_ActionList* ActionList;
 
 	UPROPERTY(VisibleDefaultsOnly)
 		class USpringArmComponent* SpringArm;
@@ -47,9 +48,12 @@ private:
 	UPROPERTY(VisibleDefaultsOnly)
 		class UCMontagesComponent* Montages;
 
-	UPROPERTY(VisibleDefaultsOnly)
+	UPROPERTY(VisibleAnywhere) // VisibleDefaultsOnly
 		class UCTargetComponent* Target;
 
+
+	UPROPERTY(VisibleDefaultsOnly)
+		TSubclassOf<class UCUserWidget_ActionList> ActionListClass;
 	UFUNCTION()
 		void OnStateTypeChanged(EStateType InPrevType, EStateType InNewType);
 
@@ -70,6 +74,8 @@ private:
 	void OnAim();
 	void OffAim();
 	void OnDoAction();
+	void OnViewActionList();
+	void OffViewActionList();
 
 	void Begin_Roll();
 	void Begin_Backstep();
@@ -80,4 +86,5 @@ public:
 
 	virtual void ChangeColor(FLinearColor InColor) override;
 
+	FORCEINLINE class UCUserWidget_ActionList* GetActionList() { return ActionList; }
 };

@@ -77,7 +77,8 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ACPlayer); \
 	FORCEINLINE static uint32 __PPO__State() { return STRUCT_OFFSET(ACPlayer, State); } \
 	FORCEINLINE static uint32 __PPO__Action() { return STRUCT_OFFSET(ACPlayer, Action); } \
 	FORCEINLINE static uint32 __PPO__Montages() { return STRUCT_OFFSET(ACPlayer, Montages); } \
-	FORCEINLINE static uint32 __PPO__Target() { return STRUCT_OFFSET(ACPlayer, Target); }
+	FORCEINLINE static uint32 __PPO__Target() { return STRUCT_OFFSET(ACPlayer, Target); } \
+	FORCEINLINE static uint32 __PPO__ActionListClass() { return STRUCT_OFFSET(ACPlayer, ActionListClass); }
 
 
 #define UnrealCppProject2_Source_UnrealCppProject2_Characters_CPlayer_h_9_PROLOG

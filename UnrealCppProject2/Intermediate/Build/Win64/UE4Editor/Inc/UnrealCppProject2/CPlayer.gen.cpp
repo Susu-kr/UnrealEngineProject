@@ -18,6 +18,8 @@ void EmptyLinkFunctionForGeneratedCodeCPlayer() {}
 	ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 	UPackage* Z_Construct_UPackage__Script_UnrealCppProject2();
 	UNREALCPPPROJECT2_API UEnum* Z_Construct_UEnum_UnrealCppProject2_EStateType();
+	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
+	UNREALCPPPROJECT2_API UClass* Z_Construct_UClass_UCUserWidget_ActionList_NoRegister();
 	UNREALCPPPROJECT2_API UClass* Z_Construct_UClass_UCTargetComponent_NoRegister();
 	UNREALCPPPROJECT2_API UClass* Z_Construct_UClass_UCMontagesComponent_NoRegister();
 	UNREALCPPPROJECT2_API UClass* Z_Construct_UClass_UCActionComponent_NoRegister();
@@ -99,6 +101,10 @@ void EmptyLinkFunctionForGeneratedCodeCPlayer() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ActionListClass_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_ActionListClass;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Target_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Target;
@@ -150,13 +156,22 @@ void EmptyLinkFunctionForGeneratedCodeCPlayer() {}
 	};
 #endif
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACPlayer_Statics::NewProp_Target_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACPlayer_Statics::NewProp_ActionListClass_MetaData[] = {
 		{ "Category", "CPlayer" },
-		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Characters/CPlayer.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACPlayer_Statics::NewProp_Target = { "Target", nullptr, (EPropertyFlags)0x00400000000b0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACPlayer, Target), Z_Construct_UClass_UCTargetComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ACPlayer_Statics::NewProp_Target_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACPlayer_Statics::NewProp_Target_MetaData)) };
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_ACPlayer_Statics::NewProp_ActionListClass = { "ActionListClass", nullptr, (EPropertyFlags)0x0044000000030001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACPlayer, ActionListClass), Z_Construct_UClass_UCUserWidget_ActionList_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_ACPlayer_Statics::NewProp_ActionListClass_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACPlayer_Statics::NewProp_ActionListClass_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACPlayer_Statics::NewProp_Target_MetaData[] = {
+		{ "Category", "CPlayer" },
+		{ "Comment", "// VisibleDefaultsOnly\n" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Characters/CPlayer.h" },
+		{ "ToolTip", "VisibleDefaultsOnly" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACPlayer_Statics::NewProp_Target = { "Target", nullptr, (EPropertyFlags)0x00400000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACPlayer, Target), Z_Construct_UClass_UCTargetComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ACPlayer_Statics::NewProp_Target_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACPlayer_Statics::NewProp_Target_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACPlayer_Statics::NewProp_Montages_MetaData[] = {
 		{ "Category", "CPlayer" },
@@ -214,6 +229,7 @@ void EmptyLinkFunctionForGeneratedCodeCPlayer() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACPlayer_Statics::NewProp_SpringArm = { "SpringArm", nullptr, (EPropertyFlags)0x00400000000b0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACPlayer, SpringArm), Z_Construct_UClass_USpringArmComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ACPlayer_Statics::NewProp_SpringArm_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACPlayer_Statics::NewProp_SpringArm_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ACPlayer_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACPlayer_Statics::NewProp_ActionListClass,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACPlayer_Statics::NewProp_Target,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACPlayer_Statics::NewProp_Montages,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACPlayer_Statics::NewProp_Action,
@@ -253,7 +269,7 @@ void EmptyLinkFunctionForGeneratedCodeCPlayer() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ACPlayer, 2916591629);
+	IMPLEMENT_CLASS(ACPlayer, 2727393595);
 	template<> UNREALCPPPROJECT2_API UClass* StaticClass<ACPlayer>()
 	{
 		return ACPlayer::StaticClass();

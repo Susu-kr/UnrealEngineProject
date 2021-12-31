@@ -29,6 +29,7 @@ private:
 	class USpringArmComponent*	SpringArm;
 	class UCameraComponent*		Camera;
 	class UCurveFloat*			Curve;
+	class ACHUD*				Hud;
 
 	bool bInZoom;
 	FTimeline Timeline;

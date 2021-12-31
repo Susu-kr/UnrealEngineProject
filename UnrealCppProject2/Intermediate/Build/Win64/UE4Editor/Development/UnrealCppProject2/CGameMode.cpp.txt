@@ -24,3 +24,8 @@ D:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Gamep
 d:\github\github\unrealengineproject\unrealcppproject2\source\unrealcppproject2\Utilities/CHelpers.h
 d:\github\github\unrealengineproject\unrealcppproject2\source\unrealcppproject2\Utilities/CLog.h
 d:\github\github\unrealengineproject\unrealcppproject2\source\unrealcppproject2\Utilities/Defines.h
+D:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\GameFramework/HUD.h
+D:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\GameFramework/HUDHitBox.h
+D:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\GameFramework/DebugTextInfo.h
+D:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\DebugTextInfo.generated.h
+D:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\HUD.generated.h
