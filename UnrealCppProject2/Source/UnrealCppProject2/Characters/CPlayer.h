@@ -62,12 +62,20 @@ private:
 	void OnHorizontalLook(float InAxis);
 	void OnVerticalLook(float InAxis);
 	void OnAvoid();
-	void OnFist();
-	void OnOneHand();
-	void OnTwoHand();
-	void OnWarp();
-	void OnFireStorm();
-	void OnIceBall();
+
+	UFUNCTION()
+		void OnFist();
+	UFUNCTION()
+		void OnOneHand();
+	UFUNCTION()
+		void OnTwoHand();
+	UFUNCTION()
+		void OnWarp();
+	UFUNCTION()
+		void OnFireStorm();
+	UFUNCTION()
+		void OnIceBall();
+
 	void OnTarget();
 	void OnTargetLeft();
 	void OnTargetRight();

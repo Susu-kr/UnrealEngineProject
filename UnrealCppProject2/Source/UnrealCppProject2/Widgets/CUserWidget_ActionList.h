@@ -29,6 +29,7 @@ public:
 	void Hovered(FString InName);
 	void Unhovered(FString InName);
 
+	FORCEINLINE FUserWidget_Action_Data& GetData(uint32 InIndex) { return Datas[InIndex]; }
 private:
 	TArray<FUserWidget_Action_Data> Datas;
 };

@@ -1,0 +1,16 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-UnrealCppProject2-5818.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\Github\GitHub\UnrealEngineProject\UnrealCppProject2\Intermediate\Build\Win64\UnrealCppProject2Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"D:\Github\GitHub\UnrealEngineProject\UnrealCppProject2\Intermediate\Build\Win64\UE4Editor\Development\UnrealCppProject2\CPlayer.cpp.obj"
+"D:\Github\GitHub\UnrealEngineProject\UnrealCppProject2\Intermediate\Build\Win64\UE4Editor\Development\UnrealCppProject2\CUserWidget_ActionList.cpp.obj"
+"D:\Github\GitHub\UnrealEngineProject\UnrealCppProject2\Intermediate\Build\Win64\UE4Editor\Development\UnrealCppProject2\Module.UnrealCppProject2.cpp.obj"
+"D:\Github\GitHub\UnrealEngineProject\UnrealCppProject2\Intermediate\Build\Win64\UE4Editor\Development\UnrealCppProject2\Module.UnrealCppProject2.gen.cpp.obj"
+"D:\Github\GitHub\UnrealEngineProject\UnrealCppProject2\Intermediate\Build\Win64\UE4Editor\Development\UnrealCppProject2\Default.rc2.res"
+/OUT:"D:\Github\GitHub\UnrealEngineProject\UnrealCppProject2\Intermediate\Build\Win64\UE4Editor\Development\UnrealCppProject2\UE4Editor-UnrealCppProject2-5818.lib"
+/INCLUDE:IMPLEMENT_MODULE_UnrealCppProject2

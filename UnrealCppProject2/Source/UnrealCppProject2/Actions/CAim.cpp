@@ -21,7 +21,7 @@ void UCAim::BeginPlay(ACharacter * InCharacter)
 	TimelineFloat.BindUFunction(this, "Zooming");
 	Timeline.AddInterpFloat(Curve, TimelineFloat);
 
-	Timeline.SetPlayRate(50);
+	Timeline.SetPlayRate(10);
 }
 
 void UCAim::OnAim()
@@ -32,8 +32,8 @@ void UCAim::OnAim()
 	bInZoom = true;
 	Hud->SetDraw();
 
-	SpringArm->TargetArmLength = 100.0f;
-	SpringArm->SocketOffset = FVector(0, 30, 10);
+	SpringArm->TargetArmLength = 200.0f;
+	SpringArm->SocketOffset = FVector(0, 60, 10);
 	SpringArm->bEnableCameraLag = false;
 
 	Camera->FieldOfView = 45;
@@ -51,7 +51,7 @@ void UCAim::OffAim()
 	Hud->SetNotDraw();
 
 	SpringArm->TargetArmLength = 400.0f;
-	SpringArm->SocketOffset = FVector(0, 30, 10);
+	SpringArm->SocketOffset = FVector(0, 90, 10);
 	SpringArm->bEnableCameraLag = true;
 
 	Camera->FieldOfView = 90;

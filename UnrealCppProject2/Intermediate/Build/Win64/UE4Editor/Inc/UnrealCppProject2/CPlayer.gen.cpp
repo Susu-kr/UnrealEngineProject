@@ -30,6 +30,48 @@ void EmptyLinkFunctionForGeneratedCodeCPlayer() {}
 	ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 	UNREALCPPPROJECT2_API UClass* Z_Construct_UClass_UICharacter_NoRegister();
 // End Cross Module References
+	DEFINE_FUNCTION(ACPlayer::execOnIceBall)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnIceBall();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(ACPlayer::execOnFireStorm)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnFireStorm();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(ACPlayer::execOnWarp)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnWarp();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(ACPlayer::execOnTwoHand)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnTwoHand();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(ACPlayer::execOnOneHand)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnOneHand();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(ACPlayer::execOnFist)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnFist();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(ACPlayer::execOnStateTypeChanged)
 	{
 		P_GET_ENUM(EStateType,Z_Param_InPrevType);
@@ -43,9 +85,103 @@ void EmptyLinkFunctionForGeneratedCodeCPlayer() {}
 	{
 		UClass* Class = ACPlayer::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
+			{ "OnFireStorm", &ACPlayer::execOnFireStorm },
+			{ "OnFist", &ACPlayer::execOnFist },
+			{ "OnIceBall", &ACPlayer::execOnIceBall },
+			{ "OnOneHand", &ACPlayer::execOnOneHand },
 			{ "OnStateTypeChanged", &ACPlayer::execOnStateTypeChanged },
+			{ "OnTwoHand", &ACPlayer::execOnTwoHand },
+			{ "OnWarp", &ACPlayer::execOnWarp },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_ACPlayer_OnFireStorm_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACPlayer_OnFireStorm_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Characters/CPlayer.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ACPlayer_OnFireStorm_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACPlayer, nullptr, "OnFireStorm", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ACPlayer_OnFireStorm_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ACPlayer_OnFireStorm_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ACPlayer_OnFireStorm()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ACPlayer_OnFireStorm_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_ACPlayer_OnFist_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACPlayer_OnFist_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Characters/CPlayer.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ACPlayer_OnFist_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACPlayer, nullptr, "OnFist", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ACPlayer_OnFist_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ACPlayer_OnFist_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ACPlayer_OnFist()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ACPlayer_OnFist_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_ACPlayer_OnIceBall_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACPlayer_OnIceBall_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Characters/CPlayer.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ACPlayer_OnIceBall_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACPlayer, nullptr, "OnIceBall", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ACPlayer_OnIceBall_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ACPlayer_OnIceBall_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ACPlayer_OnIceBall()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ACPlayer_OnIceBall_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_ACPlayer_OnOneHand_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACPlayer_OnOneHand_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Characters/CPlayer.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ACPlayer_OnOneHand_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACPlayer, nullptr, "OnOneHand", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ACPlayer_OnOneHand_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ACPlayer_OnOneHand_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ACPlayer_OnOneHand()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ACPlayer_OnOneHand_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_ACPlayer_OnStateTypeChanged_Statics
 	{
@@ -86,6 +222,50 @@ void EmptyLinkFunctionForGeneratedCodeCPlayer() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ACPlayer_OnStateTypeChanged_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_ACPlayer_OnTwoHand_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACPlayer_OnTwoHand_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Characters/CPlayer.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ACPlayer_OnTwoHand_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACPlayer, nullptr, "OnTwoHand", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ACPlayer_OnTwoHand_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ACPlayer_OnTwoHand_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ACPlayer_OnTwoHand()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ACPlayer_OnTwoHand_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_ACPlayer_OnWarp_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACPlayer_OnWarp_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Characters/CPlayer.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ACPlayer_OnWarp_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACPlayer, nullptr, "OnWarp", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ACPlayer_OnWarp_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ACPlayer_OnWarp_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ACPlayer_OnWarp()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ACPlayer_OnWarp_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -146,7 +326,13 @@ void EmptyLinkFunctionForGeneratedCodeCPlayer() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_UnrealCppProject2,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_ACPlayer_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_ACPlayer_OnFireStorm, "OnFireStorm" }, // 3267542814
+		{ &Z_Construct_UFunction_ACPlayer_OnFist, "OnFist" }, // 3227509037
+		{ &Z_Construct_UFunction_ACPlayer_OnIceBall, "OnIceBall" }, // 2526254752
+		{ &Z_Construct_UFunction_ACPlayer_OnOneHand, "OnOneHand" }, // 3316102057
 		{ &Z_Construct_UFunction_ACPlayer_OnStateTypeChanged, "OnStateTypeChanged" }, // 3326230602
+		{ &Z_Construct_UFunction_ACPlayer_OnTwoHand, "OnTwoHand" }, // 475488713
+		{ &Z_Construct_UFunction_ACPlayer_OnWarp, "OnWarp" }, // 3814481621
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACPlayer_Statics::Class_MetaDataParams[] = {
@@ -269,7 +455,7 @@ void EmptyLinkFunctionForGeneratedCodeCPlayer() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ACPlayer, 2727393595);
+	IMPLEMENT_CLASS(ACPlayer, 3364573685);
 	template<> UNREALCPPPROJECT2_API UClass* StaticClass<ACPlayer>()
 	{
 		return ACPlayer::StaticClass();

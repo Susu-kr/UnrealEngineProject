@@ -43,6 +43,7 @@ ACPlayer::ACPlayer()
 	GetMesh()->SetAnimInstanceClass(animInstance);
 
 	SpringArm->TargetArmLength = 400.0f;
+	SpringArm->SocketOffset = FVector(0, 90, 10);
 	SpringArm->bDoCollisionTest = false;
 	SpringArm->bUsePawnControlRotation = true;
 	SpringArm->bEnableCameraLag = true;
@@ -75,6 +76,14 @@ void ACPlayer::BeginPlay()
 	ActionList = CreateWidget< UCUserWidget_ActionList, APlayerController>(GetController< APlayerController>(), ActionListClass);
 	ActionList->AddToViewport();
 	ActionList->SetVisibility(ESlateVisibility::Hidden);
+
+	ActionList->GetData(0).OnUserWidget_ActionItem_Clicked.AddDynamic(this, &ACPlayer::OnFist);
+	ActionList->GetData(1).OnUserWidget_ActionItem_Clicked.AddDynamic(this, &ACPlayer::OnOneHand);
+	ActionList->GetData(2).OnUserWidget_ActionItem_Clicked.AddDynamic(this, &ACPlayer::OnTwoHand);
+	ActionList->GetData(3).OnUserWidget_ActionItem_Clicked.AddDynamic(this, &ACPlayer::OnWarp);
+	ActionList->GetData(4).OnUserWidget_ActionItem_Clicked.AddDynamic(this, &ACPlayer::OnFireStorm);
+	ActionList->GetData(5).OnUserWidget_ActionItem_Clicked.AddDynamic(this, &ACPlayer::OnIceBall);
+
 }
 
 void ACPlayer::Tick(float DeltaTime)
@@ -218,11 +227,15 @@ void ACPlayer::OnTargetRight()
 
 void ACPlayer::OnAim()
 {
+	bUseControllerRotationYaw = true;
+	GetCharacterMovement()->bOrientRotationToMovement = false;
 	Action->DoAim(true);
 }
 
 void ACPlayer::OffAim()
 {
+	bUseControllerRotationYaw = false;
+	GetCharacterMovement()->bOrientRotationToMovement = true;
 	Action->DoAim(false);
 }
 
